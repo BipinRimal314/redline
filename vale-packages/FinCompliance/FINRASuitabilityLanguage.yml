@@ -1,0 +1,16 @@
+extends: existence
+message: "Suitability concern: '%s'. FINRA Rule 2111 requires reasonable basis for believing a recommendation is suitable. Language suggesting universal suitability may violate this rule."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2111"
+level: warning
+ignorecase: true
+tokens:
+  - suitable for everyone
+  - suitable for all investors
+  - appropriate for any investor
+  - perfect for all
+  - ideal for everyone
+  - right for any portfolio
+  - works for all risk levels
+  - no matter your risk tolerance
+  - regardless of your goals
+  - one size fits all

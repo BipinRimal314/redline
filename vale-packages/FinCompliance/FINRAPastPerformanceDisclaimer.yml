@@ -1,0 +1,15 @@
+extends: existence
+message: "Past performance reference without disclaimer: '%s'. FINRA requires that any reference to past performance include the disclaimer that past performance is not indicative of future results."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+level: warning
+ignorecase: true
+tokens:
+  - has returned
+  - returned an average
+  - historical returns
+  - track record of
+  - performance history shows
+  - has consistently returned
+  - has earned
+  - historically produced
+  - past returns of

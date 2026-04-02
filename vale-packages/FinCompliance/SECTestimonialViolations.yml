@@ -1,0 +1,15 @@
+extends: existence
+message: "Testimonial/endorsement without required disclosures: '%s'. SEC Rule 206(4)-1 requires clear disclosure of compensation, conflicts, and material relationships for all testimonials and endorsements."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: warning
+ignorecase: true
+tokens:
+  - client testimonial
+  - client review
+  - investor testimonial
+  - satisfied client
+  - happy investor
+  - client success story
+  - endorsement from
+  - recommended by
+  - endorsed by

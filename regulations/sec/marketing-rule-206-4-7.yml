@@ -1,0 +1,45 @@
+regulation:
+  id: "SEC-MARKETING"
+  name: "Investment Adviser Marketing Rule"
+  authority: "SEC"
+  cfr_reference: "17 CFR 275.206(4)-7"
+  document_types:
+    - marketing-materials
+    - client-communication
+    - adv-filing
+  requirements:
+    - id: "MKT-01"
+      description: "Marketing materials must not contain prohibited misleading claims"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECProhibitedClaims"
+    - id: "MKT-02"
+      description: "Performance presentations must be fair and balanced"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECPerformanceMisleading"
+    - id: "MKT-03"
+      description: "Testimonials and endorsements must include required disclosures"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECTestimonialViolations"
+    - id: "MKT-04"
+      description: "Hypothetical performance must include prominent disclaimers"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECHypotheticalPerformance"
+    - id: "MKT-05"
+      description: "Fee disclosures must be clear and complete"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECFeeDisclosure"
+    - id: "MKT-06"
+      description: "Performance must be presented net of fees with appropriate time periods"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sec_net_of_fees_adequacy"
+    - id: "MKT-07"
+      description: "Material risks must be disclosed alongside performance claims"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sec_risk_disclosure_adequacy"

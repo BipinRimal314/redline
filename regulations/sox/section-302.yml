@@ -1,0 +1,25 @@
+regulation:
+  id: "SOX-302"
+  name: "Corporate Responsibility for Financial Reports"
+  authority: "PCAOB"
+  cfr_reference: "15 USC 7241"
+  document_types:
+    - certification
+    - compliance-policy
+    - management-assessment
+  requirements:
+    - id: "302-01"
+      description: "Certification language must be precise and legally compliant"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXCertificationLanguage"
+    - id: "302-02"
+      description: "Certifications must confirm review of financial report"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sox_certification_completeness"
+    - id: "302-03"
+      description: "Certifications must address internal controls over financial reporting"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sox_icfr_certification"

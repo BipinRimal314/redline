@@ -1,0 +1,36 @@
+regulation:
+  id: "SOX-404"
+  name: "Management Assessment of Internal Controls"
+  authority: "PCAOB"
+  cfr_reference: "15 USC 7262"
+  document_types:
+    - control-description
+    - management-assessment
+    - audit-documentation
+    - compliance-policy
+  requirements:
+    - id: "404-01"
+      description: "Control descriptions must be specific and testable, not vague"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXVagueControls"
+    - id: "404-02"
+      description: "Control documentation must use definitive language"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXWeakAssertions"
+    - id: "404-03"
+      description: "Documentation must not contain indicators of material weakness"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXMaterialWeakness"
+    - id: "404-04"
+      description: "Test procedures must be complete and specific"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
+    - id: "404-05"
+      description: "Management assessment must evaluate design and operating effectiveness of controls"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sox_control_effectiveness_evaluation"

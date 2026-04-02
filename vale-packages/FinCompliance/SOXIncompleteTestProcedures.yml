@@ -1,0 +1,15 @@
+extends: existence
+message: "Incomplete test procedure: '%s'. SOX testing documentation must specify exact steps, sample sizes, expected results, and criteria for pass/fail."
+level: warning
+ignorecase: true
+tokens:
+  - test as appropriate
+  - review a sample
+  - check some of
+  - verify a few
+  - spot check
+  - review as needed
+  - examine selected
+  - randomly review
+  - informally review
+  - briefly examine

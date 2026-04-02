@@ -1,0 +1,22 @@
+extends: existence
+message: "Potentially unbalanced presentation: '%s'. FINRA Rule 2210 requires fair and balanced discussion of risks alongside benefits. Superlative claims require substantiation."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+level: warning
+ignorecase: true
+tokens:
+  - best investment
+  - best opportunity
+  - best returns
+  - highest returns
+  - lowest risk
+  - safest investment
+  - most profitable
+  - unmatched returns
+  - unparalleled performance
+  - superior to all
+  - outperforms everything
+  - once in a lifetime
+  - limited time offer
+  - act now
+  - don't miss out
+  - exclusive opportunity

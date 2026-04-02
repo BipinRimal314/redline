@@ -1,0 +1,24 @@
+regulation:
+  id: "FINRA-3110"
+  name: "Supervision"
+  authority: "FINRA"
+  cfr_reference: "FINRA Rule 3110"
+  document_types:
+    - supervisory-procedures
+    - compliance-policy
+  requirements:
+    - id: "3110-01"
+      description: "Supervisory procedures must not contain prohibited claims"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAProhibitedCommunications"
+    - id: "3110-02"
+      description: "Procedures must describe supervisory system including designation of supervisory personnel"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "finra_supervisory_system_adequacy"
+    - id: "3110-03"
+      description: "Procedures must address review of correspondence and communications"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "finra_communication_review_procedures"

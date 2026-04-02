@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague control description: '%s'. SOX Section 404 requires specific, testable control descriptions. Replace vague language with specific procedures, frequencies, and responsible parties."
+link: "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201"
+level: error
+ignorecase: true
+tokens:
+  - adequate controls
+  - appropriate controls
+  - reasonable controls
+  - sufficient controls
+  - proper controls
+  - good controls
+  - as needed
+  - as appropriate
+  - as necessary
+  - when required
+  - periodically reviewed
+  - regularly monitored
+  - from time to time
+  - on occasion
+  - as deemed necessary

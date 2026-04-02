@@ -1,0 +1,18 @@
+extends: existence
+message: "Projected/predicted returns: '%s'. FINRA prohibits predictions of specific future prices or performance. Projections must be clearly labeled and accompanied by appropriate disclaimers."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+level: error
+ignorecase: true
+tokens:
+  - will return
+  - will earn
+  - will generate
+  - will produce returns
+  - will yield
+  - will appreciate by
+  - will grow by
+  - will increase by
+  - expect to earn
+  - expect to return
+  - predict a return
+  - forecasting returns of

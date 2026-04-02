@@ -1,0 +1,19 @@
+extends: existence
+message: "Hypothetical or projected performance language: '%s'. SEC restricts use of hypothetical performance in marketing materials. Must include prominent disclaimers about limitations and risks."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: warning
+ignorecase: true
+tokens:
+  - projected returns
+  - projected performance
+  - hypothetical performance
+  - hypothetical returns
+  - backtested performance
+  - backtested returns
+  - simulated performance
+  - simulated returns
+  - expected returns
+  - anticipated returns
+  - forecasted returns
+  - pro forma performance
+  - model performance

@@ -1,0 +1,36 @@
+regulation:
+  id: "FINRA-2210"
+  name: "Communications with the Public"
+  authority: "FINRA"
+  cfr_reference: "FINRA Rule 2210"
+  document_types:
+    - marketing-materials
+    - client-communication
+    - retail-communication
+    - correspondence
+  requirements:
+    - id: "2210-01"
+      description: "Communications must not contain exaggerated, misleading, or prohibited claims"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAProhibitedCommunications"
+    - id: "2210-02"
+      description: "Presentation of benefits must be fair and balanced with discussion of risks"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAUnbalancedPresentation"
+    - id: "2210-03"
+      description: "Predictions of specific future performance are prohibited"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAProjectedReturns"
+    - id: "2210-04"
+      description: "Past performance references must include appropriate disclaimers"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAPastPerformanceDisclaimer"
+    - id: "2210-05"
+      description: "Communications must be reviewed and approved by a principal before use"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "finra_principal_approval_check"

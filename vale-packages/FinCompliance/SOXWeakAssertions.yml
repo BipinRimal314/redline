@@ -1,0 +1,17 @@
+extends: existence
+message: "Weak assertion in control documentation: '%s'. SOX control descriptions should use definitive language ('must', 'shall', 'is required') rather than tentative language."
+level: warning
+ignorecase: true
+tokens:
+  - should try to
+  - will attempt to
+  - may consider
+  - might review
+  - could potentially
+  - would try to
+  - plans to eventually
+  - intends to consider
+  - hopes to implement
+  - aims to achieve
+  - strives to maintain
+  - endeavors to ensure

@@ -1,0 +1,16 @@
+extends: existence
+message: "Potentially misleading performance language: '%s'. SEC requires fair and balanced presentation. Performance claims must include material risks and limitations."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: warning
+ignorecase: true
+tokens:
+  - consistently outperform
+  - always beats the market
+  - never had a losing
+  - unmatched track record
+  - best performing
+  - top performing fund
+  - number one fund
+  - highest returns in
+  - we always beat
+  - superior returns

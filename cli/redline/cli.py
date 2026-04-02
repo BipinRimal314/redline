@@ -61,6 +61,28 @@ def lint(
         findings = runner.lint(file)
         all_findings.extend(findings)
 
+    if ai:
+        try:
+            from redline.ai import AIAnalyzer
+
+            config = load_config(path.parent / ".redline.yml" if path.is_file() else path / ".redline.yml")
+            analyzer = AIAnalyzer(
+                model=config.ai_model,
+                confidence_threshold=config.confidence_threshold,
+            )
+            registry = Registry(REGULATIONS_DIR)
+            for file in files:
+                doc_text = file.read_text()
+                ai_reqs = registry.get_ai_requirements("compliance-policy")
+                if ai_reqs:
+                    ai_findings = analyzer.analyze(doc_text, ai_reqs)
+                    all_findings.extend(ai_findings)
+                    console.print(
+                        f"[dim]AI analysis: {len(ai_findings)} finding(s) for {file.name}[/dim]"
+                    )
+        except (ImportError, ValueError) as e:
+            console.print(f"[yellow]AI analysis skipped:[/yellow] {e}")
+
     errors = [f for f in all_findings if f.level == "error"]
     warnings = [f for f in all_findings if f.level == "warning"]
     suggestions = [f for f in all_findings if f.level == "suggestion"]

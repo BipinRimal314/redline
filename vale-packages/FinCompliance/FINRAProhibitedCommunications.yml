@@ -1,0 +1,21 @@
+extends: existence
+message: "FINRA Rule 2210 violation: '%s'. Communications with the public must be fair, balanced, and not misleading. Exaggerated or unwarranted claims are prohibited."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+level: error
+ignorecase: true
+tokens:
+  - guaranteed returns
+  - guaranteed profit
+  - risk-free
+  - no risk involved
+  - cannot lose
+  - safe investment
+  - sure thing
+  - can't miss opportunity
+  - certain to profit
+  - will definitely increase
+  - always profitable
+  - never loses value
+  - absolutely safe
+  - without any risk
+  - zero downside

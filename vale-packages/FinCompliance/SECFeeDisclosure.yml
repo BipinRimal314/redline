@@ -1,0 +1,12 @@
+extends: existence
+message: "Fee/compensation language that may require additional disclosure: '%s'. SEC requires clear, prominent disclosure of all fees, compensation arrangements, and potential conflicts of interest."
+level: warning
+ignorecase: true
+tokens:
+  - no hidden fees
+  - fee-free
+  - free of charge
+  - no cost to you
+  - at no additional cost
+  - complimentary service
+  - no commission

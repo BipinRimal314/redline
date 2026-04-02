@@ -1,0 +1,19 @@
+extends: existence
+message: "Material weakness indicator: '%s'. This language suggests a potential material weakness or significant deficiency. Ensure proper evaluation and disclosure per PCAOB AS 2201."
+link: "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201"
+level: error
+ignorecase: true
+tokens:
+  - no controls exist
+  - controls are not in place
+  - control has not been implemented
+  - no segregation of duties
+  - no review process
+  - no approval required
+  - anyone can access
+  - unrestricted access
+  - no audit trail
+  - no documentation required
+  - override without approval
+  - bypass controls
+  - no monitoring

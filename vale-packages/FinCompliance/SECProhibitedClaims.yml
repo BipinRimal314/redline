@@ -1,0 +1,24 @@
+extends: existence
+message: "Prohibited claim in SEC-regulated communication: '%s'. SEC Marketing Rule 206(4)-7 prohibits misleading statements about investment performance or risk."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: error
+ignorecase: true
+tokens:
+  - guaranteed returns
+  - guaranteed profit
+  - guaranteed income
+  - risk-free investment
+  - risk-free returns
+  - no possibility of loss
+  - cannot lose money
+  - safe investment
+  - assured gains
+  - assured returns
+  - zero risk
+  - no risk
+  - money-back guarantee
+  - will always increase
+  - never lose value
+  - certain to profit
+  - promise of returns
+  - guaranteed to earn

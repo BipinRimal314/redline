@@ -1,0 +1,19 @@
+regulation:
+  id: "SEC-ADV"
+  name: "Form ADV Filing Requirements"
+  authority: "SEC"
+  cfr_reference: "17 CFR 275.204-1"
+  document_types:
+    - adv-filing
+    - compliance-policy
+  requirements:
+    - id: "ADV-01"
+      description: "ADV filing must not contain prohibited claims"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECProhibitedClaims"
+    - id: "ADV-02"
+      description: "ADV brochure must accurately describe advisory services, fees, and disciplinary history"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "adv_completeness_check"

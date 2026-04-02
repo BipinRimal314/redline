@@ -1,0 +1,17 @@
+extends: existence
+message: "Certification language concern: '%s'. SOX Section 302 CEO/CFO certifications require specific, legally precise language. Vague certifications may not meet statutory requirements."
+level: warning
+ignorecase: true
+tokens:
+  - to the best of my knowledge
+  - as far as I know
+  - I believe that
+  - to my understanding
+  - it is my belief
+  - I think that
+  - in my opinion
+  - it appears that
+  - it seems that
+  - probably accurate
+  - likely correct
+  - generally accurate

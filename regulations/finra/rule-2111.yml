@@ -1,0 +1,20 @@
+regulation:
+  id: "FINRA-2111"
+  name: "Suitability"
+  authority: "FINRA"
+  cfr_reference: "FINRA Rule 2111"
+  document_types:
+    - client-communication
+    - recommendation
+    - suitability-documentation
+  requirements:
+    - id: "2111-01"
+      description: "Recommendations must not suggest universal suitability"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRASuitabilityLanguage"
+    - id: "2111-02"
+      description: "Documentation must demonstrate reasonable-basis suitability analysis"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "finra_suitability_analysis_adequacy"

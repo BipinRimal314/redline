@@ -1,0 +1,25 @@
+regulation:
+  id: "SOX-PCAOB"
+  name: "PCAOB Auditing Standards"
+  authority: "PCAOB"
+  cfr_reference: "PCAOB AS 2201"
+  document_types:
+    - audit-documentation
+    - control-description
+    - management-assessment
+  requirements:
+    - id: "PCAOB-01"
+      description: "Audit documentation must not contain vague control descriptions"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXVagueControls"
+    - id: "PCAOB-02"
+      description: "Testing procedures must be specific and reproducible"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
+    - id: "PCAOB-03"
+      description: "Audit documentation must be sufficient for an experienced auditor to understand"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "pcaob_documentation_sufficiency"

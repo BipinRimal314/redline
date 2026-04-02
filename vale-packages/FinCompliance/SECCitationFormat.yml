@@ -1,0 +1,7 @@
+extends: existence
+message: "SEC regulatory citation '%s' may be incorrectly formatted. Use standard format: 'SEC Rule [Number]', 'Securities Act Section [Number]', or '[Title] CFR [Section]'."
+level: suggestion
+ignorecase: false
+raw:
+  - '(?i)\bsec\s+rule\s+\d+(?!\s*[\(\-])'
+  - '(?i)\bsection\s+\d+\s+of\s+the\s+act\b'
