@@ -1,0 +1,35 @@
+# Redline Compliance Gap Report
+
+**Document:** {{ report.document }}
+**Generated:** {{ report.generated_at }}
+**Regulations:** {{ report.regulations_checked | join(', ') }}
+**Redline Version:** {{ report.redline_version }}
+**Pass Rate:** {{ summary.pass_rate }}
+
+## Summary
+
+| Level | Count |
+|---|---|
+| Errors | {{ summary.errors }} |
+| Warnings | {{ summary.warnings }} |
+| Suggestions | {{ summary.suggestions }} |
+| **Total** | **{{ summary.total_findings }}** |
+
+{% if findings %}
+## Findings
+
+{% for f in findings %}
+### [{{ f.level[0] | upper }}] {{ f.id }}: {{ f.rule }}
+
+**Line {{ f.line }}:** `{{ f.text }}`
+
+{{ f.message }}
+
+{% if f.regulation_id %}**Regulation:** {{ f.regulation_id }} ({{ f.authority }}) — {{ f.cfr_reference }}{% endif %}
+
+{% endfor %}
+{% else %}
+## Findings
+
+No findings. Document passes all checked regulations.
+{% endif %}

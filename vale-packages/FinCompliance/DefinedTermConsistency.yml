@@ -1,0 +1,10 @@
+extends: consistency
+message: "Inconsistent term usage: '%s' vs '%s'. Use the defined term consistently."
+level: error
+ignorecase: false
+either:
+  the Company: the Firm
+  BSA Officer: AML Officer
+  Anti-Money Laundering: Anti Money Laundering
+  AML/BSA: BSA/AML
+  client: customer

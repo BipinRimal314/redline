@@ -1,0 +1,20 @@
+extends: substitution
+message: "Consider using '%s' instead of '%s' for plain language compliance."
+level: suggestion
+ignorecase: true
+swap:
+  utilize: use
+  commence: begin
+  terminate: end
+  endeavor: try
+  forthwith: immediately
+  hereinafter: from now on
+  notwithstanding: despite
+  pursuant to: under
+  in the event that: if
+  prior to: before
+  subsequent to: after
+  in lieu of: instead of
+  with respect to: about
+  in accordance with: under
+  for the purpose of: to

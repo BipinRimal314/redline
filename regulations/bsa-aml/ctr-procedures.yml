@@ -1,0 +1,19 @@
+regulation:
+  id: "BSA-CTR"
+  name: "Currency Transaction Report Procedures"
+  authority: "FinCEN"
+  cfr_reference: "31 CFR 1010.311"
+  document_types:
+    - compliance-policy
+    - ctr-procedures
+  requirements:
+    - id: "CTR-01"
+      description: "Procedures must include required CDD/CTR elements (thresholds, aggregation, structuring, monitoring)"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.RequiredCDDCTRElements"
+    - id: "CTR-02"
+      description: "Procedures must specify CTR filing timeline and exemption criteria"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "ctr_timeline_exemptions_adequacy"

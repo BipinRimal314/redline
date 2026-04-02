@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Redline Regulation Definition",
+  "type": "object",
+  "required": ["regulation"],
+  "properties": {
+    "regulation": {
+      "type": "object",
+      "required": ["id", "name", "authority", "cfr_reference", "document_types", "requirements"],
+      "properties": {
+        "id": { "type": "string", "description": "Unique regulation identifier" },
+        "name": { "type": "string", "description": "Human-readable name" },
+        "authority": { "type": "string", "description": "Regulatory body" },
+        "cfr_reference": { "type": "string", "description": "Code of Federal Regulations reference" },
+        "document_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Which document types this regulation applies to"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "description", "severity", "check_type"],
+            "properties": {
+              "id": { "type": "string" },
+              "description": { "type": "string" },
+              "severity": { "type": "string", "enum": ["error", "warning", "suggestion"] },
+              "check_type": { "type": "string", "enum": ["deterministic", "ai"] },
+              "vale_rule": { "type": "string" },
+              "ai_prompt_key": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+extends: existence
+message: "Vague time reference: '%s'. SAR narratives and BSA/AML documents require specific dates (e.g., '2026-01-15' not 'recently')."
+link: "https://bsaaml.ffiec.gov/manual/Introduction/01"
+level: error
+ignorecase: true
+tokens:
+  - recently
+  - some time ago
+  - a while back
+  - in the past
+  - at some point
+  - a few days ago
+  - a few weeks ago
+  - a few months ago
+  - around that time
+  - the other day
+  - not long ago
+  - a period of time

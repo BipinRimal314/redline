@@ -1,0 +1,19 @@
+regulation:
+  id: "BSA-CDD"
+  name: "Customer Due Diligence Procedures"
+  authority: "FinCEN"
+  cfr_reference: "31 CFR 1010.230"
+  document_types:
+    - compliance-policy
+    - cdd-procedures
+  requirements:
+    - id: "CDD-01"
+      description: "Procedures must include required CDD/CTR elements (beneficial ownership, thresholds, EDD, monitoring, structuring)"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.RequiredCDDCTRElements"
+    - id: "CDD-02"
+      description: "Procedures must describe risk rating methodology"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "cdd_risk_rating_adequacy"

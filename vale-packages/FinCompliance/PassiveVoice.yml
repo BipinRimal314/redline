@@ -1,0 +1,6 @@
+extends: existence
+message: "Passive voice detected: '%s'. Use active voice for clarity in compliance documentation."
+level: suggestion
+ignorecase: true
+raw:
+  - '\b(was|were|been|being|is|are|am)\s+(being\s+)?\w+ed\b'

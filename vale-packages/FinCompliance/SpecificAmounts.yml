@@ -1,0 +1,16 @@
+extends: existence
+message: "Vague amount reference: '%s'. BSA/AML documents require specific dollar amounts (e.g., '$10,000' not 'various amounts')."
+link: "https://bsaaml.ffiec.gov/manual/Introduction/01"
+level: error
+ignorecase: true
+tokens:
+  - various amounts
+  - undisclosed amount
+  - unspecified amount
+  - unknown amount
+  - certain amount
+  - some amount
+  - an amount
+  - several amounts
+  - numerous transactions of varying
+  - multiple amounts

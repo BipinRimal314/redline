@@ -1,0 +1,23 @@
+extends: existence
+message: "SAR narratives must not reference '%s'. FinCEN prohibits disclosure of investigation techniques, confidential sources, or the existence of the SAR itself in the narrative."
+link: "https://www.fincen.gov/resources/statutes-and-regulations"
+level: error
+ignorecase: true
+tokens:
+  - undercover investigation
+  - confidential informant
+  - confidential source
+  - surveillance operation
+  - wiretap
+  - law enforcement request
+  - law enforcement advised
+  - the SAR was filed
+  - this SAR
+  - filing this report
+  - we are filing
+  - we reported to FinCEN
+  - notified law enforcement
+  - tipped off
+  - our investigation revealed
+  - intelligence gathering
+  - covert operation

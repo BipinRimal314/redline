@@ -1,0 +1,43 @@
+regulation:
+  id: "BSA-SAR"
+  name: "Suspicious Activity Report Narrative Requirements"
+  authority: "FinCEN"
+  cfr_reference: "31 CFR 1020.320"
+  document_types:
+    - sar-narrative
+  requirements:
+    - id: "SAR-01"
+      description: "Narrative must include specific dollar amounts, not vague references"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SpecificAmounts"
+    - id: "SAR-02"
+      description: "Narrative must not use prohibited vague language about transactions"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.ProhibitedLanguage"
+    - id: "SAR-03"
+      description: "Narrative must reference specific dates, not vague time references"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SpecificDates"
+    - id: "SAR-04"
+      description: "Narrative must identify the suspicious activity pattern"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sar_activity_pattern_adequacy"
+    - id: "SAR-05"
+      description: "Narrative must describe how the activity was detected"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "sar_detection_method"
+    - id: "SAR-06"
+      description: "Narrative must include the five W's (who, what, when, where, why)"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "sar_five_ws_coverage"
+    - id: "SAR-07"
+      description: "Narrative must not include investigation techniques or confidential sources"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SARConfidential"

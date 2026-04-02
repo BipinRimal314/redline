@@ -1,0 +1,29 @@
+regulation:
+  id: "BSA-AML-PROG"
+  name: "Anti-Money Laundering Program Requirements"
+  authority: "FinCEN"
+  cfr_reference: "31 CFR 1020.210"
+  document_types:
+    - compliance-policy
+    - aml-program
+  requirements:
+    - id: "AML-01"
+      description: "Program must include all five BSA/AML pillars: compliance officer, internal controls, independent testing, training, and CIP"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.RequiredProgramElements"
+    - id: "AML-02"
+      description: "Program must not use prohibited vague language"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.ProhibitedLanguage"
+    - id: "AML-03"
+      description: "Program must describe risk assessment methodology"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "aml_risk_assessment_adequacy"
+    - id: "AML-04"
+      description: "Program must address high-risk customers and geographies"
+      severity: warning
+      check_type: ai
+      ai_prompt_key: "aml_high_risk_coverage"

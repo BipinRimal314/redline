@@ -1,0 +1,21 @@
+extends: existence
+message: "Prohibited vague language in BSA/AML documentation: '%s'. Use specific, quantifiable terms. FinCEN requires precise descriptions in compliance documents."
+link: "https://bsaaml.ffiec.gov/manual/Introduction/01"
+level: error
+ignorecase: true
+tokens:
+  - large amount
+  - significant sum
+  - substantial funds
+  - considerable amount
+  - sizeable transaction
+  - huge sum
+  - enormous amount
+  - massive transfer
+  - large sum of money
+  - big deposit
+  - lots of money
+  - a bunch of cash
+  - a great deal of money
+  - tons of cash
+  - plenty of funds
