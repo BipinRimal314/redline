@@ -1,0 +1,21 @@
+extends: existence
+message: "Inadequate transfer safeguard language: '%s'. GDPR Articles 44-49 require that international data transfers are protected by specific mechanisms (adequacy decisions, Standard Contractual Clauses, Binding Corporate Rules, or explicit derogations). Identify the specific safeguard used."
+link: "https://gdpr-info.eu/art-44-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - data may be transferred internationally
+  - stored in various locations
+  - processed globally
+  - transferred to third countries
+  - data may be sent overseas
+  - transferred outside the EEA
+  - processed in other jurisdictions
+  - stored in multiple regions
+  - transferred across borders
+  - data may reside outside
+  - hosted in various countries
+  - processed in different territories
+  - transferred to other countries
+  - shared with international partners
+  - moved to external servers

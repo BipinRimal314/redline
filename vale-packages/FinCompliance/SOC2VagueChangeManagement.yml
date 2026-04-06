@@ -1,0 +1,10 @@
+extends: existence
+message: "Vague change management procedure: '%s'. SOC2 CC8.1 requires change management with named approvers, defined testing criteria, and explicit documentation requirements."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - approved changes
+  - authorized modifications
+  - tested as appropriate
+  - documented as needed

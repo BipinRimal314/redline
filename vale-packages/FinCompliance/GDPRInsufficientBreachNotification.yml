@@ -1,0 +1,21 @@
+extends: existence
+message: "Insufficient breach notification language: '%s'. GDPR Article 33 requires supervisory authority notification within 72 hours, and Article 34 requires data subject notification without undue delay for high-risk breaches. Specify the 72-hour timeline and notification procedures explicitly."
+link: "https://gdpr-info.eu/art-33-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - notify affected parties
+  - inform as soon as possible
+  - communicate without undue delay
+  - report breaches promptly
+  - notify in a timely manner
+  - inform within reasonable time
+  - communicate as quickly as possible
+  - report without unnecessary delay
+  - notify at the earliest opportunity
+  - inform affected individuals promptly
+  - communicate breaches expeditiously
+  - report as soon as practicable
+  - notify when reasonably possible
+  - inform in due course
+  - communicate at earliest convenience

@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague legal basis: '%s'. GDPR Article 6 requires a specific, identified legal basis for each processing activity. Replace with explicit reference to the applicable lawful basis (consent, contract, legal obligation, vital interests, public task, or specified legitimate interest)."
+link: "https://gdpr-info.eu/art-6-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - legitimate interest without
+  - consent where applicable
+  - as permitted by law
+  - appropriate legal basis
+  - lawful basis as appropriate
+  - valid legal grounds
+  - suitable legal basis
+  - legal basis where required
+  - legitimate business purposes
+  - permitted under applicable law
+  - various legal bases
+  - one or more legal bases
+  - legal grounds as necessary
+  - justified legal basis
+  - applicable legal grounds

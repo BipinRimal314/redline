@@ -1,0 +1,21 @@
+extends: existence
+message: "Undefined retention period: '%s'. GDPR Article 5(1)(e) and Article 13(2)(a) require specific data retention periods or clear criteria for determining them. Replace with concrete timeframes or objectively determinable criteria."
+link: "https://gdpr-info.eu/art-5-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - retained as long as necessary
+  - kept for a reasonable period
+  - stored until no longer needed
+  - data retention as appropriate
+  - retained in accordance with our policy
+  - retained for as long as needed
+  - stored for a reasonable time
+  - kept as long as required
+  - retained for the appropriate period
+  - held for a suitable duration
+  - stored for an appropriate period
+  - retained until further notice
+  - kept for a necessary period
+  - stored as long as appropriate
+  - retained for business purposes

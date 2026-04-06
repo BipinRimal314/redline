@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing or vague DPIA reference: '%s'. GDPR Article 35 requires a formal Data Protection Impact Assessment for high-risk processing. Reference the specific DPIA methodology, outcomes, and mitigating measures rather than generic privacy review language."
+link: "https://gdpr-info.eu/art-35-gdpr/"
+level: warning
+ignorecase: true
+tokens:
+  - risk assessment conducted
+  - privacy impact considered
+  - data protection reviewed
+  - privacy risks evaluated
+  - impact assessment performed
+  - privacy review completed
+  - data risks analyzed
+  - protection measures assessed
+  - privacy assessment undertaken
+  - risk evaluation carried out
+  - data impact reviewed
+  - privacy considerations addressed
+  - protection impact evaluated
+  - risk analysis performed
+  - privacy implications assessed

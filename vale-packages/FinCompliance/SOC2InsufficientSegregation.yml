@@ -1,0 +1,9 @@
+extends: existence
+message: "Insufficient segregation of duties: '%s'. SOC2 CC5.1 and CC6.3 require mandatory segregation of duties for critical functions, not conditional or discretionary separation."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - dual control when practical
+  - segregation where feasible
+  - separation of duties as appropriate

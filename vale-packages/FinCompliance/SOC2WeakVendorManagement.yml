@@ -1,0 +1,10 @@
+extends: existence
+message: "Weak vendor management language: '%s'. SOC2 CC9.2 requires documented vendor assessment criteria, defined due diligence procedures, and measurable evaluation standards."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: warning
+ignorecase: true
+tokens:
+  - trusted vendors
+  - reputable third parties
+  - appropriate due diligence
+  - satisfactory vendor assessment

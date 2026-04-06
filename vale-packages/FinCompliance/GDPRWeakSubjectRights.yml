@@ -1,0 +1,21 @@
+extends: existence
+message: "Weak data subject rights language: '%s'. GDPR Articles 15-22 grant enforceable rights with a mandatory 30-day response period (extendable to 90 days with notice). Replace vague language with specific processes, timelines, and conditions."
+link: "https://gdpr-info.eu/art-15-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - we will endeavor to respond
+  - reasonable efforts to comply
+  - requests may be denied
+  - subject to verification
+  - within a reasonable timeframe
+  - we will try to accommodate
+  - best efforts to fulfill
+  - requests handled on a case-by-case basis
+  - may take reasonable steps
+  - we aim to respond promptly
+  - requests considered at our discretion
+  - response within a reasonable time
+  - we will attempt to process
+  - handled in due course
+  - addressed when practicable

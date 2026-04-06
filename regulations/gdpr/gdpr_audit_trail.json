@@ -1,0 +1,148 @@
+{
+  "regulation": "GDPR",
+  "full_name": "General Data Protection Regulation (EU) 2016/679",
+  "authority": "European Union",
+  "effective_date": "2018-05-25",
+  "audit_mappings": [
+    {
+      "rule_id": "GDPR-01",
+      "vale_rule": "FinCompliance.GDPRVagueLegalBasis",
+      "vale_file": "vale-packages/FinCompliance/GDPRVagueLegalBasis.yml",
+      "gdpr_articles": ["Article 6"],
+      "article_title": "Lawfulness of processing",
+      "article_url": "https://gdpr-info.eu/art-6-gdpr/",
+      "requirement_summary": "Each processing activity must identify a specific lawful basis from the six grounds enumerated in Article 6(1). Vague or conditional references to legal grounds do not satisfy the accountability principle.",
+      "severity": "error",
+      "enforcement_examples": [
+        "CNIL fined Google EUR 50 million (2019) for lack of valid legal basis and insufficient transparency",
+        "ICO fined British Airways GBP 20 million (2020) for insufficient lawful basis documentation"
+      ]
+    },
+    {
+      "rule_id": "GDPR-02",
+      "vale_rule": "FinCompliance.GDPRWeakConsentLanguage",
+      "vale_file": "vale-packages/FinCompliance/GDPRWeakConsentLanguage.yml",
+      "gdpr_articles": ["Article 7", "Recital 32"],
+      "article_title": "Conditions for consent",
+      "article_url": "https://gdpr-info.eu/art-7-gdpr/",
+      "requirement_summary": "Consent must be freely given, specific, informed, and unambiguous through a clear affirmative action (Recital 32). Pre-ticked boxes, silence, or inactivity do not constitute consent. Bundling consent with terms of service is invalid.",
+      "severity": "error",
+      "enforcement_examples": [
+        "Planet49 (CJEU C-673/17, 2019) ruled pre-checked boxes invalid for consent",
+        "Austrian DPA fined a company for bundled consent in terms of service"
+      ]
+    },
+    {
+      "rule_id": "GDPR-03",
+      "vale_rule": "FinCompliance.GDPRMissingRetention",
+      "vale_file": "vale-packages/FinCompliance/GDPRMissingRetention.yml",
+      "gdpr_articles": ["Article 5(1)(e)", "Article 13(2)(a)"],
+      "article_title": "Storage limitation",
+      "article_url": "https://gdpr-info.eu/art-5-gdpr/",
+      "requirement_summary": "Personal data must be kept in identifiable form for no longer than necessary. Privacy notices must state either the specific retention period or the criteria used to determine it. Open-ended phrases like 'as long as necessary' fail both requirements.",
+      "severity": "error",
+      "enforcement_examples": [
+        "DPC (Ireland) fined WhatsApp EUR 225 million (2021) partly for inadequate retention disclosures",
+        "CNIL fined Carrefour EUR 2.25 million (2020) for excessive and undefined retention periods"
+      ]
+    },
+    {
+      "rule_id": "GDPR-04",
+      "vale_rule": "FinCompliance.GDPRVagueDataTransfer",
+      "vale_file": "vale-packages/FinCompliance/GDPRVagueDataTransfer.yml",
+      "gdpr_articles": ["Article 44", "Article 45", "Article 46", "Article 47", "Article 49"],
+      "article_title": "General principle for transfers to third countries",
+      "article_url": "https://gdpr-info.eu/art-44-gdpr/",
+      "requirement_summary": "Transfers to third countries require a specific legal mechanism: adequacy decision (Art 45), appropriate safeguards such as SCCs or BCRs (Art 46-47), or explicit derogations (Art 49). Merely acknowledging that data 'may be transferred internationally' is insufficient.",
+      "severity": "error",
+      "enforcement_examples": [
+        "Schrems II (CJEU C-311/18, 2020) invalidated Privacy Shield, requiring SCCs with supplementary measures",
+        "DPC fined Meta EUR 1.2 billion (2023) for US transfers without adequate safeguards"
+      ]
+    },
+    {
+      "rule_id": "GDPR-05",
+      "vale_rule": "FinCompliance.GDPRWeakSubjectRights",
+      "vale_file": "vale-packages/FinCompliance/GDPRWeakSubjectRights.yml",
+      "gdpr_articles": ["Article 12", "Article 15", "Article 16", "Article 17", "Article 18", "Article 20", "Article 21", "Article 22"],
+      "article_title": "Rights of the data subject",
+      "article_url": "https://gdpr-info.eu/art-15-gdpr/",
+      "requirement_summary": "Controllers must respond to data subject requests within one month (Article 12(3)), extendable by two further months with notification. Responses must be provided free of charge. Refusals must state reasons and inform of the right to complain to a supervisory authority.",
+      "severity": "error",
+      "enforcement_examples": [
+        "AEPD (Spain) fined CaixaBank EUR 6 million (2021) for inadequate data subject rights procedures",
+        "Swedish DPA fined Google SEK 75 million (2020) for failing to comply with erasure requests"
+      ]
+    },
+    {
+      "rule_id": "GDPR-06",
+      "vale_rule": "FinCompliance.GDPRMissingDPIA",
+      "vale_file": "vale-packages/FinCompliance/GDPRMissingDPIA.yml",
+      "gdpr_articles": ["Article 35", "Article 36"],
+      "article_title": "Data protection impact assessment",
+      "article_url": "https://gdpr-info.eu/art-35-gdpr/",
+      "requirement_summary": "A DPIA is mandatory when processing is likely to result in a high risk to individuals' rights and freedoms, including systematic profiling, large-scale processing of special categories, and public area monitoring. The DPIA must contain a systematic description, necessity assessment, risk evaluation, and mitigating measures.",
+      "severity": "warning",
+      "enforcement_examples": [
+        "CNIL enforcement notice to a health data processor for missing DPIA on large-scale patient data processing",
+        "Hamburg DPA required DPIA for employee monitoring systems"
+      ]
+    },
+    {
+      "rule_id": "GDPR-07",
+      "vale_rule": "FinCompliance.GDPRVagueProcessorObligations",
+      "vale_file": "vale-packages/FinCompliance/GDPRVagueProcessorObligations.yml",
+      "gdpr_articles": ["Article 28"],
+      "article_title": "Processor",
+      "article_url": "https://gdpr-info.eu/art-28-gdpr/",
+      "requirement_summary": "Processing by a processor must be governed by a binding contract (Article 28(3)) that sets out subject-matter, duration, nature, purpose, type of data, categories of data subjects, and controller obligations. The contract must use mandatory language and include specific provisions for sub-processing, audits, and data deletion/return.",
+      "severity": "error",
+      "enforcement_examples": [
+        "Danish DPA reprimanded a municipality for inadequate processor agreements lacking required contractual terms",
+        "Belgian DPA fined a company for processor agreements using 'should' instead of mandatory terms"
+      ]
+    },
+    {
+      "rule_id": "GDPR-08",
+      "vale_rule": "FinCompliance.GDPRInsufficientBreachNotification",
+      "vale_file": "vale-packages/FinCompliance/GDPRInsufficientBreachNotification.yml",
+      "gdpr_articles": ["Article 33", "Article 34"],
+      "article_title": "Notification of a personal data breach",
+      "article_url": "https://gdpr-info.eu/art-33-gdpr/",
+      "requirement_summary": "Controllers must notify the supervisory authority within 72 hours of becoming aware of a personal data breach (Article 33(1)), unless unlikely to result in risk. High-risk breaches must also be communicated to affected data subjects without undue delay (Article 34). Notifications must include nature of breach, DPO contact, likely consequences, and mitigation measures.",
+      "severity": "error",
+      "enforcement_examples": [
+        "ICO fined Marriott GBP 18.4 million (2020) partly for delayed breach notification",
+        "AEPD fined CaixaBank for failing to notify the supervisory authority within the 72-hour window"
+      ]
+    },
+    {
+      "rule_id": "GDPR-09",
+      "vale_rule": "FinCompliance.GDPRWeakPrivacyByDesign",
+      "vale_file": "vale-packages/FinCompliance/GDPRWeakPrivacyByDesign.yml",
+      "gdpr_articles": ["Article 25"],
+      "article_title": "Data protection by design and by default",
+      "article_url": "https://gdpr-info.eu/art-25-gdpr/",
+      "requirement_summary": "Controllers must implement appropriate technical and organizational measures (such as pseudonymization and data minimization) both at the time of determining processing means and at the time of processing itself. Privacy by default means only data necessary for each specific purpose is processed. Treating privacy as conditional or aspirational ('where feasible') violates this obligation.",
+      "severity": "warning",
+      "enforcement_examples": [
+        "EDPB Guidelines 4/2019 on Data Protection by Design and by Default",
+        "Danish DPA fined a taxi company for failing to implement data minimization by design"
+      ]
+    },
+    {
+      "rule_id": "GDPR-10",
+      "vale_rule": "FinCompliance.GDPRMissingDPO",
+      "vale_file": "vale-packages/FinCompliance/GDPRMissingDPO.yml",
+      "gdpr_articles": ["Article 37", "Article 38", "Article 39"],
+      "article_title": "Designation of the Data Protection Officer",
+      "article_url": "https://gdpr-info.eu/art-37-gdpr/",
+      "requirement_summary": "A DPO must be designated when processing is carried out by a public authority, when core activities require regular and systematic monitoring at scale, or when core activities involve large-scale processing of special categories. The DPO must have expert knowledge, operate independently (Article 38(3)), report to the highest management level, and not be dismissed for performing their tasks.",
+      "severity": "warning",
+      "enforcement_examples": [
+        "Belgian DPA fined a company EUR 50,000 for conflict of interest in DPO appointment (DPO also headed IT)",
+        "Romanian DPA fined a bank for not designating a DPO despite large-scale data processing"
+      ]
+    }
+  ]
+}

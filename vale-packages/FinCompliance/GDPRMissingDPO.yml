@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing or inadequate DPO reference: '%s'. GDPR Articles 37-39 require the designation of a Data Protection Officer with specified qualifications, authority, independence, and direct reporting to the highest management level. Generic privacy contacts do not satisfy DPO requirements."
+link: "https://gdpr-info.eu/art-37-gdpr/"
+level: warning
+ignorecase: true
+tokens:
+  - privacy officer
+  - data protection contact
+  - privacy contact person
+  - data privacy representative
+  - privacy team lead
+  - data protection coordinator
+  - privacy point of contact
+  - data handling contact
+  - privacy liaison
+  - data protection manager
+  - privacy compliance contact
+  - data governance lead
+  - privacy administrator
+  - data protection representative
+  - privacy focal point

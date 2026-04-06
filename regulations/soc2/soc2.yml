@@ -1,0 +1,73 @@
+regulation:
+  id: "SOC2-TSC"
+  name: "SOC 2 Trust Services Criteria"
+  authority: "AICPA"
+  cfr_reference: "AICPA TSP Section 100 (2017, 2022 revisions)"
+  document_types:
+    - compliance-policy
+    - security-policy
+    - access-control-policy
+    - incident-response-plan
+    - vendor-management-policy
+    - privacy-policy
+  requirements:
+    - id: "SOC2-01"
+      description: "Access control descriptions must use specific, measurable language with defined authorization criteria"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2VagueAccessControls"
+      regulation_paragraph: "CC6.1"
+    - id: "SOC2-02"
+      description: "Incident response plans must define response timeframes in specific hours or minutes"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2WeakIncidentResponse"
+      regulation_paragraph: "CC7.4"
+    - id: "SOC2-03"
+      description: "Monitoring activities must specify explicit frequencies rather than vague intervals"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2UndefinedMonitoring"
+      regulation_paragraph: "CC4.1, CC7.2"
+    - id: "SOC2-04"
+      description: "Risk assessments must include defined methodologies and documented scoring criteria"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2MissingRiskCriteria"
+      regulation_paragraph: "CC3.2"
+    - id: "SOC2-05"
+      description: "Change management procedures must name specific approvers and define testing criteria"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2VagueChangeManagement"
+      regulation_paragraph: "CC8.1"
+    - id: "SOC2-06"
+      description: "Vendor management policies must include documented assessment criteria and due diligence procedures"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2WeakVendorManagement"
+      regulation_paragraph: "CC9.2"
+    - id: "SOC2-07"
+      description: "Backup procedures must define explicit schedules, retention periods, and recovery testing frequencies"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2UndefinedBackupProcedures"
+      regulation_paragraph: "A1.2"
+    - id: "SOC2-08"
+      description: "Data classification references must be backed by a formal classification scheme with defined categories"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2VagueDataClassification"
+      regulation_paragraph: "C1.1"
+    - id: "SOC2-09"
+      description: "Privacy notices must use definitive language about data practices, not hedging or conditional statements"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2WeakPrivacyNotice"
+      regulation_paragraph: "P1.1"
+    - id: "SOC2-10"
+      description: "Segregation of duties must be mandatory for critical functions, not conditional or discretionary"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOC2InsufficientSegregation"
+      regulation_paragraph: "CC5.1, CC6.3"

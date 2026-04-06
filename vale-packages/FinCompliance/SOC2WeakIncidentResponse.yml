@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak incident response timeline: '%s'. SOC2 CC7.4 requires defined response timeframes with specific hours or minutes, not open-ended commitments."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - as soon as practical
+  - when possible
+  - in a timely fashion
+  - at the earliest convenience
+  - without undue delay

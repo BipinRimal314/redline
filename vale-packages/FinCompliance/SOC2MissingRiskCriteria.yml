@@ -1,0 +1,11 @@
+extends: existence
+message: "Missing risk assessment criteria: '%s'. SOC2 CC3.2 requires risk assessments with defined methodologies, scoring criteria, and documented thresholds for each risk level."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - low risk
+  - medium risk
+  - high risk
+  - risk-based approach
+  - appropriate risk level

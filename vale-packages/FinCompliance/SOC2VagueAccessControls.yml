@@ -1,0 +1,12 @@
+extends: existence
+message: "Vague access control language: '%s'. SOC2 CC6.1 requires specific, documented logical and physical access controls with defined authorization criteria, not subjective qualifiers."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - appropriate access
+  - reasonable access controls
+  - adequate authentication
+  - suitable security measures
+  - sufficient access restrictions
+  - proper access management

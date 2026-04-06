@@ -1,0 +1,21 @@
+extends: existence
+message: "Privacy-as-afterthought language: '%s'. GDPR Article 25 requires data protection by design and by default, not as an optional or conditional consideration. Replace with commitments to specific technical and organizational measures integrated from the design stage."
+link: "https://gdpr-info.eu/art-25-gdpr/"
+level: warning
+ignorecase: true
+tokens:
+  - privacy will be considered
+  - security measures implemented as appropriate
+  - privacy controls where feasible
+  - data minimization where practical
+  - privacy where reasonably possible
+  - protection measures as appropriate
+  - privacy taken into account
+  - security applied where feasible
+  - data protection where practical
+  - privacy addressed as needed
+  - protection implemented where possible
+  - privacy considered during development
+  - security measures as deemed necessary
+  - data protection where appropriate
+  - privacy integrated where feasible

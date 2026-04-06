@@ -1,0 +1,21 @@
+extends: existence
+message: "Weak processor obligation language: '%s'. GDPR Article 28 requires binding contractual terms using mandatory language ('shall', 'must'). Vague expectations ('should', 'expected to') do not satisfy Article 28 requirements for processor agreements."
+link: "https://gdpr-info.eu/art-28-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - processors will maintain appropriate security
+  - third parties must comply
+  - vendors are expected to
+  - service providers should
+  - subprocessors will endeavor to
+  - partners are encouraged to
+  - processors should implement
+  - vendors will take reasonable steps
+  - third parties are expected
+  - service providers will attempt
+  - processors may implement
+  - vendors should maintain
+  - subprocessors are encouraged
+  - partners should comply with
+  - processors will use reasonable efforts

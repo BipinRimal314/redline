@@ -1,0 +1,10 @@
+extends: existence
+message: "Weak privacy notice language: '%s'. SOC2 P1.1 requires clear, definitive privacy commitments. Hedging language undermines the notice and may not meet Trust Services Criteria for privacy."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: warning
+ignorecase: true
+tokens:
+  - may share your information
+  - might collect data
+  - could use your information
+  - reserves the right to

@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-04-06T00:00:00+00:00",
+  "model_used": "manual-expert-review",
+  "source_file": "regulations-source/soc2-trust-services-criteria.md",
+  "regulation_id": "SOC2-TSC",
+  "rule_count": 10,
+  "mappings": [
+    {
+      "rule_id": "SOC2-01",
+      "vale_rule": "FinCompliance.SOC2VagueAccessControls",
+      "regulation_paragraph": "CC6.1",
+      "criteria_name": "Logical and Physical Access Controls",
+      "severity": "error",
+      "rationale": "CC6.1 requires the entity to implement logical access security software, infrastructure, and architectures over protected information assets. Vague qualifiers like 'appropriate' or 'adequate' fail to establish testable control criteria."
+    },
+    {
+      "rule_id": "SOC2-02",
+      "vale_rule": "FinCompliance.SOC2WeakIncidentResponse",
+      "regulation_paragraph": "CC7.4",
+      "criteria_name": "Response to Identified Security Incidents",
+      "severity": "error",
+      "rationale": "CC7.4 requires the entity to respond to identified security incidents by executing a defined incident response program. Open-ended timelines like 'as soon as practical' do not constitute a defined program."
+    },
+    {
+      "rule_id": "SOC2-03",
+      "vale_rule": "FinCompliance.SOC2UndefinedMonitoring",
+      "regulation_paragraph": "CC4.1, CC7.2",
+      "criteria_name": "Monitoring Activities / System Operation Monitoring",
+      "severity": "error",
+      "rationale": "CC4.1 requires ongoing monitoring of internal controls, and CC7.2 requires monitoring system components for anomalies. Without explicit frequencies, monitoring cannot be verified as operating effectively."
+    },
+    {
+      "rule_id": "SOC2-04",
+      "vale_rule": "FinCompliance.SOC2MissingRiskCriteria",
+      "regulation_paragraph": "CC3.2",
+      "criteria_name": "Risk Assessment",
+      "severity": "error",
+      "rationale": "CC3.2 requires the entity to identify risks to the achievement of its objectives and analyze risks as a basis for determining how they should be managed. Undefined risk labels (low/medium/high) without scoring criteria make risk assessment non-reproducible."
+    },
+    {
+      "rule_id": "SOC2-05",
+      "vale_rule": "FinCompliance.SOC2VagueChangeManagement",
+      "regulation_paragraph": "CC8.1",
+      "criteria_name": "Change Management",
+      "severity": "error",
+      "rationale": "CC8.1 requires the entity to authorize, design, develop, configure, document, test, approve, and implement changes. Generic references to 'approved changes' without naming approvers or defining test criteria leave the control unverifiable."
+    },
+    {
+      "rule_id": "SOC2-06",
+      "vale_rule": "FinCompliance.SOC2WeakVendorManagement",
+      "regulation_paragraph": "CC9.2",
+      "criteria_name": "Vendor and Business Partner Risk Management",
+      "severity": "warning",
+      "rationale": "CC9.2 requires the entity to assess and manage risks associated with vendors and business partners. Subjective qualifiers like 'trusted' or 'reputable' do not constitute a documented assessment framework."
+    },
+    {
+      "rule_id": "SOC2-07",
+      "vale_rule": "FinCompliance.SOC2UndefinedBackupProcedures",
+      "regulation_paragraph": "A1.2",
+      "criteria_name": "Recovery of Infrastructure and Data",
+      "severity": "error",
+      "rationale": "A1.2 (Availability) requires the entity to provide for recovery of infrastructure and data to meet its objectives. Undefined backup schedules and untested recovery procedures cannot demonstrate recoverability."
+    },
+    {
+      "rule_id": "SOC2-08",
+      "vale_rule": "FinCompliance.SOC2VagueDataClassification",
+      "regulation_paragraph": "C1.1",
+      "criteria_name": "Confidentiality Classifications",
+      "severity": "warning",
+      "rationale": "C1.1 (Confidentiality) requires the entity to identify and maintain confidential information. Using terms like 'sensitive data' without a formal classification scheme means the organization cannot consistently identify what data requires protection."
+    },
+    {
+      "rule_id": "SOC2-09",
+      "vale_rule": "FinCompliance.SOC2WeakPrivacyNotice",
+      "regulation_paragraph": "P1.1",
+      "criteria_name": "Privacy Notice",
+      "severity": "warning",
+      "rationale": "P1.1 (Privacy) requires the entity to provide notice about its privacy practices. Hedging language ('may', 'might', 'could') undermines the notice by failing to make clear commitments about data handling."
+    },
+    {
+      "rule_id": "SOC2-10",
+      "vale_rule": "FinCompliance.SOC2InsufficientSegregation",
+      "regulation_paragraph": "CC5.1, CC6.3",
+      "criteria_name": "Segregation of Duties / Role-Based Access",
+      "severity": "error",
+      "rationale": "CC5.1 requires the entity to select and develop control activities that mitigate risks, and CC6.3 requires role-based access. Conditional segregation ('when practical', 'where feasible') creates exploitable gaps in the control environment."
+    }
+  ]
+}

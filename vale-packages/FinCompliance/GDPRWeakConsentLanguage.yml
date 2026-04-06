@@ -1,0 +1,21 @@
+extends: existence
+message: "Weak consent language: '%s'. GDPR Article 7 requires freely given, specific, informed, and unambiguous consent through a clear affirmative action. Pre-checked boxes, bundled consent, and implied consent do not meet GDPR requirements."
+link: "https://gdpr-info.eu/art-7-gdpr/"
+level: error
+ignorecase: true
+tokens:
+  - by using this service you agree
+  - continued use constitutes consent
+  - deemed to have consented
+  - opt-out at any time
+  - implied consent
+  - by accessing this site you consent
+  - your use indicates acceptance
+  - by continuing you agree
+  - consent is assumed
+  - presumed to consent
+  - automatically agree to
+  - deemed to consent
+  - by registering you consent
+  - consent unless you object
+  - passive consent

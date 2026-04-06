@@ -1,0 +1,9 @@
+extends: existence
+message: "Missing data classification scheme: '%s'. SOC2 C1.1 requires a formal data classification policy that defines each category with explicit handling, storage, and transmission requirements."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: warning
+ignorecase: true
+tokens:
+  - sensitive data
+  - confidential information
+  - restricted data

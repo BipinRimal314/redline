@@ -10,6 +10,7 @@ from rich.table import Table
 
 from redline import __version__
 from redline.config import load_config
+from redline.generator import RuleGenerator, write_rule_set
 from redline.registry import Registry
 from redline.report import generate_report
 from redline.runner import ValeRunner
@@ -245,6 +246,93 @@ ai:
 """
     )
     console.print(f"[green]Created {config_path}[/green]")
+
+
+@app.command()
+def generate(
+    source: Path = typer.Argument(..., help="Regulation text file (Markdown or plain text)"),
+    regulation_id: str = typer.Option(..., "--id", help="Regulation ID (e.g., SOC2, GDPR, HIPAA)"),
+    authority: str = typer.Option("", "--authority", help="Regulatory authority name"),
+    document_types: str = typer.Option(
+        "compliance-policy", "--doc-types", help="Comma-separated document types"
+    ),
+    model: str = typer.Option(
+        "claude-sonnet-4-20250514", "--model", help="LLM model for rule generation"
+    ),
+    dry_run: bool = typer.Option(
+        False, "--dry-run", help="Preview generated rules without writing files"
+    ),
+) -> None:
+    """Generate Vale rules from regulation text. LLM reads the regulation once; rules run deterministically forever."""
+    if not source.exists():
+        console.print(f"[red]Error:[/red] {source} does not exist")
+        raise typer.Exit(code=2)
+
+    regulation_text = source.read_text()
+    if len(regulation_text) < 100:
+        console.print("[red]Error:[/red] Regulation text is too short. Provide the full regulation text.")
+        raise typer.Exit(code=2)
+
+    console.print(f"[bold]Reading regulation:[/bold] {source.name} ({len(regulation_text):,} chars)")
+    console.print(f"[bold]Regulation ID:[/bold] {regulation_id}")
+    console.print(f"[bold]Model:[/bold] {model}")
+    console.print()
+
+    try:
+        gen = RuleGenerator(model=model)
+    except (ValueError, ImportError) as e:
+        console.print(f"[red]Error:[/red] {e}")
+        raise typer.Exit(code=2)
+
+    with console.status("Generating rules from regulation text..."):
+        rule_set = gen.generate(
+            regulation_text=regulation_text,
+            regulation_id=regulation_id,
+            authority=authority,
+            document_types=document_types.split(","),
+            source_file=str(source),
+        )
+
+    console.print(f"\n[green]Generated {len(rule_set.rules)} rules[/green]\n")
+
+    table = Table(title=f"Rules for {rule_set.regulation_name}")
+    table.add_column("File")
+    table.add_column("Requirement")
+    table.add_column("Paragraph")
+    table.add_column("Severity")
+    table.add_column("Tokens", justify="right")
+
+    for rule in rule_set.rules:
+        table.add_row(
+            rule.filename,
+            rule.requirement_id,
+            rule.regulation_paragraph,
+            rule.severity,
+            str(len(rule.vale_config.get("tokens", []))),
+        )
+
+    console.print(table)
+
+    if dry_run:
+        console.print("\n[yellow]Dry run — no files written.[/yellow]")
+        return
+
+    vale_dir = REPO_ROOT / "vale-packages" / "FinCompliance"
+    created = write_rule_set(rule_set, vale_dir, REGULATIONS_DIR)
+
+    console.print(f"\n[green]Written:[/green]")
+    for category, paths in created.items():
+        for p in paths:
+            console.print(f"  {category}: {p.relative_to(REPO_ROOT)}")
+
+    console.print(
+        f"\n[bold]Next steps:[/bold]\n"
+        f"  1. Review generated rules in vale-packages/FinCompliance/\n"
+        f"  2. Review regulation YAML in regulations/\n"
+        f"  3. Check audit trail for rule-to-paragraph mappings\n"
+        f"  4. Test: redline lint <your-doc> to verify rules work\n"
+        f"  5. Commit when satisfied"
+    )
 
 
 @app.callback()

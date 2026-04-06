@@ -1,0 +1,13 @@
+extends: existence
+message: "Undefined monitoring frequency: '%s'. SOC2 CC4.1 and CC7.2 require monitoring activities with explicit frequencies (e.g., daily, weekly, every 4 hours), not vague intervals."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+scope: paragraph
+tokens:
+  - regular monitoring without
+  - periodic review of controls
+  - routine checks are performed
+  - monitoring is conducted periodically
+  - reviewed as deemed necessary
+  - monitored on a regular basis

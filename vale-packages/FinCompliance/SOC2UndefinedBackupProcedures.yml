@@ -1,0 +1,10 @@
+extends: existence
+message: "Undefined backup procedure: '%s'. SOC2 A1.2 requires backup procedures with explicit schedules, defined retention periods, and documented recovery testing frequencies."
+link: "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria"
+level: error
+ignorecase: true
+tokens:
+  - regular backups
+  - periodic backup testing
+  - appropriate backup procedures
+  - backup as needed
