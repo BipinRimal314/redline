@@ -86,16 +86,16 @@ Each rule set includes:
 
 ### Tier 2: Strengthens Pitch (parallel with outreach)
 
-- [ ] **HIPAA + ISO 27001 rule sets** — shows the approach generalizes
-- [ ] **Buyer list** — 10-15 companies with contacts
-- [ ] **Outreach emails** — templates per buyer type
+- [x] **HIPAA + ISO 27001 rule sets** — 10 rules each, total 65 rules across 8 domains (2026-04-06)
+- [x] **Buyer list** — 9 companies across 3 categories (sale/buyer-list.md, 2026-04-06)
+- [x] **Outreach emails** — 3 templates + bundle pitch (sale/outreach-emails.md, 2026-04-06)
 - [ ] **Demo script** — 2-minute walkthrough: lint a doc, see flags with regulation traceability
 - [ ] **Cloud version working demo** — Docker Compose boots, scan flow works end-to-end
 - [ ] **PyPI publish** — `pip install redline-lint` or similar
 
 ### Tier 3: Nice to Have
 
-- [ ] **Landing page** (GitHub Pages)
+- [x] **Landing page** — docs/index.html created (2026-04-06). Enable GitHub Pages in repo settings -> docs/ folder
 - [ ] **Rule set versioning system** — git-tagged releases per regulation
 - [ ] **Stripe billing** in cloud version
 - [ ] **Demo video**

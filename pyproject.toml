@@ -4,22 +4,25 @@ build-backend = "hatchling.build"
 
 [project]
 name = "redline-compliance"
-version = "0.1.0"
-description = "Compliance documentation linter for financial regulations"
+version = "0.2.0"
+description = "Deterministic compliance document linter with regulation-traceable rules. 65 rules across SOC2, GDPR, HIPAA, ISO 27001, BSA/AML, SEC, FINRA, SOX."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 authors = [
     { name = "Bipin Rimal", email = "bipinrimal314@gmail.com" }
 ]
-keywords = ["compliance", "linting", "bsa", "aml", "sec", "finra", "sox", "vale"]
+keywords = ["compliance", "linting", "soc2", "gdpr", "hipaa", "iso27001", "bsa", "aml", "sec", "finra", "sox", "vale", "regtech"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Legal Industry",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Office/Business :: Financial",
+    "Topic :: Text Processing :: Linguistic",
 ]
 dependencies = [
     "typer>=0.9.0",
