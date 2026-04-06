@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague minimum necessary language: '%s'. HIPAA §164.502(b) and §164.514(d) require documented policies that define specific criteria for limiting PHI access, use, and disclosure to the minimum necessary, not subjective determinations."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - minimum necessary information
+  - only necessary data
+  - limited to what is needed
+  - reasonable efforts to limit
+  - appropriate amount of information

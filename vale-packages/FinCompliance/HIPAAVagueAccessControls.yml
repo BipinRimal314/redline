@@ -1,0 +1,12 @@
+extends: existence
+message: "Vague access control language: '%s'. HIPAA §164.312(a) requires specific, documented access controls with unique user identification and emergency access procedures, not subjective qualifiers."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - appropriate access controls
+  - reasonable access restrictions
+  - adequate authentication measures
+  - suitable access management
+  - proper access safeguards
+  - sufficient identity verification

@@ -1,0 +1,71 @@
+regulation:
+  id: "ISO-27001"
+  name: "ISO/IEC 27001:2022 Information Security Management System"
+  authority: "ISO/IEC"
+  cfr_reference: "ISO/IEC 27001:2022"
+  document_types:
+    - security-policy
+    - risk-assessment
+    - statement-of-applicability
+    - compliance-policy
+  requirements:
+    - id: "ISO27001-01"
+      description: "Risk treatment plans must specify named controls from Annex A with explicit risk owners and implementation timelines"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001VagueRiskTreatment"
+      regulation_paragraph: "Clause 6.1.3"
+    - id: "ISO27001-02"
+      description: "Asset management documentation must include a classified inventory with defined owners and handling procedures"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001WeakAssetManagement"
+      regulation_paragraph: "A.8"
+    - id: "ISO27001-03"
+      description: "Access control policies must define explicit authorization criteria, role-based permissions, and provisioning procedures"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001UndefinedAccessPolicy"
+      regulation_paragraph: "A.9.1"
+    - id: "ISO27001-04"
+      description: "Cryptographic controls must name specific algorithms, key lengths, and key lifecycle procedures"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001VagueCryptographyPolicy"
+      regulation_paragraph: "A.10"
+    - id: "ISO27001-05"
+      description: "Supplier security requirements must include documented assessment criteria and contractual obligations"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001WeakSupplierSecurity"
+      regulation_paragraph: "A.15"
+    - id: "ISO27001-06"
+      description: "Incident management procedures must define reporting timelines, escalation paths, and categorized severity levels"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001MissingIncidentManagement"
+      regulation_paragraph: "A.16"
+    - id: "ISO27001-07"
+      description: "Business continuity plans must define RTOs, RPOs, recovery procedures, and testing schedules"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001VagueBCP"
+      regulation_paragraph: "A.17"
+    - id: "ISO27001-08"
+      description: "Compliance monitoring must specify review frequencies, scope, named reviewers, and corrective action timelines"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001WeakComplianceMonitoring"
+      regulation_paragraph: "A.18"
+    - id: "ISO27001-09"
+      description: "Awareness programs must define training content, delivery schedules, competency criteria, and attendance tracking"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001UndefinedAwareness"
+      regulation_paragraph: "Clause 7.3, A.7.2.2"
+    - id: "ISO27001-10"
+      description: "Statement of Applicability must list each Annex A control with justified inclusion or exclusion rationale and implementation status"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.ISO27001VagueSOA"
+      regulation_paragraph: "Clause 6.1.3(d)"

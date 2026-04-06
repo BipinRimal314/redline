@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague disposal language: '%s'. HIPAA §164.310(d)(2)(i-ii) requires specific documented procedures for final disposal of ePHI and the hardware or media on which it is stored, including named sanitization methods and verification steps."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - properly disposed of
+  - disposed as appropriate
+  - secure disposal methods
+  - appropriate media sanitization
+  - disposal in accordance with policy

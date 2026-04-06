@@ -1,0 +1,11 @@
+extends: existence
+message: "Missing incident management specifics: '%s'. ISO 27001 Annex A.16 requires defined incident response procedures with explicit reporting timelines, named escalation paths, categorized severity levels, and documented response actions."
+link: "https://www.iso.org/standard/27001"
+level: warning
+ignorecase: true
+tokens:
+  - incidents handled appropriately
+  - reported in a timely manner
+  - managed as deemed necessary
+  - incident response when needed
+  - appropriate incident procedures

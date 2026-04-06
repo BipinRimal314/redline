@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak asset management language: '%s'. ISO 27001 Annex A.8 requires a documented asset inventory with defined classification levels, assigned owners, and specific handling procedures for each classification."
+link: "https://www.iso.org/standard/27001"
+level: warning
+ignorecase: true
+tokens:
+  - appropriate asset classification
+  - assets managed as needed
+  - suitable asset controls
+  - reasonable asset protection
+  - proper asset handling

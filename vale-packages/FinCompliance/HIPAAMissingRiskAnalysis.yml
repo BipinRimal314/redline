@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague risk analysis language: '%s'. HIPAA §164.308(a)(1)(ii)(A) requires an accurate and thorough assessment of potential risks and vulnerabilities to ePHI with documented methodology, not open-ended review commitments."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - periodic risk assessment
+  - risk analysis conducted
+  - regular security review
+  - appropriate risk evaluation
+  - risk assessment as needed

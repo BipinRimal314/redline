@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague contingency plan language: '%s'. HIPAA §164.308(a)(7) requires documented data backup, disaster recovery, and emergency mode operation plans with specific procedures, testing schedules, and recovery time objectives."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - appropriate contingency measures
+  - reasonable disaster recovery
+  - adequate backup procedures
+  - contingency plans as needed
+  - suitable emergency procedures

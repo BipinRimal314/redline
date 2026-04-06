@@ -1,0 +1,71 @@
+regulation:
+  id: "HIPAA-SEC"
+  name: "HIPAA Security Rule"
+  authority: "HHS Office for Civil Rights"
+  cfr_reference: "45 CFR Part 164, Subpart C"
+  document_types:
+    - compliance-policy
+    - security-policy
+    - risk-assessment
+    - business-associate-agreement
+  requirements:
+    - id: "HIPAA-01"
+      description: "Access control descriptions must specify unique user identification, emergency access procedures, and automatic logoff mechanisms"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAVagueAccessControls"
+      regulation_paragraph: "§164.312(a)"
+    - id: "HIPAA-02"
+      description: "Encryption specifications must name standards and cover ePHI at rest and in transit"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAWeakEncryption"
+      regulation_paragraph: "§164.312(a)(2)(iv), §164.312(e)(2)(ii)"
+    - id: "HIPAA-03"
+      description: "Risk analysis must document methodology, identified threats, and vulnerability assessments for all ePHI"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAMissingRiskAnalysis"
+      regulation_paragraph: "§164.308(a)(1)(ii)(A)"
+    - id: "HIPAA-04"
+      description: "Business Associate Agreements must include specific safeguard requirements, breach notification timelines, and subcontractor flow-down obligations"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAVagueBAALanguage"
+      regulation_paragraph: "§164.308(b), §164.314(a)"
+    - id: "HIPAA-05"
+      description: "Incident response procedures must define specific identification, response, mitigation, and documentation steps with defined timelines"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAWeakIncidentResponse"
+      regulation_paragraph: "§164.308(a)(6)"
+    - id: "HIPAA-06"
+      description: "Security awareness and training programs must specify content topics, delivery frequency, and completion tracking requirements"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAUndefinedTraining"
+      regulation_paragraph: "§164.308(a)(5)"
+    - id: "HIPAA-07"
+      description: "Minimum necessary policies must define specific role-based access criteria for each category of PHI use and disclosure"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAVagueMinimumNecessary"
+      regulation_paragraph: "§164.502(b), §164.514(d)"
+    - id: "HIPAA-08"
+      description: "Physical safeguard policies must document specific facility access procedures, workstation security measures, and device controls"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAWeakPhysicalSafeguards"
+      regulation_paragraph: "§164.310"
+    - id: "HIPAA-09"
+      description: "Disposal procedures must name specific sanitization methods, verification steps, and documentation requirements for ePHI media"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAMissingDisposalProcedures"
+      regulation_paragraph: "§164.310(d)(2)(i-ii)"
+    - id: "HIPAA-10"
+      description: "Contingency plans must include specific backup schedules, recovery time objectives, testing frequencies, and emergency mode operation procedures"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.HIPAAVagueContingencyPlan"
+      regulation_paragraph: "§164.308(a)(7)"

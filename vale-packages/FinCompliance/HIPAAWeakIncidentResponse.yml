@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak incident response timeline: '%s'. HIPAA §164.308(a)(6) requires documented security incident procedures with specific identification, response, and mitigation steps, not open-ended notification commitments."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - incidents reported promptly
+  - notify as soon as possible
+  - report without undue delay
+  - timely incident notification
+  - respond in a reasonable timeframe

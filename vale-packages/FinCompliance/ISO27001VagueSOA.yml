@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague Statement of Applicability language: '%s'. ISO 27001 Clause 6.1.3(d) requires the Statement of Applicability to explicitly list each Annex A control with a justified inclusion or exclusion rationale and documented implementation status."
+link: "https://www.iso.org/standard/27001"
+level: error
+ignorecase: true
+tokens:
+  - controls selected as appropriate
+  - applicable controls implemented
+  - relevant controls in place
+  - suitable controls applied
+  - controls deemed necessary

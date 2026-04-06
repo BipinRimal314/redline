@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak physical safeguard language: '%s'. HIPAA §164.310 requires documented facility access controls, workstation use policies, and device and media controls with specific procedures, not subjective qualifiers."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - appropriate physical controls
+  - reasonable facility security
+  - adequate physical protections
+  - suitable environmental controls
+  - proper facility safeguards

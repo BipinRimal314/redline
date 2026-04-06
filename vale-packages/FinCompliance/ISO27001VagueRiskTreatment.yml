@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague risk treatment language: '%s'. ISO 27001 Clause 6.1.3 requires a formal risk treatment plan with specific controls selected from Annex A, explicit risk owners, and defined implementation timelines."
+link: "https://www.iso.org/standard/27001"
+level: error
+ignorecase: true
+tokens:
+  - appropriate risk treatment
+  - suitable risk mitigation
+  - reasonable risk controls
+  - adequate risk response
+  - risk treatment as needed

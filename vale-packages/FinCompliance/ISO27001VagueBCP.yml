@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague business continuity language: '%s'. ISO 27001 Annex A.17 requires documented business continuity plans with defined RTOs, RPOs, specific recovery procedures, named responsible parties, and scheduled testing frequencies."
+link: "https://www.iso.org/standard/27001"
+level: warning
+ignorecase: true
+tokens:
+  - appropriate continuity measures
+  - reasonable recovery procedures
+  - suitable business continuity
+  - continuity plans as needed
+  - adequate backup arrangements

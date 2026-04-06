@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-04-06T00:00:00+00:00",
+  "model_used": "manual-expert-review",
+  "source_file": "regulations-source/hipaa-security-rule.md",
+  "regulation_id": "HIPAA-SEC",
+  "rule_count": 10,
+  "mappings": [
+    {
+      "rule_id": "HIPAA-01",
+      "vale_rule": "FinCompliance.HIPAAVagueAccessControls",
+      "regulation_paragraph": "§164.312(a)",
+      "criteria_name": "Access Control",
+      "severity": "error",
+      "rationale": "§164.312(a) requires covered entities to implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to authorized persons or software programs. Vague qualifiers like 'appropriate' or 'suitable' fail to establish testable access control criteria."
+    },
+    {
+      "rule_id": "HIPAA-02",
+      "vale_rule": "FinCompliance.HIPAAWeakEncryption",
+      "regulation_paragraph": "§164.312(a)(2)(iv), §164.312(e)(2)(ii)",
+      "criteria_name": "Encryption and Decryption / Transmission Security",
+      "severity": "error",
+      "rationale": "§164.312(a)(2)(iv) requires a mechanism to encrypt and decrypt ePHI, and §164.312(e)(2)(ii) addresses encryption of ePHI in transit. Conditional language like 'where feasible' or 'when practical' undermines the addressable implementation specification by failing to document why encryption is not reasonable and appropriate."
+    },
+    {
+      "rule_id": "HIPAA-03",
+      "vale_rule": "FinCompliance.HIPAAMissingRiskAnalysis",
+      "regulation_paragraph": "§164.308(a)(1)(ii)(A)",
+      "criteria_name": "Risk Analysis",
+      "severity": "error",
+      "rationale": "§164.308(a)(1)(ii)(A) requires an accurate and thorough assessment of potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI. Vague references to 'periodic' or 'regular' assessments without defined methodology and scope do not satisfy the requirement for accuracy and thoroughness."
+    },
+    {
+      "rule_id": "HIPAA-04",
+      "vale_rule": "FinCompliance.HIPAAVagueBAALanguage",
+      "regulation_paragraph": "§164.308(b), §164.314(a)",
+      "criteria_name": "Business Associate Contracts and Other Arrangements",
+      "severity": "error",
+      "rationale": "§164.308(b) requires written contracts or arrangements with business associates providing satisfactory assurances that ePHI will be appropriately safeguarded. §164.314(a) specifies required contract terms. Aspirational language like 'will endeavor to' or 'are expected to comply' does not constitute satisfactory assurances."
+    },
+    {
+      "rule_id": "HIPAA-05",
+      "vale_rule": "FinCompliance.HIPAAWeakIncidentResponse",
+      "regulation_paragraph": "§164.308(a)(6)",
+      "criteria_name": "Security Incident Procedures",
+      "severity": "error",
+      "rationale": "§164.308(a)(6) requires policies and procedures to address security incidents, including identification, response, and mitigation. Open-ended timelines like 'as soon as possible' or 'without undue delay' do not constitute defined response procedures that can be tested and verified."
+    },
+    {
+      "rule_id": "HIPAA-06",
+      "vale_rule": "FinCompliance.HIPAAUndefinedTraining",
+      "regulation_paragraph": "§164.308(a)(5)",
+      "criteria_name": "Security Awareness and Training",
+      "severity": "error",
+      "rationale": "§164.308(a)(5) requires a security awareness and training program for all workforce members including management. Vague references to 'periodic' or 'as appropriate' training without specifying content, frequency, and tracking cannot demonstrate compliance with this required implementation specification."
+    },
+    {
+      "rule_id": "HIPAA-07",
+      "vale_rule": "FinCompliance.HIPAAVagueMinimumNecessary",
+      "regulation_paragraph": "§164.502(b), §164.514(d)",
+      "criteria_name": "Minimum Necessary Standard",
+      "severity": "error",
+      "rationale": "§164.502(b) requires covered entities to make reasonable efforts to limit PHI to the minimum necessary for the intended purpose. §164.514(d) requires policies identifying persons needing access by category. Subjective phrases like 'minimum necessary' or 'only necessary data' without role-based criteria fail to operationalize the standard."
+    },
+    {
+      "rule_id": "HIPAA-08",
+      "vale_rule": "FinCompliance.HIPAAWeakPhysicalSafeguards",
+      "regulation_paragraph": "§164.310",
+      "criteria_name": "Physical Safeguards",
+      "severity": "error",
+      "rationale": "§164.310 requires facility access controls, workstation use policies, workstation security measures, and device and media controls. Subjective qualifiers like 'reasonable' or 'adequate' do not specify the physical measures, access authorization procedures, or maintenance records required."
+    },
+    {
+      "rule_id": "HIPAA-09",
+      "vale_rule": "FinCompliance.HIPAAMissingDisposalProcedures",
+      "regulation_paragraph": "§164.310(d)(2)(i-ii)",
+      "criteria_name": "Disposal and Media Re-use",
+      "severity": "error",
+      "rationale": "§164.310(d)(2)(i) requires policies for final disposal of ePHI and the hardware or electronic media on which it is stored, and §164.310(d)(2)(ii) requires procedures for removal of ePHI before media re-use. Language like 'properly disposed of' or 'secure disposal methods' without naming specific sanitization standards (e.g., NIST SP 800-88) is unverifiable."
+    },
+    {
+      "rule_id": "HIPAA-10",
+      "vale_rule": "FinCompliance.HIPAAVagueContingencyPlan",
+      "regulation_paragraph": "§164.308(a)(7)",
+      "criteria_name": "Contingency Plan",
+      "severity": "error",
+      "rationale": "§164.308(a)(7) requires a data backup plan, disaster recovery plan, and emergency mode operation plan with procedures for testing and revision. Vague references to 'appropriate' or 'reasonable' contingency measures without defined RTOs, RPOs, backup schedules, and testing frequencies cannot demonstrate compliance."
+    }
+  ]
+}

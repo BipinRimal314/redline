@@ -1,0 +1,11 @@
+extends: existence
+message: "Undefined training language: '%s'. HIPAA §164.308(a)(5) requires a security awareness and training program with specific content, frequency, and completion tracking, not vague training references."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - periodic security training
+  - regular awareness training
+  - training as appropriate
+  - appropriate security education
+  - training provided as needed

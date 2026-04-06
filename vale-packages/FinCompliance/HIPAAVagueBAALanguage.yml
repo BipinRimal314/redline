@@ -1,0 +1,11 @@
+extends: existence
+message: "Vague Business Associate Agreement language: '%s'. HIPAA §164.308(b) and §164.314(a) require BAAs with specific safeguard obligations, breach notification procedures, and subcontractor requirements, not aspirational commitments."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - business associate will maintain security
+  - associates are expected to comply
+  - vendors should protect data
+  - third parties will endeavor to
+  - service providers are responsible for

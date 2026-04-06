@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak supplier security language: '%s'. ISO 27001 Annex A.15 requires documented supplier information security requirements, defined assessment criteria, contractual security obligations, and specific monitoring procedures."
+link: "https://www.iso.org/standard/27001"
+level: warning
+ignorecase: true
+tokens:
+  - suppliers will maintain security
+  - vendors expected to comply
+  - third parties should protect
+  - appropriate supplier controls
+  - reasonable vendor security

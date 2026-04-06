@@ -1,0 +1,11 @@
+extends: existence
+message: "Weak encryption language: '%s'. HIPAA §164.312(a)(2)(iv) and §164.312(e)(2)(ii) require encryption and decryption mechanisms for ePHI at rest and in transit with specified standards, not conditional commitments."
+link: "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
+level: error
+ignorecase: true
+tokens:
+  - encryption where feasible
+  - encrypted as appropriate
+  - reasonable encryption measures
+  - encryption when practical
+  - suitable encryption methods
