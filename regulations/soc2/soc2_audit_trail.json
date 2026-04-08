@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-06T00:00:00+00:00",
+  "generated_at": "2026-04-08T00:00:00+00:00",
   "model_used": "manual-expert-review",
   "source_file": "regulations-source/soc2-trust-services-criteria.md",
   "regulation_id": "SOC2-TSC",
   "rule_count": 10,
+  "framework_note": "SOC 2 is a voluntary attestation framework based on AICPA Trust Services Criteria (TSC) 2017, built on COSO 2013 Internal Control framework. It is NOT a regulation or statute.",
   "mappings": [
     {
       "rule_id": "SOC2-01",
@@ -11,7 +12,9 @@
       "regulation_paragraph": "CC6.1",
       "criteria_name": "Logical and Physical Access Controls",
       "severity": "error",
-      "rationale": "CC6.1 requires the entity to implement logical access security software, infrastructure, and architectures over protected information assets. Vague qualifiers like 'appropriate' or 'adequate' fail to establish testable control criteria."
+      "rationale": "CC6.1 requires the entity to implement logical access security software, infrastructure, and architectures over protected information assets. Vague qualifiers like 'appropriate' or 'adequate' fail to establish testable control criteria.",
+      "audit_status": "verified",
+      "audit_notes": "CC6.1 correctly cited. Description is a reasonable lint interpretation."
     },
     {
       "rule_id": "SOC2-02",
@@ -19,7 +22,9 @@
       "regulation_paragraph": "CC7.4",
       "criteria_name": "Response to Identified Security Incidents",
       "severity": "error",
-      "rationale": "CC7.4 requires the entity to respond to identified security incidents by executing a defined incident response program. Open-ended timelines like 'as soon as practical' do not constitute a defined program."
+      "rationale": "CC7.4 requires the entity to respond to identified security incidents by executing a defined incident response program to understand, contain, remediate, and communicate incidents. Open-ended or undefined response language does not constitute a defined program.",
+      "audit_status": "fixed",
+      "audit_notes": "Original description injected 'specific hours or minutes' — CC7.4 does not mandate specific time units. Rewritten to match the criteria's actual language about a defined response program with four components: understand, contain, remediate, communicate."
     },
     {
       "rule_id": "SOC2-03",
@@ -27,7 +32,9 @@
       "regulation_paragraph": "CC4.1, CC7.2",
       "criteria_name": "Monitoring Activities / System Operation Monitoring",
       "severity": "error",
-      "rationale": "CC4.1 requires ongoing monitoring of internal controls, and CC7.2 requires monitoring system components for anomalies. Without explicit frequencies, monitoring cannot be verified as operating effectively."
+      "rationale": "CC4.1 (COSO Principle 16) requires ongoing and/or separate evaluations to ascertain whether internal control components are present and functioning. CC7.2 requires monitoring system components for anomalies indicative of malicious acts, natural disasters, and errors. Vague or aspirational monitoring language fails to demonstrate operating effectiveness.",
+      "audit_status": "fixed",
+      "audit_notes": "Original description demanded 'explicit frequencies' — neither CC4.1 nor CC7.2 prescribes specific frequency requirements. Rewritten to match the criteria: ongoing/separate evaluations (CC4.1) and anomaly detection (CC7.2)."
     },
     {
       "rule_id": "SOC2-04",
@@ -35,7 +42,9 @@
       "regulation_paragraph": "CC3.2",
       "criteria_name": "Risk Assessment",
       "severity": "error",
-      "rationale": "CC3.2 requires the entity to identify risks to the achievement of its objectives and analyze risks as a basis for determining how they should be managed. Undefined risk labels (low/medium/high) without scoring criteria make risk assessment non-reproducible."
+      "rationale": "CC3.2 (COSO Principle 7) requires the entity to identify risks to the achievement of its objectives and analyze risks as a basis for determining how they should be managed. Undefined risk labels without analysis criteria make risk assessment non-reproducible.",
+      "audit_status": "fixed",
+      "audit_notes": "Original description required 'documented scoring criteria' — CC3.2 requires risk analysis but does not mandate numeric scoring. Changed 'scoring criteria' to 'analysis criteria' to match the principle's actual language."
     },
     {
       "rule_id": "SOC2-05",
@@ -43,7 +52,9 @@
       "regulation_paragraph": "CC8.1",
       "criteria_name": "Change Management",
       "severity": "error",
-      "rationale": "CC8.1 requires the entity to authorize, design, develop, configure, document, test, approve, and implement changes. Generic references to 'approved changes' without naming approvers or defining test criteria leave the control unverifiable."
+      "rationale": "CC8.1 requires the entity to authorize, design, develop, configure, document, test, approve, and implement changes. Generic references to 'approved changes' without naming approvers or defining test criteria leave the control unverifiable.",
+      "audit_status": "verified",
+      "audit_notes": "CC8.1 explicitly includes 'authorizes,' 'tests,' and 'approves.' The description's requirement for named approvers and testing criteria is directly supported by the criteria text."
     },
     {
       "rule_id": "SOC2-06",
@@ -51,7 +62,9 @@
       "regulation_paragraph": "CC9.2",
       "criteria_name": "Vendor and Business Partner Risk Management",
       "severity": "warning",
-      "rationale": "CC9.2 requires the entity to assess and manage risks associated with vendors and business partners. Subjective qualifiers like 'trusted' or 'reputable' do not constitute a documented assessment framework."
+      "rationale": "CC9.2 requires the entity to assess and manage risks associated with vendors and business partners. Subjective qualifiers like 'trusted' or 'reputable' do not constitute a documented assessment framework.",
+      "audit_status": "verified",
+      "audit_notes": "CC9.2 correctly cited. Description accurately reflects the requirement for documented assessment criteria."
     },
     {
       "rule_id": "SOC2-07",
@@ -59,7 +72,9 @@
       "regulation_paragraph": "A1.2",
       "criteria_name": "Recovery of Infrastructure and Data",
       "severity": "error",
-      "rationale": "A1.2 (Availability) requires the entity to provide for recovery of infrastructure and data to meet its objectives. Undefined backup schedules and untested recovery procedures cannot demonstrate recoverability."
+      "rationale": "A1.2 (Availability) requires the entity to provide for recovery of infrastructure and data to meet its objectives. Undefined or vague recovery procedures cannot demonstrate recoverability.",
+      "audit_status": "fixed",
+      "audit_notes": "Original description injected 'explicit schedules, retention periods, and recovery testing frequencies' — A1.2 requires recovery provisions but does not mandate these specific terms. Rewritten to match the criteria: defined, documented, tested recovery procedures."
     },
     {
       "rule_id": "SOC2-08",
@@ -67,7 +82,9 @@
       "regulation_paragraph": "C1.1",
       "criteria_name": "Confidentiality Classifications",
       "severity": "warning",
-      "rationale": "C1.1 (Confidentiality) requires the entity to identify and maintain confidential information. Using terms like 'sensitive data' without a formal classification scheme means the organization cannot consistently identify what data requires protection."
+      "rationale": "C1.1 (Confidentiality) requires the entity to identify and maintain confidential information. Using terms like 'sensitive data' without a formal classification scheme means the organization cannot consistently identify what data requires protection.",
+      "audit_status": "verified",
+      "audit_notes": "C1.1 correctly cited. The requirement to identify confidential information implies a classification scheme. Description is a reasonable interpretation."
     },
     {
       "rule_id": "SOC2-09",
@@ -75,7 +92,9 @@
       "regulation_paragraph": "P1.1",
       "criteria_name": "Privacy Notice",
       "severity": "warning",
-      "rationale": "P1.1 (Privacy) requires the entity to provide notice about its privacy practices. Hedging language ('may', 'might', 'could') undermines the notice by failing to make clear commitments about data handling."
+      "rationale": "P1.1 (Privacy) requires the entity to provide notice about its privacy practices. Hedging language ('may', 'might', 'could') undermines the notice by failing to make clear commitments about data handling.",
+      "audit_status": "verified",
+      "audit_notes": "P1.1 correctly cited. The notice requirement implies definitive language about actual practices. Description is well-supported."
     },
     {
       "rule_id": "SOC2-10",
@@ -83,7 +102,9 @@
       "regulation_paragraph": "CC5.1, CC6.3",
       "criteria_name": "Segregation of Duties / Role-Based Access",
       "severity": "error",
-      "rationale": "CC5.1 requires the entity to select and develop control activities that mitigate risks, and CC6.3 requires role-based access. Conditional segregation ('when practical', 'where feasible') creates exploitable gaps in the control environment."
+      "rationale": "CC5.1 (COSO Principle 10) requires the entity to select and develop control activities that mitigate risks, including segregation of duties. CC6.3 requires role-based access authorization. Conditional segregation ('when practical', 'where feasible') creates exploitable gaps in the control environment.",
+      "audit_status": "verified",
+      "audit_notes": "CC5.1 includes segregation of duties as a control activity type. CC6.3 addresses role-based access as the enforcement mechanism. Mapping is reasonable."
     }
   ]
 }

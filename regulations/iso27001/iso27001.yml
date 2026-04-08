@@ -10,59 +10,59 @@ regulation:
     - compliance-policy
   requirements:
     - id: "ISO27001-01"
-      description: "Risk treatment plans must specify named controls from Annex A with explicit risk owners and implementation timelines"
+      description: "Risk treatment plans must specify named controls from Annex A with explicit risk owners and approval of the risk treatment plan"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001VagueRiskTreatment"
       regulation_paragraph: "Clause 6.1.3"
     - id: "ISO27001-02"
-      description: "Asset management documentation must include a classified inventory with defined owners and handling procedures"
+      description: "Asset management documentation must include a classified inventory with defined owners and acceptable use rules"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001WeakAssetManagement"
-      regulation_paragraph: "A.8"
+      regulation_paragraph: "A.5.9, A.5.10, A.5.11"
     - id: "ISO27001-03"
-      description: "Access control policies must define explicit authorization criteria, role-based permissions, and provisioning procedures"
+      description: "Access control policies must define explicit authorization criteria based on business and information security requirements, with identity management and access rights provisioning"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001UndefinedAccessPolicy"
-      regulation_paragraph: "A.9.1"
+      regulation_paragraph: "A.5.15, A.5.16, A.5.18"
     - id: "ISO27001-04"
-      description: "Cryptographic controls must name specific algorithms, key lengths, and key lifecycle procedures"
+      description: "Cryptographic controls must define a policy on the use of cryptography including key management procedures"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001VagueCryptographyPolicy"
-      regulation_paragraph: "A.10"
+      regulation_paragraph: "A.8.24"
     - id: "ISO27001-05"
-      description: "Supplier security requirements must include documented assessment criteria and contractual obligations"
+      description: "Supplier security requirements must include documented assessment criteria, contractual security clauses, and monitoring procedures for supplier services"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001WeakSupplierSecurity"
-      regulation_paragraph: "A.15"
+      regulation_paragraph: "A.5.19, A.5.20, A.5.21, A.5.22"
     - id: "ISO27001-06"
-      description: "Incident management procedures must define reporting timelines, escalation paths, and categorized severity levels"
+      description: "Incident management procedures must define planning, assessment, response, learning, and evidence collection processes with event reporting channels"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001MissingIncidentManagement"
-      regulation_paragraph: "A.16"
+      regulation_paragraph: "A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8"
     - id: "ISO27001-07"
-      description: "Business continuity plans must define RTOs, RPOs, recovery procedures, and testing schedules"
+      description: "Business continuity plans must define information security requirements during disruption and ICT readiness procedures for continuity"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001VagueBCP"
-      regulation_paragraph: "A.17"
+      regulation_paragraph: "A.5.29, A.5.30"
     - id: "ISO27001-08"
-      description: "Compliance monitoring must specify review frequencies, scope, named reviewers, and corrective action timelines"
+      description: "Compliance monitoring must include identification of legal and contractual requirements, independent review of information security, and compliance verification with defined policies and standards"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001WeakComplianceMonitoring"
-      regulation_paragraph: "A.18"
+      regulation_paragraph: "A.5.31, A.5.35, A.5.36"
     - id: "ISO27001-09"
-      description: "Awareness programs must define training content, delivery schedules, competency criteria, and attendance tracking"
+      description: "Awareness programs must ensure persons are aware of the information security policy, their ISMS contribution, and non-conformance implications, with appropriate education and training"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.ISO27001UndefinedAwareness"
-      regulation_paragraph: "Clause 7.3, A.7.2.2"
+      regulation_paragraph: "Clause 7.3, A.6.3"
     - id: "ISO27001-10"
       description: "Statement of Applicability must list each Annex A control with justified inclusion or exclusion rationale and implementation status"
       severity: error

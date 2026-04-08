@@ -18,19 +18,19 @@ regulation:
       vale_rule: "FinCompliance.SOC2VagueAccessControls"
       regulation_paragraph: "CC6.1"
     - id: "SOC2-02"
-      description: "Incident response plans must define response timeframes in specific hours or minutes"
+      description: "Incident response plans must define procedures for understanding, containing, remediating, and communicating security incidents, not use vague or undefined response language"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2WeakIncidentResponse"
       regulation_paragraph: "CC7.4"
     - id: "SOC2-03"
-      description: "Monitoring activities must specify explicit frequencies rather than vague intervals"
+      description: "Monitoring activities must be defined as ongoing or separate evaluations (CC4.1) with anomaly detection criteria (CC7.2), not described in vague or aspirational terms"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2UndefinedMonitoring"
       regulation_paragraph: "CC4.1, CC7.2"
     - id: "SOC2-04"
-      description: "Risk assessments must include defined methodologies and documented scoring criteria"
+      description: "Risk assessments must include defined methodologies and documented analysis criteria for identifying and managing risks"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2MissingRiskCriteria"
@@ -48,7 +48,7 @@ regulation:
       vale_rule: "FinCompliance.SOC2WeakVendorManagement"
       regulation_paragraph: "CC9.2"
     - id: "SOC2-07"
-      description: "Backup procedures must define explicit schedules, retention periods, and recovery testing frequencies"
+      description: "Recovery procedures must be defined, documented, and tested to demonstrate that infrastructure and data can be recovered to meet availability objectives"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2UndefinedBackupProcedures"

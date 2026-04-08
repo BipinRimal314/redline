@@ -65,7 +65,34 @@ All 11 SOX rules (section-302, section-404, pcaob-standards) and 15 BSA-AML rule
 | CTR-01 | Labeled as "CDD/CTR elements" — these are CTR-specific requirements | Rewritten as CTR-specific: $10,000 threshold (1010.311), aggregation (1010.313), structuring (31 USC 5324), exemptions (1020.315) |
 | SAR-07 | Missing citation for confidentiality provision | Now cites 31 USC 5318(g)(2) and 31 CFR 1020.320(e) |
 
-**31 rules remain unaudited.** Priority: FINRA (10 rules), SEC (9 rules), SOC 2 (10 rules), ISO 27001 (10 rules). [NEEDS VERIFICATION: actual count is 39 if ISO 27001 has 10.]
+**19 rules remain unaudited.** Priority: FINRA (10 rules), SEC (9 rules).
+
+### Full Audit: SOC 2 (10) and ISO 27001 (10) (2026-04-08)
+
+All 10 SOC 2 rules audited against AICPA Trust Services Criteria (TSC) 2017. All 10 ISO 27001 rules audited against ISO/IEC 27001:2022.
+
+**SOC 2 (10 rules): 4 fixed, 6 verified.**
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| SOC2-02 | Injected "specific hours or minutes" — CC7.4 requires a defined response program, not specific time units | Rewritten to match CC7.4 language: understand, contain, remediate, communicate |
+| SOC2-03 | Demanded "explicit frequencies" — neither CC4.1 nor CC7.2 prescribes specific frequency requirements | Rewritten: ongoing/separate evaluations (CC4.1) and anomaly detection (CC7.2) |
+| SOC2-04 | Required "documented scoring criteria" — CC3.2 requires risk analysis, not numeric scoring | Changed "scoring criteria" to "analysis criteria" |
+| SOC2-07 | Injected "explicit schedules, retention periods, and recovery testing frequencies" — A1.2 does not use these terms | Rewritten: defined, documented, tested recovery procedures |
+
+**ISO 27001 (10 rules): 8 fixed, 2 verified.** Seven rules used ISO 27001:2013 Annex A numbering while the file header claimed 2022 version.
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| ISO27001-01 | Injected "implementation timelines" — Clause 6.1.3 does not mandate timelines | Removed; now says "risk owners and approval of the risk treatment plan" |
+| ISO27001-02 | **Cited A.8 (2013: Asset Management)** — in 2022, A.8 is "Technological controls" | Updated to A.5.9, A.5.10, A.5.11 (Inventory, Acceptable Use, Return of Assets) |
+| ISO27001-03 | **Cited A.9.1 (2013: Access Control)** — does not exist in 2022 | Updated to A.5.15, A.5.16, A.5.18 (Access Control, Identity Management, Access Rights) |
+| ISO27001-04 | **Cited A.10 (2013: Cryptography)** — does not exist in 2022 | Updated to A.8.24 (Use of Cryptography); simplified description |
+| ISO27001-05 | **Cited A.15 (2013: Supplier Relationships)** — does not exist in 2022 | Updated to A.5.19-A.5.22 (Supplier security lifecycle) |
+| ISO27001-06 | **Cited A.16 (2013: Incident Management)** — does not exist in 2022 | Updated to A.5.24-A.5.28, A.6.8 (Incident management + event reporting) |
+| ISO27001-07 | **Cited A.17 (2013: Business Continuity)** — does not exist in 2022 | Updated to A.5.29, A.5.30 (Disruption + ICT readiness) |
+| ISO27001-08 | **Cited A.18 (2013: Compliance)** — does not exist in 2022 | Updated to A.5.31, A.5.35, A.5.36 (Legal requirements, independent review, policy compliance) |
+| ISO27001-09 | Cited A.7.2.2 (2013 numbering) + Clause 7.3 | Updated A.7.2.2 to A.6.3; Clause 7.3 confirmed correct |
 
 ## Project Structure
 
@@ -108,7 +135,8 @@ python -m pytest tests/
 - ~~**Fix 7 audit findings** from spot-check~~ (done 2026-04-07)
 - ~~**Audit GDPR (10) and HIPAA (10)**~~ (done 2026-04-08)
 - ~~**Audit SOX (11) and BSA-AML (15)**~~ (done 2026-04-08)
-- **Audit remaining rules** — FINRA (10), SEC (9), SOC 2 (10), ISO 27001 (10)
+- ~~**Audit SOC 2 (10) and ISO 27001 (10)**~~ (done 2026-04-08)
+- **Audit remaining rules** — FINRA (10), SEC (9)
 - **Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)
 - **Add `verified_against_primary` flag** to each rule
 

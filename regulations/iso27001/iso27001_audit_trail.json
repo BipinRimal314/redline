@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-06T00:00:00+00:00",
+  "generated_at": "2026-04-08T00:00:00+00:00",
   "model_used": "manual-expert-review",
   "source_file": "regulations-source/iso27001-isms-requirements.md",
   "regulation_id": "ISO-27001",
   "rule_count": 10,
+  "standard_note": "ISO/IEC 27001:2022 restructured Annex A from 14 domains (A.5-A.18) to 4 themes (A.5 Organizational, A.6 People, A.7 Physical, A.8 Technological). All Annex A references updated from 2013 to 2022 numbering.",
   "mappings": [
     {
       "rule_id": "ISO27001-01",
@@ -11,71 +12,89 @@
       "regulation_paragraph": "Clause 6.1.3",
       "criteria_name": "Information Security Risk Treatment",
       "severity": "error",
-      "rationale": "Clause 6.1.3 requires the organization to define and apply an information security risk treatment process, selecting controls from Annex A and producing a risk treatment plan with assigned owners. Vague qualifiers like 'appropriate' or 'adequate' fail to establish auditable treatment criteria."
+      "rationale": "Clause 6.1.3 requires the organization to define and apply an information security risk treatment process, selecting controls from Annex A, producing a Statement of Applicability, formulating a risk treatment plan, and obtaining risk owners' approval. Vague qualifiers like 'appropriate' or 'adequate' fail to establish auditable treatment criteria.",
+      "audit_status": "fixed",
+      "audit_notes": "Original description injected 'implementation timelines' — Clause 6.1.3 requires risk treatment plans with named controls and risk owner approval, but does not mandate implementation timelines. Rewritten to match clause language."
     },
     {
       "rule_id": "ISO27001-02",
       "vale_rule": "FinCompliance.ISO27001WeakAssetManagement",
-      "regulation_paragraph": "A.8",
-      "criteria_name": "Asset Management",
+      "regulation_paragraph": "A.5.9, A.5.10, A.5.11",
+      "criteria_name": "Asset Management (Inventory, Acceptable Use, Return of Assets)",
       "severity": "warning",
-      "rationale": "Annex A.8 requires identification of organizational assets, assignment of asset owners, and definition of acceptable use rules. Subjective phrases like 'managed as needed' do not constitute a formal asset classification scheme or inventory."
+      "rationale": "A.5.9 requires an inventory of information and other associated assets to be identified and maintained. A.5.10 requires rules for acceptable use. A.5.11 requires return of assets. Subjective phrases like 'managed as needed' do not constitute a formal asset management framework.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.8 which was the 2013 numbering for Asset Management. In ISO 27001:2022, A.8 is 'Technological controls.' Asset management is now A.5.9 (Inventory), A.5.10 (Acceptable use), A.5.11 (Return of assets). Also removed 'handling procedures' from description — the 2022 controls focus on inventory, acceptable use, and return."
     },
     {
       "rule_id": "ISO27001-03",
       "vale_rule": "FinCompliance.ISO27001UndefinedAccessPolicy",
-      "regulation_paragraph": "A.9.1",
-      "criteria_name": "Business Requirements of Access Control",
+      "regulation_paragraph": "A.5.15, A.5.16, A.5.18",
+      "criteria_name": "Access Control (Policy, Identity Management, Access Rights)",
       "severity": "warning",
-      "rationale": "Annex A.9.1 requires an access control policy established and documented based on business and information security requirements. Generic terms like 'appropriate access levels' without defined role matrices or authorization workflows leave access decisions unverifiable."
+      "rationale": "A.5.15 requires an access control policy based on business and information security requirements. A.5.16 requires identity management lifecycle. A.5.18 requires access rights provisioning, review, and removal. Generic terms like 'appropriate access levels' without defined role matrices or authorization workflows leave access decisions unverifiable.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.9.1 which does not exist in ISO 27001:2022. Access control was A.9 in 2013; in 2022 it is A.5.15 (Access control), A.5.16 (Identity management), A.5.17 (Authentication information), A.5.18 (Access rights). Updated paragraph references and description."
     },
     {
       "rule_id": "ISO27001-04",
       "vale_rule": "FinCompliance.ISO27001VagueCryptographyPolicy",
-      "regulation_paragraph": "A.10",
-      "criteria_name": "Cryptography",
+      "regulation_paragraph": "A.8.24",
+      "criteria_name": "Use of Cryptography",
       "severity": "warning",
-      "rationale": "Annex A.10 requires a policy on the use of cryptographic controls and a key management policy. Phrases like 'encryption where necessary' fail to specify which algorithms, key lengths, or key lifecycle procedures are mandated, leaving cryptographic implementation unauditable."
+      "rationale": "A.8.24 requires a policy on the use of cryptographic controls including key management. Phrases like 'encryption where necessary' fail to specify the cryptographic policy and key management procedures required by the control.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.10 which does not exist in ISO 27001:2022. Cryptography was A.10 in 2013; in 2022 it is A.8.24 (Use of cryptography). Also simplified description — original demanded 'specific algorithms, key lengths' which goes beyond what A.8.24 requires. The control requires a policy and key management, not prescriptive algorithm choices."
     },
     {
       "rule_id": "ISO27001-05",
       "vale_rule": "FinCompliance.ISO27001WeakSupplierSecurity",
-      "regulation_paragraph": "A.15",
-      "criteria_name": "Supplier Relationships",
+      "regulation_paragraph": "A.5.19, A.5.20, A.5.21, A.5.22",
+      "criteria_name": "Supplier Relationships (Security Requirements, Agreements, ICT Supply Chain, Monitoring)",
       "severity": "warning",
-      "rationale": "Annex A.15 requires agreed information security requirements for mitigating risks associated with supplier access to organizational assets. Statements like 'vendors expected to comply' without contractual security clauses, defined assessment criteria, or monitoring procedures provide no enforceable baseline."
+      "rationale": "A.5.19 requires documented information security requirements for supplier relationships. A.5.20 requires addressing security within supplier agreements. A.5.21 covers ICT supply chain security. A.5.22 requires monitoring, review, and change management of supplier services. Statements like 'vendors expected to comply' without contractual clauses or monitoring procedures provide no enforceable baseline.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.15 which does not exist in ISO 27001:2022. Supplier relationships was A.15 in 2013; in 2022 it is A.5.19-A.5.22. Updated with all four relevant controls."
     },
     {
       "rule_id": "ISO27001-06",
       "vale_rule": "FinCompliance.ISO27001MissingIncidentManagement",
-      "regulation_paragraph": "A.16",
-      "criteria_name": "Information Security Incident Management",
+      "regulation_paragraph": "A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8",
+      "criteria_name": "Information Security Incident Management (Planning, Assessment, Response, Learning, Evidence, Reporting)",
       "severity": "warning",
-      "rationale": "Annex A.16 requires management responsibilities and procedures to ensure quick, effective, and orderly response to information security incidents. Open-ended language like 'reported in a timely manner' without defined SLAs, escalation matrices, or severity classifications cannot demonstrate incident readiness."
+      "rationale": "A.5.24 requires incident management planning and preparation. A.5.25 requires assessment and decision on security events. A.5.26 requires response procedures. A.5.27 requires learning from incidents. A.5.28 requires evidence collection. A.6.8 requires event reporting channels. Open-ended language like 'reported in a timely manner' without defined procedures cannot demonstrate incident readiness.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.16 which does not exist in ISO 27001:2022. Incident management was A.16 in 2013; in 2022 it spans A.5.24-A.5.28 and A.6.8. Also rewrote description — original injected 'reporting timelines, escalation paths, and categorized severity levels' which are implementation details not specified in the controls."
     },
     {
       "rule_id": "ISO27001-07",
       "vale_rule": "FinCompliance.ISO27001VagueBCP",
-      "regulation_paragraph": "A.17",
-      "criteria_name": "Information Security Aspects of Business Continuity Management",
+      "regulation_paragraph": "A.5.29, A.5.30",
+      "criteria_name": "Information Security during Disruption / ICT Readiness for Business Continuity",
       "severity": "warning",
-      "rationale": "Annex A.17 requires the organization to determine its requirements for information security and continuity of information security management in adverse situations. Phrases like 'appropriate continuity measures' without defined RTOs, RPOs, or tested recovery procedures do not satisfy continuity planning requirements."
+      "rationale": "A.5.29 requires the organization to plan how to maintain information security at an appropriate level during disruption. A.5.30 requires ICT readiness to be planned, implemented, maintained, and tested based on business continuity objectives and ICT continuity requirements. Phrases like 'appropriate continuity measures' without defined procedures do not satisfy these requirements.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.17 which does not exist in ISO 27001:2022. Business continuity was A.17 in 2013; in 2022 it is A.5.29 (during disruption) and A.5.30 (ICT readiness). Also rewrote description — original injected 'RTOs, RPOs, recovery procedures, and testing schedules' which are not terms used in these controls."
     },
     {
       "rule_id": "ISO27001-08",
       "vale_rule": "FinCompliance.ISO27001WeakComplianceMonitoring",
-      "regulation_paragraph": "A.18",
-      "criteria_name": "Compliance",
+      "regulation_paragraph": "A.5.31, A.5.35, A.5.36",
+      "criteria_name": "Compliance (Legal Requirements, Independent Review, Policy Compliance)",
       "severity": "warning",
-      "rationale": "Annex A.18 requires independent review of the organization's approach to managing information security and its implementation. Terms like 'reviewed from time to time' or 'periodic compliance checks' without explicit frequencies, scope definitions, or named reviewers render compliance monitoring non-deterministic."
+      "rationale": "A.5.31 requires identification and documentation of legal, statutory, regulatory, and contractual requirements. A.5.35 requires independent review of information security approach and implementation. A.5.36 requires compliance with established policies, rules, and standards. Terms like 'reviewed from time to time' without defined review processes render compliance monitoring non-deterministic.",
+      "audit_status": "fixed",
+      "audit_notes": "CRITICAL: Original cited A.18 which does not exist in ISO 27001:2022. Compliance was A.18 in 2013; in 2022 it spans A.5.31-A.5.36. Selected the three most relevant controls. Also rewrote description — original injected 'review frequencies, scope, named reviewers, and corrective action timelines' which are implementation specifics not in these controls."
     },
     {
       "rule_id": "ISO27001-09",
       "vale_rule": "FinCompliance.ISO27001UndefinedAwareness",
-      "regulation_paragraph": "Clause 7.3, A.7.2.2",
-      "criteria_name": "Awareness / Information Security Awareness, Education, and Training",
+      "regulation_paragraph": "Clause 7.3, A.6.3",
+      "criteria_name": "Awareness / Information Security Awareness, Education and Training",
       "severity": "error",
-      "rationale": "Clause 7.3 requires persons doing work under the organization's control to be aware of the information security policy and their contribution to the ISMS. A.7.2.2 requires appropriate awareness education and training. Vague programs described as 'training provided as needed' lack the specificity required to demonstrate competency assurance."
+      "rationale": "Clause 7.3 requires persons doing work under the organization's control to be aware of the information security policy, their contribution to ISMS effectiveness, and implications of not conforming. A.6.3 requires appropriate awareness education and training, and regular updates. Vague programs described as 'training provided as needed' lack the specificity required to demonstrate awareness.",
+      "audit_status": "fixed",
+      "audit_notes": "Original cited A.7.2.2 which was the 2013 numbering. In ISO 27001:2022, this is A.6.3 (Information security awareness, education and training). Also rewrote description — original injected 'delivery schedules, competency criteria, and attendance tracking' which are implementation details not specified in the clause or control."
     },
     {
       "rule_id": "ISO27001-10",
@@ -83,7 +102,9 @@
       "regulation_paragraph": "Clause 6.1.3(d)",
       "criteria_name": "Statement of Applicability",
       "severity": "error",
-      "rationale": "Clause 6.1.3(d) requires the organization to produce a Statement of Applicability that contains the necessary controls, justification for their inclusion, whether they are implemented, and justification for excluding any Annex A controls. Language like 'controls selected as appropriate' without per-control justification fails the explicit documentation requirement."
+      "rationale": "Clause 6.1.3(d) requires the organization to produce a Statement of Applicability that contains the necessary controls, justification for their inclusion, whether they are implemented, and justification for excluding any Annex A controls. Language like 'controls selected as appropriate' without per-control justification fails the explicit documentation requirement.",
+      "audit_status": "verified",
+      "audit_notes": "Clause 6.1.3(d) correctly cited. The description accurately reflects the SoA requirements: listing each Annex A control with inclusion/exclusion justification and implementation status."
     }
   ]
 }
