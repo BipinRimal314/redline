@@ -10,11 +10,11 @@ regulation:
     - business-associate-agreement
   requirements:
     - id: "HIPAA-01"
-      description: "Access control descriptions must specify unique user identification, emergency access procedures, and automatic logoff mechanisms"
+      description: "Access control descriptions must specify unique user identification (Required, §164.312(a)(2)(i)) and emergency access procedures (Required, §164.312(a)(2)(ii)); automatic logoff (Addressable, §164.312(a)(2)(iii)) requires documented implementation or rationale for alternative measure"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueAccessControls"
-      regulation_paragraph: "§164.312(a)"
+      regulation_paragraph: "§164.312(a)(1) — Access control standard; §164.312(a)(2)(i-iv) — Implementation specifications (Required: unique user ID, emergency access; Addressable: automatic logoff, encryption/decryption)"
     - id: "HIPAA-02"
       description: "Encryption specifications must name standards and cover ePHI at rest and in transit"
       severity: error
@@ -46,11 +46,11 @@ regulation:
       vale_rule: "FinCompliance.HIPAAUndefinedTraining"
       regulation_paragraph: "§164.308(a)(5)"
     - id: "HIPAA-07"
-      description: "Minimum necessary policies must define specific role-based access criteria for each category of PHI use and disclosure"
+      description: "Minimum necessary policies must identify persons or classes of persons who need access to PHI, and for each such class, the category or categories of PHI to which access is needed"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueMinimumNecessary"
-      regulation_paragraph: "§164.502(b), §164.514(d)"
+      regulation_paragraph: "§164.514(d)(2)(i) — Identify persons/classes needing access; §164.514(d)(2)(ii) — Identify categories of PHI for each class; §164.502(b) — Minimum necessary standard"
     - id: "HIPAA-08"
       description: "Physical safeguard policies must document specific facility access procedures, workstation security measures, and device controls"
       severity: error
@@ -58,11 +58,11 @@ regulation:
       vale_rule: "FinCompliance.HIPAAWeakPhysicalSafeguards"
       regulation_paragraph: "§164.310"
     - id: "HIPAA-09"
-      description: "Disposal procedures must name specific sanitization methods, verification steps, and documentation requirements for ePHI media"
+      description: "Device and media controls must address final disposition of ePHI and/or the hardware or electronic media on which it is stored (Required), and removal of ePHI from electronic media before re-use (Required)"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAMissingDisposalProcedures"
-      regulation_paragraph: "§164.310(d)(2)(i-ii)"
+      regulation_paragraph: "§164.310(d)(1) — Device and media controls standard; §164.310(d)(2)(i) — Disposal (Required); §164.310(d)(2)(ii) — Media re-use (Required)"
     - id: "HIPAA-10"
       description: "Contingency plans must include specific backup schedules, recovery time objectives, testing frequencies, and emergency mode operation procedures"
       severity: error

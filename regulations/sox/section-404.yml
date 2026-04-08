@@ -30,7 +30,8 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
     - id: "404-05"
-      description: "Management assessment must evaluate design and operating effectiveness of controls"
+      description: "Management assessment must state whether internal control over financial reporting is effective, per 15 USC 7262(a); evaluation of design and operating effectiveness follows PCAOB AS 2201 (auditor standard)"
       severity: error
       check_type: ai
       ai_prompt_key: "sox_control_effectiveness_evaluation"
+      regulation_paragraph: "15 USC 7262(a) — Management assessment of internal controls; PCAOB Auditing Standard No. 5 (AS 2201) — Evaluating design and operating effectiveness (auditor requirement)"

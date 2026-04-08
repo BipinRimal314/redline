@@ -20,7 +20,7 @@ regulation:
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.GDPRWeakConsentLanguage"
-      regulation_paragraph: "Article 7 — Conditions for consent"
+      regulation_paragraph: "Article 4(11) — Definition of consent; Article 7 — Conditions for consent"
     - id: "GDPR-03"
       description: "Retention periods must be specified with concrete timeframes or objectively determinable criteria; open-ended storage language violates the storage limitation principle"
       severity: error
@@ -34,11 +34,11 @@ regulation:
       vale_rule: "FinCompliance.GDPRVagueDataTransfer"
       regulation_paragraph: "Articles 44-49 — Transfers of personal data to third countries"
     - id: "GDPR-05"
-      description: "Data subject rights responses must specify the 30-day timeline, verification process, and conditions for any extensions or refusals"
+      description: "Data subject rights responses must specify the one-month timeline (Article 12(3)), verification process, and conditions for any extensions or refusals"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.GDPRWeakSubjectRights"
-      regulation_paragraph: "Articles 15-22 — Rights of the data subject"
+      regulation_paragraph: "Article 12(3) — Response timeline; Articles 15-22 — Rights of the data subject"
     - id: "GDPR-06"
       description: "High-risk processing must reference a formal DPIA with methodology, findings, and mitigating measures rather than generic privacy review language"
       severity: warning
@@ -52,11 +52,11 @@ regulation:
       vale_rule: "FinCompliance.GDPRVagueProcessorObligations"
       regulation_paragraph: "Article 28 — Processor"
     - id: "GDPR-08"
-      description: "Breach notification procedures must explicitly state the 72-hour supervisory authority notification deadline and the criteria triggering data subject notification"
+      description: "Breach notification procedures must reference the 72-hour supervisory authority notification deadline (where feasible, per Article 33(1)) and the criteria triggering data subject notification"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.GDPRInsufficientBreachNotification"
-      regulation_paragraph: "Article 33 — Notification to supervisory authority; Article 34 — Communication to data subject"
+      regulation_paragraph: "Article 33(1) — Notification without undue delay and where feasible within 72 hours; Article 34 — Communication to data subject"
     - id: "GDPR-09"
       description: "Data protection must be integrated by design and by default with specific technical and organizational measures, not treated as conditional or optional"
       severity: warning
