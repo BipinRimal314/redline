@@ -15,57 +15,67 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueAccessControls"
       regulation_paragraph: "§164.312(a)(1) — Access control standard; §164.312(a)(2)(i-iv) — Implementation specifications (Required: unique user ID, emergency access; Addressable: automatic logoff, encryption/decryption)"
+      legal_text: "§164.312(a)(1) Standard: Access control. Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4). §164.312(a)(2)(i) Implementation specification: Unique user identification (Required). Assign a unique name and/or number for identifying and tracking user identity. §164.312(a)(2)(ii) Implementation specification: Emergency access procedure (Required). Establish (and implement as needed) procedures for obtaining necessary electronic protected health information during an emergency. §164.312(a)(2)(iii) Implementation specification: Automatic logoff (Addressable). Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity. §164.312(a)(2)(iv) Implementation specification: Encryption and decryption (Addressable). Implement a mechanism to encrypt and decrypt electronic protected health information."
     - id: "HIPAA-02"
       description: "Encryption specifications must name standards and cover ePHI at rest and in transit"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAWeakEncryption"
       regulation_paragraph: "§164.312(a)(2)(iv), §164.312(e)(2)(ii)"
+      legal_text: "§164.312(a)(2)(iv) Implementation specification: Encryption and decryption (Addressable). Implement a mechanism to encrypt and decrypt electronic protected health information. §164.312(e)(2)(ii) Implementation specification: Encryption (Addressable). Implement a mechanism to encrypt electronic protected health information whenever deemed appropriate."
     - id: "HIPAA-03"
       description: "Risk analysis must document methodology, identified threats, and vulnerability assessments for all ePHI"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAMissingRiskAnalysis"
       regulation_paragraph: "§164.308(a)(1)(ii)(A)"
+      legal_text: "§164.308(a)(1)(ii)(A) Implementation specification: Risk analysis (Required). Conduct an accurate and thorough assessment of the potential risks and vulnerabilities to the confidentiality, integrity, and availability of electronic protected health information held by the covered entity or business associate."
     - id: "HIPAA-04"
       description: "Business Associate Agreements must include specific safeguard requirements, breach notification timelines, and subcontractor flow-down obligations"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueBAALanguage"
       regulation_paragraph: "§164.308(b), §164.314(a)"
+      legal_text: "§164.308(b)(1) Standard: Business associate contracts and other arrangements. A covered entity may permit a business associate to create, receive, maintain, or transmit electronic protected health information on the covered entity's behalf only if the covered entity obtains satisfactory assurances, in accordance with §164.314(a), that the business associate will appropriately safeguard the information. §164.314(a)(2)(i) A contract between a covered entity and a business associate must provide that the business associate will: (A) Comply with the applicable requirements of this subpart; (B) In accordance with §164.308(b)(2), ensure that any subcontractors that create, receive, maintain, or transmit electronic protected health information on behalf of the business associate agree to comply with the applicable requirements of this subpart; (C) Report to the covered entity any security incident of which it becomes aware, including breaches of unsecured protected health information as required by §164.410."
     - id: "HIPAA-05"
       description: "Incident response procedures must define specific steps for identifying, responding to, and mitigating suspected or known security incidents, and documenting incidents and their outcomes"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAWeakIncidentResponse"
       regulation_paragraph: "§164.308(a)(6)(i) — Security incident procedures (Standard); §164.308(a)(6)(ii) — Response and reporting (Required): identify and respond to suspected or known security incidents, mitigate harmful effects, document incidents and outcomes"
+      legal_text: "§164.308(a)(6)(i) Standard: Security incident procedures. Implement policies and procedures to address security incidents. §164.308(a)(6)(ii) Implementation specification: Response and reporting (Required). Identify and respond to suspected or known security incidents; mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity or business associate; and document security incidents and their outcomes."
     - id: "HIPAA-06"
       description: "Security awareness and training programs must exist for all workforce members (including management) and should address Addressable topics: security reminders, protection from malicious software, log-in monitoring, and password management"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAUndefinedTraining"
       regulation_paragraph: "§164.308(a)(5)(i) — Security awareness and training (Standard, Required); §164.308(a)(5)(ii)(A-D) — Implementation specifications (all Addressable): security reminders, malicious software protection, log-in monitoring, password management"
+      legal_text: "§164.308(a)(5)(i) Standard: Security awareness and training. Implement a security awareness and training program for all members of its workforce (including management). §164.308(a)(5)(ii)(A) Implementation specification: Security reminders (Addressable). Periodic security updates. §164.308(a)(5)(ii)(B) Implementation specification: Protection from malicious software (Addressable). Procedures for guarding against, detecting, and reporting malicious software. §164.308(a)(5)(ii)(C) Implementation specification: Log-in monitoring (Addressable). Procedures for monitoring log-in attempts and reporting discrepancies. §164.308(a)(5)(ii)(D) Implementation specification: Password management (Addressable). Procedures for creating, changing, and safeguarding passwords."
     - id: "HIPAA-07"
       description: "Minimum necessary policies must identify persons or classes of persons who need access to PHI, and for each such class, the category or categories of PHI to which access is needed"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueMinimumNecessary"
       regulation_paragraph: "§164.514(d)(2)(i) — Identify persons/classes needing access; §164.514(d)(2)(ii) — Identify categories of PHI for each class; §164.502(b) — Minimum necessary standard"
+      legal_text: "§164.502(b)(1): When using or disclosing protected health information or when requesting protected health information from another covered entity or business associate, a covered entity or business associate must make reasonable efforts to limit protected health information to the minimum necessary to accomplish the intended purpose of the use, disclosure, or request. §164.514(d)(2)(i): A covered entity must identify those persons or classes of persons, as appropriate, in its workforce who need access to protected health information to carry out their duties. §164.514(d)(2)(ii): For each such person or class of persons, the covered entity must identify the category or categories of protected health information to which access is needed and any conditions appropriate to such access."
     - id: "HIPAA-08"
       description: "Physical safeguard policies must document specific facility access procedures, workstation security measures, and device controls"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAWeakPhysicalSafeguards"
       regulation_paragraph: "§164.310"
+      legal_text: "§164.310(a)(1) Standard: Facility access controls. Implement policies and procedures to limit physical access to its electronic information systems and the facility or facilities in which they are housed, while ensuring that properly authorized access is allowed. §164.310(b) Standard: Workstation use. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and the physical attributes of the surroundings of a specific workstation or class of workstation that can access electronic protected health information. §164.310(c) Standard: Workstation security. Implement physical safeguards for all workstations that access electronic protected health information, to restrict access to authorized users. §164.310(d)(1) Standard: Device and media controls. Implement policies and procedures that govern the receipt and removal of hardware and electronic media that contain electronic protected health information into and out of a facility, and the movement of these items within the facility."
     - id: "HIPAA-09"
       description: "Device and media controls must address final disposition of ePHI and/or the hardware or electronic media on which it is stored (Required), and removal of ePHI from electronic media before re-use (Required)"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAMissingDisposalProcedures"
       regulation_paragraph: "§164.310(d)(1) — Device and media controls standard; §164.310(d)(2)(i) — Disposal (Required); §164.310(d)(2)(ii) — Media re-use (Required)"
+      legal_text: "§164.310(d)(1) Standard: Device and media controls. Implement policies and procedures that govern the receipt and removal of hardware and electronic media that contain electronic protected health information into and out of a facility, and the movement of these items within the facility. §164.310(d)(2)(i) Implementation specification: Disposal (Required). Implement policies and procedures to address the final disposition of electronic protected health information, and/or the hardware or electronic media on which it is stored. §164.310(d)(2)(ii) Implementation specification: Media re-use (Required). Implement procedures for removal of electronic protected health information from electronic media before the media are made available for re-use."
     - id: "HIPAA-10"
       description: "Contingency plans must include procedures for data backup (Required), disaster recovery (Required), and emergency mode operation (Required); testing and revision procedures and applications/data criticality analysis are Addressable"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueContingencyPlan"
       regulation_paragraph: "§164.308(a)(7)(i) — Contingency plan (Standard); §164.308(a)(7)(ii)(A) — Data backup plan (Required); §164.308(a)(7)(ii)(B) — Disaster recovery plan (Required); §164.308(a)(7)(ii)(C) — Emergency mode operation plan (Required); §164.308(a)(7)(ii)(D) — Testing and revision (Addressable); §164.308(a)(7)(ii)(E) — Applications and data criticality analysis (Addressable)"
+      legal_text: "§164.308(a)(7)(i) Standard: Contingency plan. Establish (and implement as needed) policies and procedures for responding to an emergency or other occurrence (for example, fire, vandalism, system failure, and natural disaster) that damages systems that contain electronic protected health information. §164.308(a)(7)(ii)(A) Implementation specification: Data backup plan (Required). Establish and implement procedures to create and maintain retrievable exact copies of electronic protected health information. §164.308(a)(7)(ii)(B) Implementation specification: Disaster recovery plan (Required). Establish (and implement as needed) procedures to restore any loss of data. §164.308(a)(7)(ii)(C) Implementation specification: Emergency mode operation plan (Required). Establish (and implement as needed) procedures to enable continuation of critical business processes for protection of the security of electronic protected health information while operating in emergency mode. §164.308(a)(7)(ii)(D) Implementation specification: Testing and revision procedures (Addressable). Implement procedures for periodic testing and revision of contingency plans. §164.308(a)(7)(ii)(E) Implementation specification: Applications and data criticality analysis (Addressable). Assess the relative criticality of specific applications and data in support of other contingency plan components."

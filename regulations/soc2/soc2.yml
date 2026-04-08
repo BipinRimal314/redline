@@ -17,57 +17,67 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2VagueAccessControls"
       regulation_paragraph: "CC6.1"
+      legal_text: "CC6.1: The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity's objectives."
     - id: "SOC2-02"
       description: "Incident response plans must define procedures for understanding, containing, remediating, and communicating security incidents, not use vague or undefined response language"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2WeakIncidentResponse"
       regulation_paragraph: "CC7.4"
+      legal_text: "CC7.4: The entity responds to identified security incidents by executing a defined incident response program to understand, contain, remediate, and communicate security incidents, as appropriate."
     - id: "SOC2-03"
       description: "Monitoring activities must be defined as ongoing or separate evaluations (CC4.1) with anomaly detection criteria (CC7.2), not described in vague or aspirational terms"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2UndefinedMonitoring"
       regulation_paragraph: "CC4.1, CC7.2"
+      legal_text: "CC4.1: COSO Principle 16 — The entity selects, develops, and performs ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. CC7.2: The entity monitors system components and the operation of those components for anomalies that are indicative of malicious acts, natural disasters, and errors affecting the entity's ability to meet its objectives; anomalies are analyzed to determine whether they represent security events."
     - id: "SOC2-04"
       description: "Risk assessments must include defined methodologies and documented analysis criteria for identifying and managing risks"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2MissingRiskCriteria"
       regulation_paragraph: "CC3.2"
+      legal_text: "CC3.2: COSO Principle 7 — The entity identifies risks to the achievement of its objectives across the entity and analyzes risks as a basis for determining how the risks should be managed."
     - id: "SOC2-05"
       description: "Change management procedures must name specific approvers and define testing criteria"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2VagueChangeManagement"
       regulation_paragraph: "CC8.1"
+      legal_text: "CC8.1: The entity authorizes, designs, develops or acquires, configures, documents, tests, approves, and implements changes to infrastructure, data, software, and procedures to meet its objectives."
     - id: "SOC2-06"
       description: "Vendor management policies must include documented assessment criteria and due diligence procedures"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2WeakVendorManagement"
       regulation_paragraph: "CC9.2"
+      legal_text: "CC9.2: The entity assesses and manages risks associated with vendors and business partners."
     - id: "SOC2-07"
       description: "Recovery procedures must be defined, documented, and tested to demonstrate that infrastructure and data can be recovered to meet availability objectives"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2UndefinedBackupProcedures"
       regulation_paragraph: "A1.2"
+      legal_text: "A1.2: The entity authorizes, designs, develops or acquires, implements, operates, approves, maintains, and monitors environmental protections, software, data back-up processes, and recovery infrastructure to meet its objectives."
     - id: "SOC2-08"
       description: "Data classification references must be backed by a formal classification scheme with defined categories"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2VagueDataClassification"
       regulation_paragraph: "C1.1"
+      legal_text: "C1.1: The entity identifies and maintains confidential information to meet the entity's objectives related to confidentiality."
     - id: "SOC2-09"
       description: "Privacy notices must use definitive language about data practices, not hedging or conditional statements"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2WeakPrivacyNotice"
       regulation_paragraph: "P1.1"
+      legal_text: "P1.1: The entity provides notice to data subjects about its privacy practices to meet the entity's objectives related to privacy. The notice is updated and communicated to data subjects in a timely manner for changes to the entity's privacy practices, including changes in the use of personal information, to meet the entity's objectives related to privacy."
     - id: "SOC2-10"
       description: "Segregation of duties must be mandatory for critical functions, not conditional or discretionary"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOC2InsufficientSegregation"
       regulation_paragraph: "CC5.1, CC6.3"
+      legal_text: "CC5.1: COSO Principle 10 — The entity selects and develops control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels. CC6.3: The entity authorizes, modifies, or removes access to data, software, functions, and other protected information assets based on roles, responsibilities, or the system design and changes, giving consideration to the concepts of least privilege and segregation of duties, to meet the entity's objectives."
