@@ -34,17 +34,17 @@ regulation:
       vale_rule: "FinCompliance.HIPAAVagueBAALanguage"
       regulation_paragraph: "§164.308(b), §164.314(a)"
     - id: "HIPAA-05"
-      description: "Incident response procedures must define specific identification, response, mitigation, and documentation steps with defined timelines"
+      description: "Incident response procedures must define specific steps for identifying, responding to, and mitigating suspected or known security incidents, and documenting incidents and their outcomes"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAWeakIncidentResponse"
-      regulation_paragraph: "§164.308(a)(6)"
+      regulation_paragraph: "§164.308(a)(6)(i) — Security incident procedures (Standard); §164.308(a)(6)(ii) — Response and reporting (Required): identify and respond to suspected or known security incidents, mitigate harmful effects, document incidents and outcomes"
     - id: "HIPAA-06"
-      description: "Security awareness and training programs must specify content topics, delivery frequency, and completion tracking requirements"
+      description: "Security awareness and training programs must exist for all workforce members (including management) and should address Addressable topics: security reminders, protection from malicious software, log-in monitoring, and password management"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAUndefinedTraining"
-      regulation_paragraph: "§164.308(a)(5)"
+      regulation_paragraph: "§164.308(a)(5)(i) — Security awareness and training (Standard, Required); §164.308(a)(5)(ii)(A-D) — Implementation specifications (all Addressable): security reminders, malicious software protection, log-in monitoring, password management"
     - id: "HIPAA-07"
       description: "Minimum necessary policies must identify persons or classes of persons who need access to PHI, and for each such class, the category or categories of PHI to which access is needed"
       severity: error
@@ -64,8 +64,8 @@ regulation:
       vale_rule: "FinCompliance.HIPAAMissingDisposalProcedures"
       regulation_paragraph: "§164.310(d)(1) — Device and media controls standard; §164.310(d)(2)(i) — Disposal (Required); §164.310(d)(2)(ii) — Media re-use (Required)"
     - id: "HIPAA-10"
-      description: "Contingency plans must include specific backup schedules, recovery time objectives, testing frequencies, and emergency mode operation procedures"
+      description: "Contingency plans must include procedures for data backup (Required), disaster recovery (Required), and emergency mode operation (Required); testing and revision procedures and applications/data criticality analysis are Addressable"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.HIPAAVagueContingencyPlan"
-      regulation_paragraph: "§164.308(a)(7)"
+      regulation_paragraph: "§164.308(a)(7)(i) — Contingency plan (Standard); §164.308(a)(7)(ii)(A) — Data backup plan (Required); §164.308(a)(7)(ii)(B) — Disaster recovery plan (Required); §164.308(a)(7)(ii)(C) — Emergency mode operation plan (Required); §164.308(a)(7)(ii)(D) — Testing and revision (Addressable); §164.308(a)(7)(ii)(E) — Applications and data criticality analysis (Addressable)"

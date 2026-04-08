@@ -25,7 +25,21 @@ Every regulation rule must satisfy ALL of these before shipping:
 | HIPAA-09 | **Was fabricated** — attributed NIST 800-88 to HIPAA | Rewritten to actual §164.310(d)(2)(i-ii): disposal + media re-use |
 | SOX 404-05 | Attributed PCAOB AS 2201 concepts to statute | Now cites both 15 USC 7262(a) and PCAOB AS 2201 separately |
 
-**75 rules not yet audited.** Priority: audit all GDPR and HIPAA rules next (highest regulatory risk).
+### Full Audit: GDPR + HIPAA (2026-04-08)
+
+All 10 GDPR and 10 HIPAA rules audited against primary sources (Regulation EU 2016/679 and 45 CFR Part 164).
+
+**GDPR (10 rules): All verified correct.** No changes needed beyond the 3 fixes from the spot-check.
+
+**HIPAA (10 rules): 3 additional fixes.**
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| HIPAA-05 | "with defined timelines" injected — §164.308(a)(6) does not mandate specific timelines | Rewritten to match regulation language: identify, respond, mitigate, document |
+| HIPAA-06 | "delivery frequency, and completion tracking" injected — not in §164.308(a)(5) | Rewritten to cite the Standard (Required) and four Addressable implementation specs |
+| HIPAA-10 | "backup schedules", "recovery time objectives", "testing frequencies" injected | RTOs are not a HIPAA term. Rewritten to cite Required (backup, recovery, emergency mode) vs Addressable (testing, criticality analysis) |
+
+**55 rules remain unaudited.** Priority: SOX (11 rules) and BSA-AML (13 rules).
 
 ## Project Structure
 
