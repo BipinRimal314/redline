@@ -8,12 +8,14 @@ regulation:
     - cdd-procedures
   requirements:
     - id: "CDD-01"
-      description: "Procedures must include required CDD/CTR elements (beneficial ownership, thresholds, EDD, monitoring, structuring)"
+      description: "Procedures must include required CDD elements: (1) identifying and verifying beneficial owners of legal entity customers (25% ownership threshold or single individual with significant control); (2) understanding the nature and purpose of customer relationships; (3) conducting ongoing monitoring. Enhanced due diligence (EDD) for higher-risk customers is a regulatory expectation from the FFIEC BSA/AML Examination Manual."
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.RequiredCDDCTRElements"
+      regulation_paragraph: "31 CFR 1010.230(b)-(d) — Beneficial ownership identification and verification requirements; 31 CFR 1010.230(a) — Definitions (beneficial owner, legal entity customer); FFIEC BSA/AML Examination Manual — EDD expectations"
     - id: "CDD-02"
-      description: "Procedures must describe risk rating methodology"
+      description: "Procedures must describe risk rating methodology for customer relationships to fulfill the CDD rule's requirement of understanding the nature and purpose of customer relationships and conducting ongoing monitoring"
       severity: warning
       check_type: ai
       ai_prompt_key: "cdd_risk_rating_adequacy"
+      regulation_paragraph: "31 CFR 1010.230(d) — Ongoing monitoring requirement; FFIEC BSA/AML Examination Manual — Customer risk rating as a practical implementation of the CDD rule"

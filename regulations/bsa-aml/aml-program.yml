@@ -8,22 +8,26 @@ regulation:
     - aml-program
   requirements:
     - id: "AML-01"
-      description: "Program must include all five BSA/AML pillars: compliance officer, internal controls, independent testing, training, and CIP"
+      description: "Program must include the four pillars required by 31 CFR 1020.210: (1) internal policies, procedures, and controls; (2) designated BSA compliance officer; (3) ongoing employee training; (4) independent testing/audit. Customer Identification Program (CIP) per 31 CFR 1020.220 is a separate regulatory requirement often counted as a fifth pillar."
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.RequiredProgramElements"
+      regulation_paragraph: "31 CFR 1020.210(b)(1)-(4) — Four minimum program elements; 31 CFR 1020.220 — CIP requirements (separate regulation, USA PATRIOT Act Section 326)"
     - id: "AML-02"
-      description: "Program must not use prohibited vague language"
+      description: "Program must not use prohibited vague language that would fail to meet the 'reasonably designed' standard for BSA/AML programs"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.ProhibitedLanguage"
+      regulation_paragraph: "31 CFR 1020.210(a) — Program must be 'reasonably designed to assure and monitor compliance'; vague language undermines this standard"
     - id: "AML-03"
-      description: "Program must describe risk assessment methodology"
+      description: "Program must describe risk assessment methodology; while not explicitly required by 31 CFR 1020.210, risk assessment is a regulatory expectation per FFIEC BSA/AML Examination Manual and FinCEN guidance for designing a risk-based program"
       severity: warning
       check_type: ai
       ai_prompt_key: "aml_risk_assessment_adequacy"
+      regulation_paragraph: "FFIEC BSA/AML Examination Manual — Risk Assessment section; FinCEN guidance (not a statutory requirement of 31 CFR 1020.210 itself)"
     - id: "AML-04"
-      description: "Program must address high-risk customers and geographies"
+      description: "Program must address high-risk customers, products, services, and geographies, per regulatory expectations for risk-based BSA/AML compliance"
       severity: warning
       check_type: ai
       ai_prompt_key: "aml_high_risk_coverage"
+      regulation_paragraph: "FFIEC BSA/AML Examination Manual — Risk Assessment (customers, products, services, geographies); FinCEN advisories on high-risk jurisdictions"

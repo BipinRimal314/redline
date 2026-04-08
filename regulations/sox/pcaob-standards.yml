@@ -2,24 +2,27 @@ regulation:
   id: "SOX-PCAOB"
   name: "PCAOB Auditing Standards"
   authority: "PCAOB"
-  cfr_reference: "PCAOB AS 2201"
+  cfr_reference: "PCAOB AS 2201, AS 1215"
   document_types:
     - audit-documentation
     - control-description
     - management-assessment
   requirements:
     - id: "PCAOB-01"
-      description: "Audit documentation must not contain vague control descriptions"
+      description: "Audit documentation must not contain vague control descriptions; control identification must be sufficiently precise to test, per PCAOB AS 2201.28-33"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOXVagueControls"
+      regulation_paragraph: "PCAOB AS 2201.28-33 — Identifying controls to test; controls must be described at a level of specificity that allows testing of design and operating effectiveness"
     - id: "PCAOB-02"
-      description: "Testing procedures must be specific and reproducible"
+      description: "Testing procedures must be specific and reproducible, with nature, timing, and extent documented, per PCAOB AS 2201.42-46"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
+      regulation_paragraph: "PCAOB AS 2201.42-46 — Testing and evaluating design effectiveness and operating effectiveness of controls"
     - id: "PCAOB-03"
-      description: "Audit documentation must be sufficient for an experienced auditor to understand"
+      description: "Audit documentation must contain sufficient detail for an experienced auditor with no previous connection to the audit to understand the nature, timing, extent, and results of procedures performed, per PCAOB AS 1215.04"
       severity: error
       check_type: ai
       ai_prompt_key: "pcaob_documentation_sufficiency"
+      regulation_paragraph: "PCAOB AS 1215.04 — Audit documentation must be sufficient for an experienced auditor to understand; this standard (formerly AS No. 3) governs documentation, not AS 2201"

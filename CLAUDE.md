@@ -39,7 +39,33 @@ All 10 GDPR and 10 HIPAA rules audited against primary sources (Regulation EU 20
 | HIPAA-06 | "delivery frequency, and completion tracking" injected — not in §164.308(a)(5) | Rewritten to cite the Standard (Required) and four Addressable implementation specs |
 | HIPAA-10 | "backup schedules", "recovery time objectives", "testing frequencies" injected | RTOs are not a HIPAA term. Rewritten to cite Required (backup, recovery, emergency mode) vs Addressable (testing, criticality analysis) |
 
-**55 rules remain unaudited.** Priority: SOX (11 rules) and BSA-AML (13 rules).
+### Full Audit: SOX + BSA-AML (2026-04-08)
+
+All 11 SOX rules (section-302, section-404, pcaob-standards) and 15 BSA-AML rules (aml-program, cdd, ctr, sar) audited against primary sources.
+
+**SOX (11 rules): All 11 fixed.** Every rule was missing `regulation_paragraph`. Additional issues:
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| 302-01/02/03 | `authority` was "PCAOB" — Section 302 is a statutory requirement, SEC implements it | Changed authority to "SEC"; added `regulation_paragraph` citing 15 USC 7241(a) subsections |
+| 302-01 | Description was generic ("precise and legally compliant") | Rewritten to reference the specific certification statements required by 15 USC 7241(a)(1)-(6) |
+| 404-01/02/03/04 | `authority` was "PCAOB" — Section 404 management assessment is SEC's domain | Changed authority to "SEC"; added `regulation_paragraph` for each |
+| 404-03 | Said "must not contain indicators of material weakness" — misleading | Rewritten: the issue is detecting language suggesting undisclosed weaknesses, not prohibiting disclosure |
+| 404-04 | No source citation for test procedure requirements | Now cites PCAOB AS 2201.42-61 and notes it's an auditor standard that management follows |
+| PCAOB-03 | Cited AS 2201 but the "experienced auditor" standard is from AS 1215.04 | Fixed cfr_reference to include AS 1215; regulation_paragraph now cites AS 1215.04 |
+
+**BSA-AML (15 rules, not 13 as originally counted): All 15 fixed.** Every rule was missing `regulation_paragraph`. Additional issues:
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| AML-01 | Called CIP a BSA/AML "pillar" under 31 CFR 1020.210 — CIP is a separate regulation (31 CFR 1020.220) | Now distinguishes four pillars (1020.210) from CIP (1020.220, USA PATRIOT Act Section 326) |
+| AML-03 | Presented risk assessment as a regulatory requirement — it's FFIEC/FinCEN guidance, not statute | Description now clarifies this is a regulatory expectation, not a statutory requirement |
+| AML-04 | Same guidance-vs-statute conflation as AML-03 | Now cites FFIEC BSA/AML Examination Manual and FinCEN advisories |
+| CDD-01 | Conflated CDD and CTR concepts ("thresholds, structuring") under 31 CFR 1010.230 | Rewritten to CDD-specific elements: beneficial ownership, nature/purpose of relationships, ongoing monitoring |
+| CTR-01 | Labeled as "CDD/CTR elements" — these are CTR-specific requirements | Rewritten as CTR-specific: $10,000 threshold (1010.311), aggregation (1010.313), structuring (31 USC 5324), exemptions (1020.315) |
+| SAR-07 | Missing citation for confidentiality provision | Now cites 31 USC 5318(g)(2) and 31 CFR 1020.320(e) |
+
+**31 rules remain unaudited.** Priority: FINRA (10 rules), SEC (9 rules), SOC 2 (10 rules), ISO 27001 (10 rules). [NEEDS VERIFICATION: actual count is 39 if ISO 27001 has 10.]
 
 ## Project Structure
 
@@ -50,7 +76,7 @@ redline/
 │   ├── hipaa/hipaa.yml     # 10 rules
 │   ├── sox/                # 11 rules (section-302, section-404, pcaob-standards)
 │   ├── finra/              # 10 rules (rule-2111, rule-2210, rule-3110)
-│   ├── bsa-aml/            # 13 rules (aml-program, cdd, ctr, sar)
+│   ├── bsa-aml/            # 15 rules (aml-program, cdd, ctr, sar)
 │   ├── sec/                # 9 rules (marketing-rule, adv-filing)
 │   ├── soc2/soc2.yml       # 10 rules
 │   └── iso27001/           # 10 rules
@@ -79,8 +105,10 @@ python -m pytest tests/
 ## Product Roadmap
 
 ### Immediate
-- **Fix 7 audit findings** from spot-check (see table above)
-- **Audit remaining 75 rules** — prioritize GDPR (all 10) and HIPAA (all 10) first
+- ~~**Fix 7 audit findings** from spot-check~~ (done 2026-04-07)
+- ~~**Audit GDPR (10) and HIPAA (10)**~~ (done 2026-04-08)
+- ~~**Audit SOX (11) and BSA-AML (15)**~~ (done 2026-04-08)
+- **Audit remaining rules** — FINRA (10), SEC (9), SOC 2 (10), ISO 27001 (10)
 - **Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)
 - **Add `verified_against_primary` flag** to each rule
 

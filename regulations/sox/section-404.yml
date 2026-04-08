@@ -1,7 +1,7 @@
 regulation:
   id: "SOX-404"
   name: "Management Assessment of Internal Controls"
-  authority: "PCAOB"
+  authority: "SEC"
   cfr_reference: "15 USC 7262"
   document_types:
     - control-description
@@ -10,25 +10,29 @@ regulation:
     - compliance-policy
   requirements:
     - id: "404-01"
-      description: "Control descriptions must be specific and testable, not vague"
+      description: "Control descriptions must be specific and testable, not vague; management must identify the framework used to evaluate ICFR, per 15 USC 7262(a)"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOXVagueControls"
+      regulation_paragraph: "15 USC 7262(a) — Management must assess and report on the effectiveness of the internal control structure"
     - id: "404-02"
-      description: "Control documentation must use definitive language"
+      description: "Control documentation must use definitive language, not hedging or equivocal assertions, to support the management assessment required by 15 USC 7262(a)"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXWeakAssertions"
+      regulation_paragraph: "15 USC 7262(a) — Annual report must contain an assessment of the effectiveness of internal control"
     - id: "404-03"
-      description: "Documentation must not contain indicators of material weakness"
+      description: "Documentation must be reviewed for language indicating potential undisclosed material weaknesses; any material weakness must be disclosed per SEC rules implementing 15 USC 7262(a)"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOXMaterialWeakness"
+      regulation_paragraph: "15 USC 7262(a) — Management may not assess ICFR as effective if one or more material weaknesses exist; SEC Rule 13a-15 (17 CFR 240.13a-15)"
     - id: "404-04"
-      description: "Test procedures must be complete and specific"
+      description: "Test procedures must be complete and specific to provide sufficient evidence of control operating effectiveness"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
+      regulation_paragraph: "PCAOB AS 2201.42-61 — Testing operating effectiveness of controls (auditor requirement; management testing follows similar principles)"
     - id: "404-05"
       description: "Management assessment must state whether internal control over financial reporting is effective, per 15 USC 7262(a); evaluation of design and operating effectiveness follows PCAOB AS 2201 (auditor standard)"
       severity: error

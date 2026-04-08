@@ -1,7 +1,7 @@
 regulation:
   id: "SOX-302"
   name: "Corporate Responsibility for Financial Reports"
-  authority: "PCAOB"
+  authority: "SEC"
   cfr_reference: "15 USC 7241"
   document_types:
     - certification
@@ -9,17 +9,20 @@ regulation:
     - management-assessment
   requirements:
     - id: "302-01"
-      description: "Certification language must be precise and legally compliant"
+      description: "Certification language must include the specific statements required by 15 USC 7241(a)(1)-(6), including that the signing officer has reviewed the report"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXCertificationLanguage"
+      regulation_paragraph: "15 USC 7241(a) — Required certification statements by CEO and CFO; SEC Rule 13a-14 (17 CFR 240.13a-14) — Implementing certification form"
     - id: "302-02"
-      description: "Certifications must confirm review of financial report"
+      description: "Certifications must confirm that the signing officer has reviewed the report, per 15 USC 7241(a)(1)"
       severity: error
       check_type: ai
       ai_prompt_key: "sox_certification_completeness"
+      regulation_paragraph: "15 USC 7241(a)(1) — Signing officer has reviewed the report"
     - id: "302-03"
-      description: "Certifications must address internal controls over financial reporting"
+      description: "Certifications must address the signing officer's responsibility for establishing and maintaining internal controls over financial reporting, and must disclose any significant changes in internal controls, per 15 USC 7241(a)(4)-(5)"
       severity: error
       check_type: ai
       ai_prompt_key: "sox_icfr_certification"
+      regulation_paragraph: "15 USC 7241(a)(4) — Responsibility for internal controls; 15 USC 7241(a)(5) — Disclosure of significant changes"
