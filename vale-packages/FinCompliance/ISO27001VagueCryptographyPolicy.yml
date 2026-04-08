@@ -1,5 +1,5 @@
 extends: existence
-message: "Vague cryptography policy language: '%s'. ISO 27001 Annex A.10 requires a cryptographic controls policy specifying named algorithms, minimum key lengths, defined key lifecycle procedures, and explicit use cases for encryption."
+message: "Vague cryptography policy language: '%s'. ISO 27001:2022 A.8.24 (Use of cryptography) requires a cryptographic controls policy specifying named algorithms, minimum key lengths, defined key lifecycle procedures, and explicit use cases."
 link: "https://www.iso.org/standard/27001"
 level: warning
 ignorecase: true

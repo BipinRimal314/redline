@@ -1,5 +1,5 @@
 extends: existence
-message: "Weak compliance monitoring language: '%s'. ISO 27001 Annex A.18 requires compliance reviews with explicit frequencies, defined scope, named reviewers, documented audit criteria, and specific corrective action timelines."
+message: "Weak compliance monitoring language: '%s'. ISO 27001:2022 A.5.31 (Legal/regulatory requirements), A.5.35 (Independent review), A.5.36 (Policy compliance) require compliance reviews with explicit frequencies, defined scope, named reviewers, documented audit criteria, and corrective action timelines."
 link: "https://www.iso.org/standard/27001"
 level: warning
 ignorecase: true

@@ -1,5 +1,5 @@
 extends: existence
-message: "Weak asset management language: '%s'. ISO 27001 Annex A.8 requires a documented asset inventory with defined classification levels, assigned owners, and specific handling procedures for each classification."
+message: "Weak asset management language: '%s'. ISO 27001:2022 A.5.9 (Inventory), A.5.10 (Acceptable use), A.5.11 (Return of assets) require a documented asset inventory with defined classification levels, assigned owners, and specific handling procedures."
 link: "https://www.iso.org/standard/27001"
 level: warning
 ignorecase: true

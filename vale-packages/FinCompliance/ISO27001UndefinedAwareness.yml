@@ -1,5 +1,5 @@
 extends: existence
-message: "Undefined awareness program language: '%s'. ISO 27001 Clause 7.3 and Annex A.7.2.2 require a documented awareness program with specific training content, defined delivery schedules, measurable competency criteria, and attendance tracking."
+message: "Undefined awareness program language: '%s'. ISO 27001:2022 Clause 7.3 and A.6.3 (Information security awareness, education, and training) require a documented awareness program with specific training content, defined delivery schedules, measurable competency criteria, and attendance tracking."
 link: "https://www.iso.org/standard/27001"
 level: error
 ignorecase: true
