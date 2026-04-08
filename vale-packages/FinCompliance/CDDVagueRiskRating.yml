@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague customer risk rating language: '%s'. CDD procedures must describe specific risk rating methodology for customer relationships, including rating categories, criteria, and review triggers. Per 31 CFR 1010.230(d) ongoing monitoring requirement."
+link: "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.230"
+level: warning
+ignorecase: true
+tokens:
+  - appropriate risk rating
+  - risk rated accordingly
+  - assigned a risk level
+  - categorized by risk
+  - risk will be determined
+  - risk assessment will be performed
+  - risk profile will be established
+  - customer risk is evaluated
+  - appropriate level of due diligence
+  - commensurate due diligence
+  - risk-based due diligence
+  - appropriate monitoring
+  - monitoring commensurate with risk
+  - risk-appropriate review
+  - ongoing review as appropriate

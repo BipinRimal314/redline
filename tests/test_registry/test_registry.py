@@ -42,7 +42,24 @@ class TestRegistry:
     def test_get_nonexistent_regulation_returns_none(self):
         assert self.registry.get_regulation("DOES-NOT-EXIST") is None
 
-    def test_get_ai_requirements(self):
+    def test_get_ai_requirements_returns_empty(self):
+        """All rules are now deterministic; no AI requirements remain."""
         ai_reqs = self.registry.get_ai_requirements("sar-narrative")
-        assert all(r["check_type"] == "ai" for r in ai_reqs)
-        assert len(ai_reqs) > 0
+        assert len(ai_reqs) == 0
+
+    def test_all_rules_are_deterministic(self):
+        for reg in self.registry.regulations.values():
+            for req in reg.get("requirements", []):
+                assert req["check_type"] == "deterministic", (
+                    f"{req['id']} is {req['check_type']}, expected deterministic"
+                )
+
+    def test_all_rules_have_legal_text(self):
+        for reg in self.registry.regulations.values():
+            for req in reg.get("requirements", []):
+                assert "legal_text" in req, (
+                    f"{req['id']} is missing legal_text field"
+                )
+                assert len(req["legal_text"]) > 0, (
+                    f"{req['id']} has empty legal_text"
+                )

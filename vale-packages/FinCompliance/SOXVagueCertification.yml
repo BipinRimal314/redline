@@ -1,0 +1,18 @@
+extends: existence
+message: "Incomplete or vague SOX certification language: '%s'. SOX Section 302 (15 USC 7241(a)(1)) requires the signing officer to certify that they have reviewed the report. Certifications must use specific statutory language."
+link: "https://www.law.cornell.edu/uscode/text/15/7241"
+level: error
+ignorecase: true
+tokens:
+  - has been generally reviewed
+  - has been substantially reviewed
+  - to my knowledge has been reviewed
+  - I believe has been reviewed
+  - has been reviewed to the extent practicable
+  - the report appears accurate
+  - the report is believed to be accurate
+  - the report is substantially accurate
+  - the financial statements are generally accurate
+  - generally fairly presents
+  - substantially fairly presents
+  - the report does not contain material misstatements to my knowledge

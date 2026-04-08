@@ -15,27 +15,32 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAProhibitedCommunications"
       regulation_paragraph: "Rule 2210(d)(1)(B) — No member may make any false, exaggerated, unwarranted, promissory or misleading statement or claim in any communication"
+      legal_text: "No member may make any false, exaggerated, unwarranted, promissory or misleading statement or claim in any communication. No member may publish, circulate or distribute any communication that the member knows or has reason to know contains any untrue statement of a material fact or is otherwise false or misleading. — FINRA Rule 2210(d)(1)(B)"
     - id: "2210-02"
       description: "Communications must be fair and balanced, providing a sound basis for evaluating the facts; presentation of benefits must include balanced treatment of risks and potential benefits"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAUnbalancedPresentation"
       regulation_paragraph: "Rule 2210(d)(1)(A) — Communications must be based on principles of fair dealing and good faith, be fair and balanced, and provide a sound basis for evaluating the facts; Rule 2210(d)(1)(D) — Balanced treatment of risks and potential benefits"
+      legal_text: "All member communications must be based on principles of fair dealing and good faith, must be fair and balanced, and must provide a sound basis for evaluating the facts in regard to any particular security or type of security, industry, or service. No member may omit any material fact or qualification if the omission, in light of the context of the material presented, would cause the communication to be misleading. — FINRA Rule 2210(d)(1)(A)"
     - id: "2210-03"
       description: "Communications may not predict or project performance, imply that past performance will recur, or make exaggerated or unwarranted claims, opinions, or forecasts; limited exceptions exist for mathematical illustrations, investment analysis tools, and research report price targets"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAProjectedReturns"
       regulation_paragraph: "Rule 2210(d)(1)(F) — Prohibition on predictions/projections of performance, with three exceptions: (1) hypothetical illustrations of mathematical principles, (2) investment analysis tools, (3) price targets in research reports"
+      legal_text: "Communications may not predict or project performance, imply that past performance will recur or make any exaggerated or unwarranted claim, opinion or forecast; provided, however, that this paragraph (d)(1)(F) does not prohibit: (i) a hypothetical illustration of mathematical principles; (ii) an investment analysis tool; or (iii) a price target contained in a research report on debt or equity securities. — FINRA Rule 2210(d)(1)(F)"
     - id: "2210-04"
       description: "Past performance references must not imply comparable future performance; lists of past recommendations must include all recommendations of the same type within the specified period, with dates, prices, and nature of each recommendation"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAPastPerformanceDisclaimer"
       regulation_paragraph: "Rule 2210(d)(1)(F) — Prohibition on implying past performance will recur; Rule 2210(d)(2) — Requirements for past recommendations lists including completeness, dates, and pricing"
+      legal_text: "If any member or associated person shows or distributes any communication that sets out or offers to furnish a list of previous recommendations made by such member or associated person, such communication must also contain: (i) the name of each security recommended; (ii) the date and nature of each recommendation (e.g., whether to buy, sell, or hold); (iii) the market price at that time; (iv) the price at which the recommendation was to be acted upon; and (v) the most recently available market price of each such security. — FINRA Rule 2210(d)(2)(A)"
     - id: "2210-05"
       description: "Retail communications must be approved by a registered principal before the earlier of use or filing with FINRA's Advertising Regulation Department"
       severity: error
-      check_type: ai
-      ai_prompt_key: "finra_principal_approval_check"
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAMissingPrincipalApproval"
       regulation_paragraph: "Rule 2210(b)(1)(A) — Registered principal approval required before earlier of use or filing; principal must be appropriately qualified for the type of communication"
+      legal_text: "A registered principal of the member must approve each retail communication before the earlier of its use or filing with the Department. A registered principal must, based on his or her knowledge of the member's business and familiarity with applicable regulatory requirements, be qualified to approve the retail communication. — FINRA Rule 2210(b)(1)(A)"

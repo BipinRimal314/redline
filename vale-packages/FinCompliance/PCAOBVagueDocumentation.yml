@@ -1,0 +1,21 @@
+extends: existence
+message: "Insufficient audit documentation detail: '%s'. PCAOB AS 1215.04 requires audit documentation to contain sufficient detail for an experienced auditor with no previous connection to understand the nature, timing, extent, and results of procedures."
+link: "https://pcaobus.org/oversight/standards/auditing-standards/details/AS1215"
+level: error
+ignorecase: true
+tokens:
+  - procedures were performed
+  - testing was conducted
+  - review was performed
+  - work was completed
+  - audit steps were followed
+  - we performed our procedures
+  - procedures as planned
+  - standard procedures were applied
+  - customary procedures
+  - normal audit procedures
+  - routine testing
+  - appropriate procedures
+  - sufficient procedures
+  - adequate testing
+  - testing was satisfactory

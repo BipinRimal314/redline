@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague CTR filing timeline or exemption language: '%s'. CTR procedures must specify the 15-calendar-day filing deadline per 31 CFR 1010.306(a)(1) and must detail exemption eligibility, designation, and annual review per 31 CFR 1020.315."
+link: "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.306"
+level: warning
+ignorecase: true
+tokens:
+  - filed in a timely manner
+  - filed promptly
+  - filed within the required timeframe
+  - filed as required
+  - submitted on time
+  - reported within the deadline
+  - timely filing
+  - timely reporting
+  - exemptions may apply
+  - exemptions as appropriate
+  - exemptions will be considered
+  - exempt customers are reviewed
+  - exemption eligibility is assessed
+  - exempt status is monitored
+  - periodic review of exemptions

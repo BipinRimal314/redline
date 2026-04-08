@@ -1,0 +1,22 @@
+extends: existence
+message: "Vague supervisory system description: '%s'. FINRA Rule 3110(a)-(b) requires written supervisory procedures to designate supervisory personnel, assign registered persons to supervisors, and designate OSJs with specificity."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/3110"
+level: error
+ignorecase: true
+tokens:
+  - appropriate supervision
+  - adequate supervision
+  - sufficient supervision
+  - proper supervision
+  - supervisory oversight
+  - supervised as appropriate
+  - supervised accordingly
+  - oversight is maintained
+  - appropriate oversight
+  - supervision is provided
+  - designated personnel
+  - appropriate personnel
+  - qualified personnel
+  - responsible individuals
+  - management oversight
+  - supervisory coverage

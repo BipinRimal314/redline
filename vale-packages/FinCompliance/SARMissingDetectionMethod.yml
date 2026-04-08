@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague detection method: '%s'. SAR narratives should describe the specific method of detection (e.g., transaction monitoring system alert, employee referral, law enforcement inquiry). Per FinCEN SAR Activity Review guidance."
+link: "https://www.fincen.gov/resources/statutes-and-regulations"
+level: warning
+ignorecase: true
+tokens:
+  - was identified
+  - was discovered
+  - was detected
+  - came to our attention
+  - was brought to our attention
+  - was noticed
+  - was observed
+  - was found
+  - it was determined
+  - review revealed
+  - analysis revealed
+  - we became aware
+  - it became apparent
+  - upon review
+  - during review

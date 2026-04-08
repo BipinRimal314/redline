@@ -146,8 +146,7 @@ redline/
 
 ## Rule Types
 
-- **deterministic** — Vale pattern matching. Catches structural issues, prohibited terms, missing sections. No LLM needed.
-- **ai** — Claude API for substantive adequacy checks (e.g., "is this net-of-fees disclosure adequate?"). Flagged for human review.
+- **deterministic** — Vale pattern matching. Catches structural issues, prohibited terms, missing sections. No LLM needed. All 85 rules are deterministic as of 2026-04-08.
 
 ## Development
 
@@ -168,7 +167,8 @@ python -m pytest tests/
 - ~~**Audit SOC 2 (10) and ISO 27001 (10)**~~ (done 2026-04-08)
 - ~~**Audit FINRA (10) and SEC (9)**~~ (done 2026-04-08)
 - **All 85 rules audited.** Every rule now has `regulation_paragraph` with primary source citation.
-- **Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)
+- ~~**Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)~~ (done 2026-04-08)
+- ~~**Convert all 18 `check_type: ai` rules to deterministic Vale patterns**~~ (done 2026-04-08)
 - **Add `verified_against_primary` flag** to each rule
 
 ### Near-term

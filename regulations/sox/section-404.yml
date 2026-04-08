@@ -15,27 +15,32 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SOXVagueControls"
       regulation_paragraph: "15 USC 7262(a) — Management must assess and report on the effectiveness of the internal control structure"
+      legal_text: "Each annual report required by section 78m(a) or 78o(d) of this title shall contain an internal control report, which shall— (1) state the responsibility of management for establishing and maintaining an adequate internal control structure and procedures for financial reporting; and (2) contain an assessment, as of the end of the most recent fiscal year of the issuer, of the effectiveness of the internal control structure and procedures of the issuer for financial reporting. — 15 USC 7262(a)"
     - id: "404-02"
       description: "Control documentation must use definitive language, not hedging or equivocal assertions, to support the management assessment required by 15 USC 7262(a)"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXWeakAssertions"
       regulation_paragraph: "15 USC 7262(a) — Annual report must contain an assessment of the effectiveness of internal control"
+      legal_text: "The annual report shall contain an assessment, as of the end of the most recent fiscal year of the issuer, of the effectiveness of the internal control structure and procedures of the issuer for financial reporting. — 15 USC 7262(a)(2). Management is not permitted to conclude that the registrant's internal control over financial reporting is effective if there are one or more material weaknesses. — SEC Release No. 33-8238, Management's Report on Internal Control Over Financial Reporting"
     - id: "404-03"
       description: "Documentation must be reviewed for language indicating potential undisclosed material weaknesses; any material weakness must be disclosed per SEC rules implementing 15 USC 7262(a)"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SOXMaterialWeakness"
       regulation_paragraph: "15 USC 7262(a) — Management may not assess ICFR as effective if one or more material weaknesses exist; SEC Rule 13a-15 (17 CFR 240.13a-15)"
+      legal_text: "Management is not permitted to conclude that the registrant's internal control over financial reporting is effective if there are one or more material weaknesses in the registrant's internal control over financial reporting. A material weakness is a deficiency, or a combination of deficiencies, in internal control over financial reporting, such that there is a reasonable possibility that a material misstatement of the company's annual or interim financial statements will not be prevented or detected on a timely basis. — SEC Release No. 33-8238; PCAOB AS 2201.A7"
     - id: "404-04"
       description: "Test procedures must be complete and specific to provide sufficient evidence of control operating effectiveness"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
       regulation_paragraph: "PCAOB AS 2201.42-61 — Testing operating effectiveness of controls (auditor requirement; management testing follows similar principles)"
+      legal_text: "The auditor should test the operating effectiveness of a control by determining whether the control is operating as designed and whether the person performing the control possesses the necessary authority and competence to perform the control effectively. The auditor's tests of the operating effectiveness of controls include a mix of inquiry of appropriate personnel, observation of the company's operations, inspection of relevant documentation, and re-performance of the control. — PCAOB AS 2201.42-44"
     - id: "404-05"
       description: "Management assessment must state whether internal control over financial reporting is effective, per 15 USC 7262(a); evaluation of design and operating effectiveness follows PCAOB AS 2201 (auditor standard)"
       severity: error
-      check_type: ai
-      ai_prompt_key: "sox_control_effectiveness_evaluation"
+      check_type: deterministic
+      vale_rule: "FinCompliance.SOXVagueEffectivenessAssessment"
       regulation_paragraph: "15 USC 7262(a) — Management assessment of internal controls; PCAOB Auditing Standard No. 5 (AS 2201) — Evaluating design and operating effectiveness (auditor requirement)"
+      legal_text: "Each annual report shall contain an internal control report which shall contain an assessment, as of the end of the most recent fiscal year of the issuer, of the effectiveness of the internal control structure and procedures of the issuer for financial reporting. — 15 USC 7262(a)(2). With respect to each significant account and each relevant assertion, the auditor should evaluate the evidence obtained from all sources, including the entity-level controls, other controls the auditor has tested, and the results of management's assessment. — PCAOB AS 2201.71"

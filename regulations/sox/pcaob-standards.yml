@@ -14,15 +14,18 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SOXVagueControls"
       regulation_paragraph: "PCAOB AS 2201.28-33 — Identifying controls to test; controls must be described at a level of specificity that allows testing of design and operating effectiveness"
+      legal_text: "The auditor should identify each significant process over each major class of transactions affecting significant accounts or groups of accounts. For each significant process, the auditor should understand the flow of transactions, including how these transactions are initiated, authorized, processed, and recorded; the controls over the process, including controls designed to prevent or detect fraud; the points within the process at which a misstatement could arise. — PCAOB AS 2201.28-34"
     - id: "PCAOB-02"
       description: "Testing procedures must be specific and reproducible, with nature, timing, and extent documented, per PCAOB AS 2201.42-46"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.SOXIncompleteTestProcedures"
       regulation_paragraph: "PCAOB AS 2201.42-46 — Testing and evaluating design effectiveness and operating effectiveness of controls"
+      legal_text: "The auditor should test the operating effectiveness of a control by determining whether the control is operating as designed and whether the person performing the control possesses the necessary authority and competence to perform the control effectively. [...] The nature, timing, and extent of tests of controls the auditor performs should be responsive to the assessed risk. — PCAOB AS 2201.42-46"
     - id: "PCAOB-03"
       description: "Audit documentation must contain sufficient detail for an experienced auditor with no previous connection to the audit to understand the nature, timing, extent, and results of procedures performed, per PCAOB AS 1215.04"
       severity: error
-      check_type: ai
-      ai_prompt_key: "pcaob_documentation_sufficiency"
+      check_type: deterministic
+      vale_rule: "FinCompliance.PCAOBVagueDocumentation"
       regulation_paragraph: "PCAOB AS 1215.04 — Audit documentation must be sufficient for an experienced auditor to understand; this standard (formerly AS No. 3) governs documentation, not AS 2201"
+      legal_text: "Audit documentation must contain sufficient information to enable an experienced auditor, having no previous connection with the engagement: (a) To understand the nature, timing, extent, and results of the procedures performed, evidence obtained, and conclusions reached, and (b) To determine who performed the work and the date such work was completed as well as the person who reviewed the work and the date of such review. — PCAOB AS 1215.04"

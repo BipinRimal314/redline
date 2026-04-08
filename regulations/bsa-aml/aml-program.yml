@@ -13,21 +13,25 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.RequiredProgramElements"
       regulation_paragraph: "31 CFR 1020.210(b)(1)-(4) — Four minimum program elements; 31 CFR 1020.220 — CIP requirements (separate regulation, USA PATRIOT Act Section 326)"
+      legal_text: "A bank shall be deemed to satisfy the requirements of 31 U.S.C. 5318(h)(1) if the bank implements and maintains a written anti-money laundering program applicable to its operations in the United States that: (1) Incorporates policies, procedures, and internal controls designed to ensure ongoing compliance; (2) Designates a compliance officer; (3) Provides education and/or training of appropriate personnel; (4) Includes an independent audit function to test programs. — 31 CFR 1020.210(b)"
     - id: "AML-02"
       description: "Program must not use prohibited vague language that would fail to meet the 'reasonably designed' standard for BSA/AML programs"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.ProhibitedLanguage"
       regulation_paragraph: "31 CFR 1020.210(a) — Program must be 'reasonably designed to assure and monitor compliance'; vague language undermines this standard"
+      legal_text: "Each bank shall develop and implement a written anti-money laundering program that is reasonably designed to prevent the bank from being used to facilitate money laundering and the financing of terrorist activities. — 31 CFR 1020.210(a)"
     - id: "AML-03"
       description: "Program must describe risk assessment methodology; while not explicitly required by 31 CFR 1020.210, risk assessment is a regulatory expectation per FFIEC BSA/AML Examination Manual and FinCEN guidance for designing a risk-based program"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "aml_risk_assessment_adequacy"
+      check_type: deterministic
+      vale_rule: "FinCompliance.AMLVagueRiskAssessment"
       regulation_paragraph: "FFIEC BSA/AML Examination Manual — Risk Assessment section; FinCEN guidance (not a statutory requirement of 31 CFR 1020.210 itself)"
+      legal_text: "The first step in developing an adequate BSA/AML compliance program is to understand the ML/TF and other illicit financial activity risks unique to the bank. This understanding should be documented in a comprehensive BSA/AML risk assessment. — FFIEC BSA/AML Examination Manual, Risk Assessment"
     - id: "AML-04"
       description: "Program must address high-risk customers, products, services, and geographies, per regulatory expectations for risk-based BSA/AML compliance"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "aml_high_risk_coverage"
+      check_type: deterministic
+      vale_rule: "FinCompliance.AMLMissingHighRiskFactors"
       regulation_paragraph: "FFIEC BSA/AML Examination Manual — Risk Assessment (customers, products, services, geographies); FinCEN advisories on high-risk jurisdictions"
+      legal_text: "The bank should identify the specific risk categories (products, services, customers, and geographic locations) unique to the bank. The risk assessment should provide a comprehensive analysis of the BSA/AML risks in a concise and organized format, and should be shared with and understood by all business lines. — FFIEC BSA/AML Examination Manual, Risk Assessment"

@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague suitability analysis: '%s'. FINRA Rule 2111(a) requires documented reasonable-basis, customer-specific, and quantitative suitability analysis. Documentation must show the recommendation is suitable based on the customer's investment profile."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2111"
+level: error
+ignorecase: true
+tokens:
+  - suitable investment
+  - suitable recommendation
+  - appropriate investment
+  - appropriate for the client
+  - meets the client's needs
+  - consistent with objectives
+  - aligned with goals
+  - in line with the client's
+  - based on the client's profile
+  - given the client's situation
+  - considering the client's
+  - taking into account
+  - we believe this is suitable
+  - deemed suitable
+  - determined to be appropriate

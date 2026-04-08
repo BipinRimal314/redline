@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague high-risk coverage: '%s'. BSA/AML programs must specifically address high-risk customers, products, services, and geographies. Per FFIEC BSA/AML Examination Manual risk assessment guidance."
+link: "https://bsaaml.ffiec.gov/manual/RiskAssessment/01"
+level: warning
+ignorecase: true
+tokens:
+  - certain high-risk customers
+  - various high-risk categories
+  - applicable high-risk factors
+  - relevant risk factors
+  - higher risk situations
+  - elevated risk customers
+  - riskier customers
+  - high-risk as appropriate
+  - enhanced due diligence as needed
+  - enhanced scrutiny where warranted
+  - additional review for higher risk
+  - risk-appropriate measures
+  - some jurisdictions may pose higher risk
+  - certain geographies
+  - various products and services

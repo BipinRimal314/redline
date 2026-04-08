@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing or vague principal approval language: '%s'. FINRA Rule 2210(b)(1)(A) requires retail communications to be approved by a registered principal before the earlier of use or filing with FINRA."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+level: error
+ignorecase: true
+tokens:
+  - pending approval
+  - subject to approval
+  - awaiting review
+  - to be reviewed
+  - approval pending
+  - not yet approved
+  - draft for review
+  - preliminary version
+  - unapproved
+  - not reviewed
+  - pre-approval
+  - needs approval
+  - requires approval
+  - approval not obtained
+  - without principal review

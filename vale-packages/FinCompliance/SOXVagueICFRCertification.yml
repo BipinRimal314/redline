@@ -1,0 +1,20 @@
+extends: existence
+message: "Vague internal controls certification language: '%s'. SOX Section 302 (15 USC 7241(a)(4)-(5)) requires the signing officer to certify responsibility for establishing and maintaining internal controls and to disclose any significant changes."
+link: "https://www.law.cornell.edu/uscode/text/15/7241"
+level: error
+ignorecase: true
+tokens:
+  - generally adequate internal controls
+  - substantially effective internal controls
+  - internal controls are believed to be effective
+  - internal controls appear effective
+  - internal controls are considered adequate
+  - we believe internal controls are effective
+  - internal controls are satisfactory
+  - no known material changes
+  - no significant changes to report
+  - no changes of note
+  - internal controls are maintained
+  - appropriate internal controls
+  - reasonable internal controls
+  - adequate internal control procedures

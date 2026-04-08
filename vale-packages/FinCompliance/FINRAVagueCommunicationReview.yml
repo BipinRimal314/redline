@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague communication review procedures: '%s'. FINRA Rule 3110(b)(4) requires review of correspondence and internal communications by a registered principal with documented evidence of review (reviewer identity, date, and actions taken)."
+link: "https://www.finra.org/rules-guidance/rulebooks/finra-rules/3110"
+level: warning
+ignorecase: true
+tokens:
+  - communications are reviewed
+  - correspondence is reviewed
+  - reviewed as appropriate
+  - reviewed periodically
+  - reviewed on a regular basis
+  - subject to review
+  - communications will be monitored
+  - correspondence is monitored
+  - oversight of communications
+  - review of communications
+  - sampled for review
+  - spot-checked
+  - communications oversight
+  - reviewed by management
+  - reviewed by compliance

@@ -1,0 +1,21 @@
+extends: existence
+message: "Potentially incomplete ADV disclosure: '%s'. Form ADV Part 2A must follow the prescribed 18-item format covering advisory business, fees, disciplinary history, conflicts, and code of ethics. Per 17 CFR 279.1."
+link: "https://www.sec.gov/about/forms/formadv.pdf"
+level: error
+ignorecase: true
+tokens:
+  - additional information available upon request
+  - details available on request
+  - contact us for more information
+  - see our website for details
+  - refer to our website
+  - not applicable at this time
+  - to be determined
+  - will be provided separately
+  - disclosed elsewhere
+  - as described in other materials
+  - no material disciplinary events
+  - no disciplinary history to report
+  - clean disciplinary record
+  - no conflicts to disclose
+  - no material conflicts

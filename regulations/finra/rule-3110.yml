@@ -13,15 +13,18 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAProhibitedCommunications"
       regulation_paragraph: "Rule 3110(a) — Supervisory system must be reasonably designed to achieve compliance with applicable securities laws, regulations, and FINRA rules; Rule 3110(b) — Written supervisory procedures must be established and maintained"
+      legal_text: "Each member shall establish and maintain a system to supervise the activities of each associated person that is reasonably designed to achieve compliance with applicable securities laws and regulations, and with applicable FINRA rules. Final responsibility for proper supervision shall rest with the member. — FINRA Rule 3110(a)"
     - id: "3110-02"
       description: "Written supervisory procedures must describe the supervisory system, including designation of appropriately registered supervisory personnel, assignment of each registered person to a supervisor, and designation of offices of supervisory jurisdiction (OSJs)"
       severity: error
-      check_type: ai
-      ai_prompt_key: "finra_supervisory_system_adequacy"
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAVagueSupervisorySystem"
       regulation_paragraph: "Rule 3110(a)(1)-(5) — Supervisory system requirements: designation of supervisory personnel, delegation of supervisory responsibilities, supervisory controls; Rule 3110(b)(1)-(2) — Written procedures for types of business, supervision of supervisory personnel"
+      legal_text: "Each member shall establish, maintain, and enforce written procedures to supervise the types of business in which it engages and the activities of its associated persons that are reasonably designed to achieve compliance with applicable securities laws and regulations, and with the applicable rules of FINRA. Each member shall designate an appropriately registered principal(s) with authority to carry out the supervisory responsibilities of the member for each type of business in which it engages. Each member shall have one or more offices designated as an office of supervisory jurisdiction ('OSJ'). — FINRA Rule 3110(a)(1)-(3), (b)(1)"
     - id: "3110-03"
       description: "Written supervisory procedures must include procedures for review of incoming and outgoing correspondence and internal communications, conducted by a registered principal with evidence of review (reviewer identity, date, and actions taken)"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "finra_communication_review_procedures"
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAVagueCommunicationReview"
       regulation_paragraph: "Rule 3110(b)(4) — Review of correspondence and internal communications by registered principal; evidence of review must identify reviewer, communication reviewed, date, and actions taken; Rule 3110(b)(5) — Customer complaint procedures"
+      legal_text: "Each member shall establish, maintain and enforce written procedures for the review by a registered principal of incoming and outgoing written (including electronic) correspondence and internal communications of its associated persons relating to the investment banking or securities business of such member. Such review procedures shall be reasonably designed to identify correspondence and internal communications that are of a supervisory concern. Evidence that these reviews have been conducted shall include the reviewer's name, the date of review, and any actions taken as a result of such review. — FINRA Rule 3110(b)(4)"

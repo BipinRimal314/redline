@@ -1,0 +1,21 @@
+extends: existence
+message: "Potentially cherry-picked performance: '%s'. SEC Rule 206(4)-1(a)(4)-(5) requires fair and balanced presentation of specific investment advice. Must not cherry-pick favorable results while omitting material risks."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: error
+ignorecase: true
+tokens:
+  - our best performing
+  - top picks
+  - best trades
+  - winning trades
+  - selected results
+  - select investments
+  - highlighted investments
+  - featured returns
+  - showcase performance
+  - cherry-picked
+  - hand-picked results
+  - our top performers
+  - best examples
+  - representative account
+  - model account performance

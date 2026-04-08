@@ -1,0 +1,19 @@
+extends: existence
+message: "Gross performance without net performance: '%s'. SEC Rule 206(4)-1(d)(2) requires advertisements targeting retail persons that present gross performance to also present net performance with equal prominence. Performance must cover 1, 5, and 10 year periods per Rule 206(4)-1(d)(3)."
+link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
+level: error
+ignorecase: true
+tokens:
+  - gross returns
+  - gross performance
+  - gross of fees
+  - before fees
+  - pre-fee returns
+  - pre-fee performance
+  - returns before expenses
+  - performance before fees
+  - performance before expenses
+  - returns before management fees
+  - returns before advisory fees
+  - gross annual return
+  - gross annualized

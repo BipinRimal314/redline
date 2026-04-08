@@ -1,0 +1,22 @@
+extends: existence
+message: "Incomplete narrative element: '%s'. SAR narratives must address all five W's: who conducted or benefited from the activity, what occurred, when it occurred, where it occurred, and why it is suspicious. Per FinCEN SAR guidance and FFIEC BSA/AML Examination Manual."
+link: "https://www.fincen.gov/resources/statutes-and-regulations"
+level: warning
+ignorecase: true
+tokens:
+  - unknown individual
+  - unknown person
+  - unknown party
+  - unidentified individual
+  - unidentified person
+  - unidentified party
+  - various individuals
+  - various parties
+  - certain individuals
+  - some customers
+  - at various locations
+  - at various times
+  - on various dates
+  - through various means
+  - for unknown reasons
+  - for unclear reasons

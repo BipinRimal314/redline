@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague risk assessment language: '%s'. BSA/AML programs must describe specific risk assessment methodology including risk categories, scoring criteria, and assessment frequency. Per FFIEC BSA/AML Examination Manual."
+link: "https://bsaaml.ffiec.gov/manual/RiskAssessment/01"
+level: warning
+ignorecase: true
+tokens:
+  - appropriate risk assessment
+  - adequate risk assessment
+  - general risk assessment
+  - basic risk review
+  - risk will be assessed
+  - risks are considered
+  - risk factors are evaluated
+  - we assess risk
+  - risk is reviewed periodically
+  - risk assessment as needed
+  - risk assessment process
+  - various risk factors
+  - risk-based approach
+  - commensurate with risk
+  - appropriate to the risk

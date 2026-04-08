@@ -1,0 +1,23 @@
+extends: existence
+message: "Vague suspicious activity description: '%s'. SAR narratives must identify the specific type of suspicious activity (structuring, money laundering, fraud, etc.) and explain why the activity is suspicious for this customer. Per 31 CFR 1020.320(a)(2) and FinCEN SAR guidance."
+link: "https://www.fincen.gov/resources/statutes-and-regulations"
+level: error
+ignorecase: true
+tokens:
+  - suspicious transactions
+  - suspicious activity was detected
+  - unusual activity
+  - unusual transactions
+  - questionable activity
+  - questionable transactions
+  - irregular activity
+  - irregular transactions
+  - anomalous activity
+  - aberrant behavior
+  - concerning activity
+  - the activity appeared suspicious
+  - various suspicious transactions
+  - multiple suspicious activities
+  - raised suspicion
+  - raised concerns
+  - flagged for review

@@ -13,9 +13,11 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.RequiredCDDCTRElements"
       regulation_paragraph: "31 CFR 1010.311 — CTR filing obligation for transactions over $10,000; 31 CFR 1010.313 — Aggregation rule for multiple transactions; 31 USC 5324 — Structuring prohibition; 31 CFR 1020.315 — Exemptions"
+      legal_text: "Each financial institution shall file a report of each deposit, withdrawal, exchange of currency or other payment or transfer, by, through, or to such financial institution which involves a transaction in currency of more than $10,000. — 31 CFR 1010.311. Multiple currency transactions shall be treated as a single transaction if the financial institution has knowledge that they are by or on behalf of any person and result in either cash in or cash out totaling more than $10,000 during any one business day. — 31 CFR 1010.313"
     - id: "CTR-02"
       description: "Procedures must specify CTR filing timeline (15 calendar days per 31 CFR 1010.306(a)(1)) and must address exemption criteria and ongoing monitoring of exempt customers per 31 CFR 1020.315"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "ctr_timeline_exemptions_adequacy"
+      check_type: deterministic
+      vale_rule: "FinCompliance.CTRVagueTimelines"
       regulation_paragraph: "31 CFR 1010.306(a)(1) — 15-day filing deadline; 31 CFR 1020.315(b)-(d) — Exemption eligibility, designation, and annual review requirements"
+      legal_text: "A report required by 31 CFR 1010.311 shall be filed by the financial institution within 15 days following the day on which the reportable transaction occurred. — 31 CFR 1010.306(a)(1). A bank may designate an exempt person: (1) A bank, to the extent of its domestic operations; (2) A department or agency of the United States, of any State, or of any political subdivision of any State; (3) Any entity exercising governmental authority within the United States; (4) Any business or category of business the reports on which have little or no value for law enforcement purposes. — 31 CFR 1020.315(b)"

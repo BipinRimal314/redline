@@ -13,9 +13,11 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SECProhibitedClaims"
       regulation_paragraph: "15 USC 80b-3(c)(1)(A) — Registration application requirements; 18 USC 1001 and 15 USC 80b-17 — Criminal penalties for misstatements or omissions"
+      legal_text: "Any application for registration may be granted by the Commission when the application is filed in such form as the Commission, by rule, may prescribe as necessary or appropriate in the public interest or for the protection of investors. [...] It shall be unlawful for any person willfully to make, or cause to be made, any untrue statement of a material fact in any registration application or report filed with the Commission, or willfully to omit to state in any such application or report any material fact which is required to be stated therein. — 15 USC 80b-3(c), 15 USC 80b-7"
     - id: "ADV-02"
       description: "Form ADV Part 2A brochure must follow the prescribed 18-item format and accurately describe advisory services, fee schedules, disciplinary history (material events within last 10 years), conflicts of interest, and code of ethics, written in plain English"
       severity: error
-      check_type: ai
-      ai_prompt_key: "adv_completeness_check"
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECADVIncompleteDisclosure"
       regulation_paragraph: "Form ADV Part 2A — Items 1-18: cover page, material changes, table of contents, advisory business, fees and compensation, performance-based fees, types of clients, methods of analysis, disciplinary information, other financial industry activities, code of ethics, brokerage practices, review of accounts, client referrals, custody, investment discretion, voting client securities, financial information"
+      legal_text: "Form ADV Part 2A requires investment advisers to deliver a brochure to clients containing 18 prescribed items: Item 1 (Cover Page), Item 2 (Material Changes), Item 3 (Table of Contents), Item 4 (Advisory Business), Item 5 (Fees and Compensation), Item 6 (Performance-Based Fees and Side-By-Side Management), Item 7 (Types of Clients), Item 8 (Methods of Analysis, Investment Strategies and Risk of Loss), Item 9 (Disciplinary Information), Item 10 (Other Financial Industry Activities and Affiliations), Item 11 (Code of Ethics, Participation or Interest in Client Transactions and Personal Trading), Item 12 (Brokerage Practices), Item 13 (Review of Accounts), Item 14 (Client Referrals and Other Compensation), Item 15 (Custody), Item 16 (Investment Discretion), Item 17 (Voting Client Securities), Item 18 (Financial Information). You must prepare your brochure in narrative form using plain English. — Form ADV Part 2A General Instructions"

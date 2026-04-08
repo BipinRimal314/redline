@@ -14,9 +14,11 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.FINRASuitabilityLanguage"
       regulation_paragraph: "Rule 2111(a) — Reasonable basis to believe recommendation is suitable based on customer's investment profile (age, financial situation, investment objectives, risk tolerance, etc.); Rule 2111.05 — Components include reasonable-basis, customer-specific, and quantitative suitability"
+      legal_text: "A member or an associated person must have a reasonable basis to believe that a recommended transaction or investment strategy involving a security or securities is suitable for the customer, based on the information obtained through the reasonable diligence of the member or associated person to ascertain the customer's investment profile. A customer's investment profile includes, but is not limited to, the customer's age, other investments, financial situation and needs, tax status, investment objectives, investment experience, investment time horizon, liquidity needs, risk tolerance, and any other information the customer may disclose to the member or associated person in connection with such recommendation. — FINRA Rule 2111(a)"
     - id: "2111-02"
       description: "Documentation must demonstrate reasonable-basis suitability analysis, showing the recommendation is suitable for at least some investors based on reasonable diligence"
       severity: error
-      check_type: ai
-      ai_prompt_key: "finra_suitability_analysis_adequacy"
+      check_type: deterministic
+      vale_rule: "FinCompliance.FINRAVagueSuitabilityAnalysis"
       regulation_paragraph: "Rule 2111(a) — Three suitability obligations: reasonable-basis (suitable for at least some investors), customer-specific (suitable for particular customer), and quantitative (series of transactions not excessive)"
+      legal_text: "Rule 2111 imposes three main suitability obligations: (1) Reasonable-basis suitability requires a member or associated person to have a reasonable basis to believe, based on reasonable diligence, that the recommendation is suitable for at least some investors; (2) Customer-specific suitability requires that a member or associated person have a reasonable basis to believe that the recommendation is suitable for a particular customer based on that customer's investment profile; (3) Quantitative suitability requires a member or associated person who has actual or de facto control over a customer account to have a reasonable basis for believing that a series of recommended transactions, even if suitable when viewed in isolation, are not excessive and unsuitable for the customer. — FINRA Rule 2111.05(a)-(c)"

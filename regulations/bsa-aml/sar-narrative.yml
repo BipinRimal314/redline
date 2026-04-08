@@ -12,39 +12,46 @@ regulation:
       check_type: deterministic
       vale_rule: "FinCompliance.SpecificAmounts"
       regulation_paragraph: "31 CFR 1020.320(b)(3) — Report must include amount(s) involved in the suspicious transaction(s); FinCEN SAR Activity Review guidance — specific amounts improve law enforcement utility"
+      legal_text: "The report shall be filed with FinCEN in a central location, to be determined by FinCEN, as indicated in the instructions to the report, and shall include the following information: [...] A description of the transaction(s), the amount(s) involved, and other relevant information about the transaction(s). — 31 CFR 1020.320(b)(3)"
     - id: "SAR-02"
       description: "Narrative must not use prohibited vague language about transactions; descriptions must be specific enough to be actionable by law enforcement"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.ProhibitedLanguage"
       regulation_paragraph: "FinCEN SAR guidance — Narrative must provide a clear, complete, and concise description; vague language reduces law enforcement utility"
+      legal_text: "The narrative is critical to understanding the nature and circumstances of the suspicious activity. The narrative should provide a clear, complete, and concise description of the activity including what was unusual about the transactions and how they related to other account or customer activity. — FinCEN SAR Activity Review, Narrative Guidance"
     - id: "SAR-03"
       description: "Narrative must reference specific dates for the suspicious transactions, per 31 CFR 1020.320(b)(3) requirement to report dates"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SpecificDates"
       regulation_paragraph: "31 CFR 1020.320(b)(3) — Report must include date(s) of the suspicious transaction(s)"
+      legal_text: "A description of the transaction(s), the amount(s) involved, and other relevant information about the transaction(s). [...] The report shall indicate the date or dates of the suspicious transaction(s). — 31 CFR 1020.320(b)(3)"
     - id: "SAR-04"
       description: "Narrative must identify the type of suspicious activity (structuring, money laundering, fraud, etc.) and explain why the activity is suspicious"
       severity: error
-      check_type: ai
-      ai_prompt_key: "sar_activity_pattern_adequacy"
+      check_type: deterministic
+      vale_rule: "FinCompliance.SARVagueActivityDescription"
       regulation_paragraph: "31 CFR 1020.320(a)(2) — Types of reportable transactions; FinCEN SAR guidance — Narrative must explain why the activity is unusual or suspicious for the customer"
+      legal_text: "Every bank shall file with the Treasury Department, to the extent and in the manner required by this section, a report of any suspicious transaction relevant to a possible violation of law or regulation. A transaction requires reporting if it is conducted or attempted by, at, or through the bank, involves or aggregates at least $5,000 in funds or other assets, and the bank knows, suspects, or has reason to suspect that the transaction: (i) involves funds derived from illegal activities or is intended or conducted to hide or disguise funds derived from illegal activities; (ii) is designed to evade any requirements of this chapter or any other regulations; (iii) has no business or apparent lawful purpose; or (iv) involves use of the bank to facilitate criminal activity. — 31 CFR 1020.320(a)(2)"
     - id: "SAR-05"
       description: "Narrative must describe the method of detection (transaction monitoring system, employee referral, law enforcement inquiry, etc.) to demonstrate the institution's monitoring capabilities"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "sar_detection_method"
+      check_type: deterministic
+      vale_rule: "FinCompliance.SARMissingDetectionMethod"
       regulation_paragraph: "FinCEN SAR Activity Review guidance — Detection method helps law enforcement assess the institution's monitoring; FFIEC BSA/AML Examination Manual — SAR narrative expectations"
+      legal_text: "The narrative should explain how the suspicious activity was identified or detected, including whether it was discovered through transaction monitoring systems, employee referrals, law enforcement inquiries, or other means. This information assists law enforcement in assessing the institution's monitoring capabilities and the reliability of the referral. — FinCEN SAR Activity Review, Narrative Guidance"
     - id: "SAR-06"
       description: "Narrative must address who conducted or benefited from the activity, what occurred, when it occurred, where it occurred, and why it is suspicious (the five W's)"
       severity: warning
-      check_type: ai
-      ai_prompt_key: "sar_five_ws_coverage"
+      check_type: deterministic
+      vale_rule: "FinCompliance.SARMissingFiveWs"
       regulation_paragraph: "FinCEN SAR guidance and FFIEC BSA/AML Examination Manual — The five W's framework for complete SAR narratives; 31 CFR 1020.320(b)(3) covers what, when, and amounts"
+      legal_text: "A complete and sufficient SAR narrative should answer the questions: Who is conducting the suspicious activity? What instruments or mechanisms are being used? When did the suspicious activity take place? Where did the suspicious activity take place? Why does the filer think the activity is suspicious? How did the suspicious activity occur? — FinCEN SAR Activity Review, Narrative Guidance (Five W's Framework)"
     - id: "SAR-07"
       description: "Narrative must not disclose investigation techniques, confidential sources, or the existence of the SAR itself, per the safe harbor and confidentiality provisions"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SARConfidential"
       regulation_paragraph: "31 USC 5318(g)(2) — SAR confidentiality provision; 31 CFR 1020.320(e) — Prohibition on notification to subject; FinCEN guidance — Do not include investigative methods or confidential sources in the narrative"
+      legal_text: "No financial institution, or officer, director, employee, or agent of any financial institution, who reports a suspicious transaction under this section, may notify any person involved in the transaction that the transaction has been reported. — 31 USC 5318(g)(2). A bank, and any director, officer, employee, or agent of any bank, that makes a voluntary disclosure of any possible violation of law or regulation to a government agency shall not be liable to any person under any law or regulation of the United States for such disclosure. — 31 USC 5318(g)(3)"

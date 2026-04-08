@@ -1,0 +1,20 @@
+extends: existence
+message: "Vague effectiveness assessment: '%s'. SOX Section 404 (15 USC 7262(a)) requires management to explicitly state whether internal control over financial reporting is effective. Assessment must be definitive, not hedged."
+link: "https://www.law.cornell.edu/uscode/text/15/7262"
+level: error
+ignorecase: true
+tokens:
+  - controls appear to be effective
+  - controls are believed to be effective
+  - controls are generally effective
+  - controls are substantially effective
+  - controls seem effective
+  - we believe controls are effective
+  - controls are considered effective
+  - controls are thought to be effective
+  - controls are deemed to be adequate
+  - in our opinion controls are effective
+  - no reason to believe controls are ineffective
+  - controls are not known to be ineffective
+  - effectiveness has not been fully assessed
+  - assessment is ongoing
