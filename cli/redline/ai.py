@@ -133,7 +133,7 @@ Respond in JSON:
 Document text:
 {document_text}
 
-SEC Marketing Rule 206(4)-7 requires that performance be presented net of all advisory fees and expenses. Gross performance may only be shown alongside net performance with equal prominence.
+SEC Marketing Rule 206(4)-1 requires that performance be presented net of all advisory fees and expenses. Gross performance may only be shown alongside net performance with equal prominence.
 
 Respond in JSON:
 {{

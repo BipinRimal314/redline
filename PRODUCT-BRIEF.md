@@ -65,7 +65,7 @@ When a regulation updates, regenerate the rule set. Version and distribute to cu
 | Domain | Rules | Regulation | Authority |
 |---|---|---|---|
 | BSA/AML | 6 | Bank Secrecy Act | FinCEN |
-| SEC | 6 | Marketing Rule 206(4)-7 | SEC |
+| SEC | 6 | Marketing Rule 206(4)-1 | SEC |
 | FINRA | 5 | Communications with Public | FINRA |
 | SOX | 5 | Section 404 | PCAOB |
 | SOC2 | 10 | Trust Services Criteria | AICPA |

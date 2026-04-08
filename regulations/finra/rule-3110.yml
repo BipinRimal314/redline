@@ -8,17 +8,20 @@ regulation:
     - compliance-policy
   requirements:
     - id: "3110-01"
-      description: "Supervisory procedures must not contain prohibited claims"
+      description: "Supervisory procedures documents must use precise regulatory language and not contain false, exaggerated, or misleading statements about the firm's supervisory capabilities"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.FINRAProhibitedCommunications"
+      regulation_paragraph: "Rule 3110(a) — Supervisory system must be reasonably designed to achieve compliance with applicable securities laws, regulations, and FINRA rules; Rule 3110(b) — Written supervisory procedures must be established and maintained"
     - id: "3110-02"
-      description: "Procedures must describe supervisory system including designation of supervisory personnel"
+      description: "Written supervisory procedures must describe the supervisory system, including designation of appropriately registered supervisory personnel, assignment of each registered person to a supervisor, and designation of offices of supervisory jurisdiction (OSJs)"
       severity: error
       check_type: ai
       ai_prompt_key: "finra_supervisory_system_adequacy"
+      regulation_paragraph: "Rule 3110(a)(1)-(5) — Supervisory system requirements: designation of supervisory personnel, delegation of supervisory responsibilities, supervisory controls; Rule 3110(b)(1)-(2) — Written procedures for types of business, supervision of supervisory personnel"
     - id: "3110-03"
-      description: "Procedures must address review of correspondence and communications"
+      description: "Written supervisory procedures must include procedures for review of incoming and outgoing correspondence and internal communications, conducted by a registered principal with evidence of review (reviewer identity, date, and actions taken)"
       severity: warning
       check_type: ai
       ai_prompt_key: "finra_communication_review_procedures"
+      regulation_paragraph: "Rule 3110(b)(4) — Review of correspondence and internal communications by registered principal; evidence of review must identify reviewer, communication reviewed, date, and actions taken; Rule 3110(b)(5) — Customer complaint procedures"

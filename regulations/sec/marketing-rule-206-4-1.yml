@@ -1,0 +1,52 @@
+regulation:
+  id: "SEC-MARKETING"
+  name: "Investment Adviser Marketing Rule"
+  authority: "SEC"
+  cfr_reference: "17 CFR 275.206(4)-1"
+  document_types:
+    - marketing-materials
+    - client-communication
+    - adv-filing
+  requirements:
+    - id: "MKT-01"
+      description: "Advertisements must not contain untrue statements of material fact, unsubstantiated material claims, or information reasonably likely to cause misleading inferences; no omission of material facts that would make the advertisement misleading"
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECProhibitedClaims"
+      regulation_paragraph: "Rule 206(4)-1(a)(1)-(3) — General prohibitions: untrue statements of material fact, omission of material facts, unsubstantiated material statements, and misleading implications or inferences"
+    - id: "MKT-02"
+      description: "Advertisements must not discuss potential benefits without providing fair and balanced treatment of associated material risks or limitations"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECPerformanceMisleading"
+      regulation_paragraph: "Rule 206(4)-1(a)(4) — Prohibition on discussing potential benefits without fair and balanced treatment of material risks or limitations"
+    - id: "MKT-03"
+      description: "Testimonials and endorsements in advertisements must include clear and prominent disclosures of whether the promoter is a client, whether compensation was provided, and any material conflicts of interest; a written agreement is required with compensated promoters (with exceptions for affiliates and de minimis compensation)"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECTestimonialViolations"
+      regulation_paragraph: "Rule 206(4)-1(b) — Testimonial and endorsement requirements: disclosure of client status, compensation, and conflicts; Rule 206(4)-1(b)(3) — Disqualification provisions for promoters with disqualifying events"
+    - id: "MKT-04"
+      description: "Hypothetical performance may only be included if the adviser has adopted policies and procedures reasonably designed to ensure it is relevant to the likely financial situation and investment objectives of the intended audience, and provides information underlying the hypothetical performance"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECHypotheticalPerformance"
+      regulation_paragraph: "Rule 206(4)-1(d)(4) — Hypothetical performance conditions: policies and procedures for audience relevance, provision of underlying assumptions and methodology"
+    - id: "MKT-05"
+      description: "Advertisements must not include or exclude performance results or present performance time periods in a manner that is not fair and balanced; fee disclosures must be clear to avoid misleading implications about actual returns"
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.SECFeeDisclosure"
+      regulation_paragraph: "Rule 206(4)-1(a)(6) — Prohibition on including/excluding performance results or presenting time periods in a manner that is not fair and balanced; Rule 206(4)-1(a)(7) — Otherwise materially misleading"
+    - id: "MKT-06"
+      description: "Advertisements targeting retail persons that present gross performance must also present net performance with equal prominence and in a format designed to facilitate comparison; performance must cover prescribed time periods"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sec_net_of_fees_adequacy"
+      regulation_paragraph: "Rule 206(4)-1(d)(2) — Net performance requirement for retail-targeted advertisements presenting gross performance; Rule 206(4)-1(d)(3) — Required time period presentation (1, 5, and 10 years or since inception)"
+    - id: "MKT-07"
+      description: "Advertisements referencing specific investment advice must present it in a fair and balanced manner, and must not cherry-pick favorable results while omitting material risks or limitations"
+      severity: error
+      check_type: ai
+      ai_prompt_key: "sec_risk_disclosure_adequacy"
+      regulation_paragraph: "Rule 206(4)-1(a)(4) — Fair and balanced treatment of material risks alongside benefits; Rule 206(4)-1(a)(5) — Specific investment advice must be presented fairly"

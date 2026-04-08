@@ -9,12 +9,14 @@ regulation:
     - suitability-documentation
   requirements:
     - id: "2111-01"
-      description: "Recommendations must not suggest universal suitability"
+      description: "Recommendations must be based on the customer's investment profile and must not suggest universal suitability; for retail customers, SEC Regulation Best Interest (Rule 15l-1) applies instead of Rule 2111"
       severity: warning
       check_type: deterministic
       vale_rule: "FinCompliance.FINRASuitabilityLanguage"
+      regulation_paragraph: "Rule 2111(a) — Reasonable basis to believe recommendation is suitable based on customer's investment profile (age, financial situation, investment objectives, risk tolerance, etc.); Rule 2111.05 — Components include reasonable-basis, customer-specific, and quantitative suitability"
     - id: "2111-02"
-      description: "Documentation must demonstrate reasonable-basis suitability analysis"
+      description: "Documentation must demonstrate reasonable-basis suitability analysis, showing the recommendation is suitable for at least some investors based on reasonable diligence"
       severity: error
       check_type: ai
       ai_prompt_key: "finra_suitability_analysis_adequacy"
+      regulation_paragraph: "Rule 2111(a) — Three suitability obligations: reasonable-basis (suitable for at least some investors), customer-specific (suitable for particular customer), and quantitative (series of transactions not excessive)"

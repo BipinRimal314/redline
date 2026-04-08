@@ -1,5 +1,5 @@
 extends: existence
-message: "Prohibited claim in SEC-regulated communication: '%s'. SEC Marketing Rule 206(4)-7 prohibits misleading statements about investment performance or risk."
+message: "Prohibited claim in SEC-regulated communication: '%s'. SEC Marketing Rule 206(4)-1 prohibits misleading statements about investment performance or risk."
 link: "https://www.sec.gov/rules/final/2020/ia-5653.pdf"
 level: error
 ignorecase: true

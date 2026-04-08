@@ -65,7 +65,37 @@ All 11 SOX rules (section-302, section-404, pcaob-standards) and 15 BSA-AML rule
 | CTR-01 | Labeled as "CDD/CTR elements" — these are CTR-specific requirements | Rewritten as CTR-specific: $10,000 threshold (1010.311), aggregation (1010.313), structuring (31 USC 5324), exemptions (1020.315) |
 | SAR-07 | Missing citation for confidentiality provision | Now cites 31 USC 5318(g)(2) and 31 CFR 1020.320(e) |
 
-**19 rules remain unaudited.** Priority: FINRA (10 rules), SEC (9 rules).
+### Full Audit: FINRA + SEC (2026-04-08)
+
+All 10 FINRA rules (rule-2111, rule-2210, rule-3110) and 9 SEC rules (adv-filing, marketing-rule) audited against primary sources (FINRA Rules 2111/2210/3110, 17 CFR 275.206(4)-1, 17 CFR 279.1, Investment Advisers Act of 1940).
+
+**FINRA (10 rules): All 10 fixed.** Every rule was missing `regulation_paragraph`. Additional issues:
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| 2111-01 | Description said "must not suggest universal suitability" -- too vague, did not mention Reg BI carve-out | Rewritten to cite Rule 2111(a) investment profile requirement; notes Reg BI (Rule 15l-1) applies to retail customers |
+| 2111-02 | Description was generic "reasonable-basis suitability analysis" | Now specifies all three suitability obligations: reasonable-basis, customer-specific, quantitative |
+| 2210-01 | Description was generic "exaggerated, misleading, or prohibited claims" | Rewritten to use Rule 2210(d)(1)(B) exact language: "false, exaggerated, unwarranted, promissory or misleading" |
+| 2210-03 | Said "predictions of specific future performance are prohibited" -- missed the three exceptions | Now notes exceptions for mathematical illustrations, investment analysis tools, and research report price targets |
+| 2210-04 | Said "include appropriate disclaimers" -- vague | Rewritten to cite Rule 2210(d)(1)(F) no-recurrence implication + Rule 2210(d)(2) past recommendations list requirements |
+| 2210-05 | Said "approved by a principal" -- generic | Now specifies "registered principal before the earlier of use or filing" per Rule 2210(b)(1)(A) |
+| 3110-01 | Said "must not contain prohibited claims" -- conflated content standards (Rule 2210) with supervision (Rule 3110) | Clarified: this lints supervisory procedures documents for precision, grounded in Rule 3110(a)-(b) |
+| 3110-02 | Was vague "describe supervisory system including designation of supervisory personnel" | Now specifies OSJ designation, registered person assignment, and supervisory controls per Rule 3110(a)(1)-(5) and (b)(1)-(2) |
+| 3110-03 | Was vague "address review of correspondence and communications" | Now specifies registered principal review with evidence requirements (reviewer, date, actions) per Rule 3110(b)(4)-(5) |
+
+**SEC (9 rules): All 9 fixed.** Every rule was missing `regulation_paragraph`. Critical issue found and fixed:
+
+| Rule | Issue | Resolution |
+|------|-------|-----------|
+| **All MKT rules** | **`cfr_reference` cited 17 CFR 275.206(4)-7 (Compliance Procedures) instead of 17 CFR 275.206(4)-1 (Marketing Rule)** | Fixed to correct CFR. Also fixed references in PRODUCT-BRIEF.md, cli/redline/ai.py, and vale-packages/FinCompliance/SECProhibitedClaims.yml. Renamed file from marketing-rule-206-4-7.yml to marketing-rule-206-4-1.yml |
+| ADV-01 | Generic "must not contain prohibited claims" | Rewritten to cite 15 USC 80b-3(c)(1)(A) and criminal penalty provisions (18 USC 1001, 15 USC 80b-17) |
+| ADV-02 | Cited only "17 CFR 275.204-1" (amendment filing rule) | cfr_reference now cites 17 CFR 279.1 (Form ADV), 275.204-1 (amendments), and 15 USC 80b-3/80b-4 (statutory authority). Description specifies 18-item Part 2A brochure format |
+| MKT-01 | Generic "prohibited misleading claims" | Rewritten to cite Rule 206(4)-1(a)(1)-(3) general prohibitions specifically |
+| MKT-03 | Said "must include required disclosures" -- vague | Now specifies client status, compensation, conflicts disclosures, written agreement requirement, and disqualification provisions per Rule 206(4)-1(b) |
+| MKT-04 | Said "must include prominent disclaimers" -- not what the rule says | Rewritten: hypothetical performance requires adopted policies/procedures for audience relevance, not just disclaimers |
+| MKT-05 | Said "fee disclosures must be clear and complete" -- vague | Now cites Rule 206(4)-1(a)(6) fair and balanced performance presentation and (a)(7) catch-all prohibition |
+| MKT-06 | Said "net of fees with appropriate time periods" -- imprecise | Now specifies retail-targeting requirement, equal prominence for net alongside gross, and 1/5/10-year time period requirements per Rule 206(4)-1(d)(2)-(3) |
+| MKT-07 | Said "material risks must be disclosed alongside performance claims" -- generic | Rewritten to cite Rule 206(4)-1(a)(4) (risks alongside benefits) and (a)(5) (specific investment advice fairness) |
 
 ### Full Audit: SOC 2 (10) and ISO 27001 (10) (2026-04-08)
 
@@ -136,7 +166,8 @@ python -m pytest tests/
 - ~~**Audit GDPR (10) and HIPAA (10)**~~ (done 2026-04-08)
 - ~~**Audit SOX (11) and BSA-AML (15)**~~ (done 2026-04-08)
 - ~~**Audit SOC 2 (10) and ISO 27001 (10)**~~ (done 2026-04-08)
-- **Audit remaining rules** — FINRA (10), SEC (9)
+- ~~**Audit FINRA (10) and SEC (9)**~~ (done 2026-04-08)
+- **All 85 rules audited.** Every rule now has `regulation_paragraph` with primary source citation.
 - **Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)
 - **Add `verified_against_primary` flag** to each rule
 

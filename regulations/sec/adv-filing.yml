@@ -2,18 +2,20 @@ regulation:
   id: "SEC-ADV"
   name: "Form ADV Filing Requirements"
   authority: "SEC"
-  cfr_reference: "17 CFR 275.204-1"
+  cfr_reference: "17 CFR 279.1 (Form ADV); 17 CFR 275.204-1 (annual amendment filing); 15 USC 80b-3 and 80b-4 (Sections 203-204, Investment Advisers Act of 1940)"
   document_types:
     - adv-filing
     - compliance-policy
   requirements:
     - id: "ADV-01"
-      description: "ADV filing must not contain prohibited claims"
+      description: "ADV filing must not contain untrue statements of material fact or omit material facts necessary to make statements not misleading; intentional misstatements constitute federal criminal violations"
       severity: error
       check_type: deterministic
       vale_rule: "FinCompliance.SECProhibitedClaims"
+      regulation_paragraph: "15 USC 80b-3(c)(1)(A) — Registration application requirements; 18 USC 1001 and 15 USC 80b-17 — Criminal penalties for misstatements or omissions"
     - id: "ADV-02"
-      description: "ADV brochure must accurately describe advisory services, fees, and disciplinary history"
+      description: "Form ADV Part 2A brochure must follow the prescribed 18-item format and accurately describe advisory services, fee schedules, disciplinary history (material events within last 10 years), conflicts of interest, and code of ethics, written in plain English"
       severity: error
       check_type: ai
       ai_prompt_key: "adv_completeness_check"
+      regulation_paragraph: "Form ADV Part 2A — Items 1-18: cover page, material changes, table of contents, advisory business, fees and compensation, performance-based fees, types of clients, methods of analysis, disciplinary information, other financial industry activities, code of ethics, brokerage practices, review of accounts, client referrals, custody, investment discretion, voting client securities, financial information"
