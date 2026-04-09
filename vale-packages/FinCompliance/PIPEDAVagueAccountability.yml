@@ -1,0 +1,19 @@
+extends: existence
+message: "Vague accountability language: '%s'. PIPEDA Principle 4.1 requires that an organization designate an individual to be accountable for compliance and that the identity of this individual be made known upon request. Generic references to 'someone' or 'appropriate personnel' are insufficient."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: error
+ignorecase: true
+tokens:
+  - someone is responsible
+  - appropriate personnel
+  - designated staff member
+  - relevant team members
+  - appropriate individuals
+  - responsible parties
+  - applicable team
+  - relevant personnel
+  - appropriate staff
+  - designated representatives
+  - the responsible person
+  - a member of our team
+  - our privacy team

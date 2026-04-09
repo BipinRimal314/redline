@@ -1,0 +1,89 @@
+regulation:
+  id: "PIPEDA"
+  name: "Personal Information Protection and Electronic Documents Act"
+  authority: "Office of the Privacy Commissioner of Canada"
+  cfr_reference: "S.C. 2000, c. 5"
+  document_types:
+    - privacy-policy
+    - data-processing-agreement
+    - compliance-policy
+  requirements:
+    - id: "PIPEDA-01"
+      description: "Consent for the collection, use, or disclosure of personal information must be meaningful; individuals must understand what they are consenting to. Vague or implied consent language is insufficient where knowledge and consent are required."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAWeakConsent"
+      regulation_paragraph: "Section 6.1 — Consent required; Schedule 1, Principle 4.3 — Consent"
+      legal_text: "Section 6.1: The consent of the individual is required for the collection, use, or disclosure of personal information, except where this Part provides that consent is not required. Schedule 1, Clause 4.3: Principle 3 — Consent. The knowledge and consent of the individual are required for the collection, use, or disclosure of personal information, except where inappropriate. 4.3.1: Consent is required for the collection of personal information and the subsequent use or disclosure of this information. Typically, an organization will seek consent with respect to the collection, use, and disclosure of personal information at the same time. 4.3.2: An organization shall make a reasonable effort to ensure that the individual is advised of the purposes for which the information will be used. To make the consent meaningful, the purposes must be stated in such a manner that the individual can reasonably understand how the information will be used or disclosed."
+
+    - id: "PIPEDA-02"
+      description: "Collection of personal information must be limited to that which is necessary for the purposes identified by the organization. Overbroad or unbounded collection language violates the limiting collection principle."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAOverboadCollection"
+      regulation_paragraph: "Schedule 1, Principle 4.4 — Limiting Collection"
+      legal_text: "Schedule 1, Clause 4.4: Principle 4 — Limiting Collection. The collection of personal information shall be limited to that which is necessary for the purposes identified by the organization. Information shall be collected by fair and lawful means. 4.4.1: Organizations shall not collect personal information indiscriminately. Both the amount and the type of information collected shall be limited to that which is necessary to fulfil the purposes identified. Organizations shall specify the type of information collected as part of their information-handling policies and practices, in accordance with the Openness principle (Clause 4.8). 4.4.2: The requirement that personal information be collected by fair and lawful means is intended to prevent organizations from collecting information by misleading or deceiving individuals about the purpose for which information is being collected."
+
+    - id: "PIPEDA-03"
+      description: "Personal information must be retained only as long as necessary for the fulfilment of the identified purposes. Indefinite or vague retention periods are non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAVagueRetention"
+      regulation_paragraph: "Schedule 1, Principle 4.5 — Limiting Use, Disclosure, and Retention"
+      legal_text: "Schedule 1, Clause 4.5: Principle 5 — Limiting Use, Disclosure, and Retention. Personal information shall not be used or disclosed for purposes other than those for which it was collected, except with the consent of the individual or as required by law. Personal information shall be retained only as long as necessary for the fulfilment of those purposes. 4.5.2: Organizations should develop guidelines and implement procedures with respect to the retention of personal information. These guidelines should include minimum and maximum retention periods. Personal information that has been used to make a decision about an individual shall be retained long enough to allow the individual access to the information after the decision has been made. An organization may be subject to legislative requirements with respect to retention periods. 4.5.3: Personal information that is no longer required to fulfil the identified purposes should be destroyed, erased, or made anonymous. Organizations shall develop guidelines and implement procedures to govern the destruction of personal information."
+
+    - id: "PIPEDA-04"
+      description: "Personal information must be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used. Weak or hedging accuracy language is insufficient."
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAWeakAccuracy"
+      regulation_paragraph: "Schedule 1, Principle 4.6 — Accuracy"
+      legal_text: "Schedule 1, Clause 4.6: Principle 6 — Accuracy. Personal information shall be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used. 4.6.1: The extent to which personal information shall be accurate, complete, and up-to-date will depend upon the use of the information, taking into account the interests of the individual. Information shall be sufficiently accurate, complete, and up-to-date to minimize the possibility that inappropriate information may be used to make a decision about the individual. 4.6.2: An organization shall not routinely update personal information, unless such a process is necessary to fulfil the purposes for which the information was collected."
+
+    - id: "PIPEDA-05"
+      description: "Personal information must be protected by security safeguards appropriate to the sensitivity of the information. Vague safeguard language without specifying the nature of protections is non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAVagueSafeguards"
+      regulation_paragraph: "Schedule 1, Principle 4.7 — Safeguards"
+      legal_text: "Schedule 1, Clause 4.7: Principle 7 — Safeguards. Personal information shall be protected by security safeguards appropriate to the sensitivity of the information. 4.7.1: The security safeguards shall protect personal information against loss or theft, as well as unauthorized access, disclosure, copying, use, or modification. Organizations shall protect personal information regardless of the format in which it is held. 4.7.2: The nature of the safeguards will vary depending on the sensitivity of the information that has been collected, the amount, distribution, and format of the information, and the method of storage. More sensitive information should be safeguarded by a higher level of protection. 4.7.3: The methods of protection should include (a) physical measures, for example, locked filing cabinets and restricted access to offices; (b) organizational measures, for example, security clearances and limiting access on a 'need-to-know' basis; and (c) technological measures, for example, the use of passwords and encryption."
+
+    - id: "PIPEDA-06"
+      description: "Individuals have the right to access their personal information held by an organization. Access must be provided upon request within the statutory timeframe. Discretionary or conditional access language is non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAWeakAccess"
+      regulation_paragraph: "Schedule 1, Principle 4.9 — Individual Access; Section 8(1) — Right of access"
+      legal_text: "Section 8(1): An individual may, on giving sufficient detail to enable an organization to provide an account of the existence, use, and disclosure of personal information and, where applicable, the name or names of the third parties to which it has been disclosed, make a request to the organization. Section 8(3): An organization shall respond to a request with due diligence and in any case not later than thirty days after receipt of the request. Schedule 1, Clause 4.9: Principle 9 — Individual Access. Upon request, an individual shall be informed of the existence, use, and disclosure of his or her personal information and shall be given access to that information. An individual shall be able to challenge the accuracy and completeness of the information and have it amended as appropriate. 4.9.1: Upon request, an organization shall inform an individual whether or not the organization holds personal information about the individual. Organizations are encouraged to indicate the source of this information. The organization shall allow the individual access to this information."
+
+    - id: "PIPEDA-07"
+      description: "Organizations must report breaches of security safeguards involving personal information to the Commissioner and notify affected individuals where there is a real risk of significant harm. Missing timelines or vague notification language is non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAInsufficientBreachNotification"
+      regulation_paragraph: "Section 10.1(1) — Report to Commissioner; Section 10.1(3) — Notification to individual"
+      legal_text: "Section 10.1(1): An organization shall report to the Commissioner any breach of security safeguards involving personal information under its control if it is reasonable in the circumstances to believe that the breach creates a real risk of significant harm to an individual. Section 10.1(2): The report shall contain the information prescribed by regulation. Section 10.1(3): Unless otherwise prohibited by law, an organization shall notify an individual of any breach of security safeguards involving the individual's personal information under the organization's control if it is reasonable in the circumstances to believe that the breach creates a real risk of significant harm to the individual. Section 10.1(4): The notification shall be conspicuous and shall be given directly to the individual in the prescribed form and manner as soon as feasible after the organization determines that the breach has occurred. Section 10.1(6): An organization shall keep and maintain a record of every breach of security safeguards involving personal information under its control."
+
+    - id: "PIPEDA-08"
+      description: "An organization is responsible for personal information in its possession or custody, including information transferred to a third party for processing. A designated individual must be accountable for compliance. Vague accountability language is non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAVagueAccountability"
+      regulation_paragraph: "Schedule 1, Principle 4.1 — Accountability"
+      legal_text: "Schedule 1, Clause 4.1: Principle 1 — Accountability. An organization is responsible for personal information in its possession or custody, including information that has been transferred to a third party for processing. The organization shall use contractual or other means to provide a comparable level of protection while the information is being processed by a third party. 4.1.1: An organization is responsible for personal information in its possession or custody. An organization that transfers information to a third party for processing retains responsibility for that information. 4.1.2: Organizations shall implement policies and practices to give effect to the principles, including (a) implementing procedures to protect personal information; (b) establishing procedures to receive and respond to complaints and inquiries; (c) training staff and communicating to staff information about the organization's policies and practices; and (d) developing information to explain the organization's policies and procedures. 4.1.4: The identity of the individual designated by the organization to oversee the organization's compliance with the principles shall be made known upon request."
+
+    - id: "PIPEDA-09"
+      description: "The purposes for which personal information is collected must be identified by the organization at or before the time of collection. Vague or open-ended purpose statements are non-compliant."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAVaguePurpose"
+      regulation_paragraph: "Schedule 1, Principle 4.2 — Identifying Purposes; Section 5(3)"
+      legal_text: "Section 5(3): An organization may collect, use or disclose personal information only for purposes that a reasonable person would consider are appropriate in the circumstances. Schedule 1, Clause 4.2: Principle 2 — Identifying Purposes. The purposes for which personal information is collected shall be identified by the organization at or before the time the information is collected. 4.2.1: The organization shall document the purposes for which personal information is collected in order to comply with the Openness principle (Clause 4.8) and the Individual Access principle (Clause 4.9). 4.2.2: Identifying the purposes for which personal information is collected at or before the time of collection allows organizations to determine the information they need to collect to fulfil these purposes. The Limiting Collection principle (Clause 4.4) requires organizations to collect only that information necessary for the purposes that have been identified. 4.2.3: The identified purposes should be specified at or before the time of collection to the individual from whom the personal information is collected. Depending upon the way in which the information is collected, this can be done orally or in writing."
+
+    - id: "PIPEDA-10"
+      description: "Individuals must be able to challenge an organization's compliance with the principles and to address their challenge to the designated individual accountable for compliance. Missing complaint mechanisms are non-compliant."
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.PIPEDAMissingComplaintMechanism"
+      regulation_paragraph: "Schedule 1, Principle 4.10 — Challenging Compliance; Section 28 — Filing of complaints"
+      legal_text: "Schedule 1, Clause 4.10: Principle 10 — Challenging Compliance. An individual shall be able to address a challenge concerning compliance with the above principles to the designated individual or individuals accountable for the organization's compliance. 4.10.1: Organizations shall put procedures in place to receive and respond to complaints or inquiries about their policies and practices relating to the handling of personal information. The complaint procedures should be easily accessible and simple to use. 4.10.2: Organizations shall inform individuals who make inquiries or lodge complaints of the existence of relevant complaint procedures. 4.10.4: An organization shall investigate all complaints. If a complaint is found to be justified, the organization shall take appropriate measures, including, if necessary, amending its policies and practices. Section 28(1): An individual may file with the Commissioner a written complaint against an organization for contravening a provision of Division 1 or for not following a recommendation set out in Schedule 1."

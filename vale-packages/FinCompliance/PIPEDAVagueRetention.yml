@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague retention language: '%s'. PIPEDA Principle 4.5 requires that personal information be retained only as long as necessary for the fulfilment of identified purposes. Organizations must develop guidelines with minimum and maximum retention periods. Information no longer required must be destroyed, erased, or made anonymous."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: error
+ignorecase: true
+tokens:
+  - retained indefinitely
+  - as long as needed
+  - kept for a reasonable period
+  - retained for an appropriate period
+  - stored until no longer needed
+  - retained as long as necessary
+  - kept for as long as required
+  - stored for a reasonable time
+  - retained for business purposes
+  - held for a suitable duration
+  - kept as long as appropriate
+  - retained until further notice
+  - stored for an appropriate period
+  - as long as reasonably necessary
+  - retained for an indeterminate period

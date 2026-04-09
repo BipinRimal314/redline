@@ -1,0 +1,18 @@
+extends: existence
+message: "Weak accuracy language: '%s'. PIPEDA Principle 4.6 requires that personal information be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used. Hedging language weakens the obligation."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: warning
+ignorecase: true
+tokens:
+  - reasonable efforts to maintain accuracy
+  - generally accurate
+  - reasonably accurate
+  - best efforts to keep accurate
+  - accuracy is not guaranteed
+  - we cannot guarantee accuracy
+  - approximately accurate
+  - may not always be accurate
+  - no guarantee of accuracy
+  - we do not warrant accuracy
+  - accuracy may vary
+  - information is believed to be accurate

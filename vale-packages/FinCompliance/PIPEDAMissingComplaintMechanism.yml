@@ -1,0 +1,18 @@
+extends: existence
+message: "Missing or inadequate complaint mechanism: '%s'. PIPEDA Principle 4.10 and Section 28 require that individuals be able to challenge an organization's compliance and file complaints with the Privacy Commissioner of Canada. Complaint procedures must be easily accessible and simple to use."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: warning
+ignorecase: true
+tokens:
+  - complaints will be considered
+  - we may investigate complaints
+  - complaints at our discretion
+  - we will review your concerns
+  - your feedback is important
+  - we welcome your feedback
+  - complaints may be submitted
+  - we will endeavour to address
+  - complaints are taken seriously
+  - we aim to resolve concerns
+  - we will try to address
+  - concerns will be noted

@@ -1,0 +1,20 @@
+extends: existence
+message: "Vague purpose language: '%s'. PIPEDA Principle 4.2 and Section 5(3) require that the purposes for which personal information is collected be identified at or before the time of collection and be appropriate in the circumstances. Open-ended purpose statements do not meet this requirement."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: error
+ignorecase: true
+tokens:
+  - various purposes
+  - business needs
+  - as we see fit
+  - general business purposes
+  - various business reasons
+  - for any purpose we determine
+  - as we deem appropriate
+  - for our business operations
+  - any purpose we consider necessary
+  - for such purposes as we may determine
+  - for any lawful purpose
+  - other purposes as needed
+  - purposes we consider appropriate
+  - unspecified purposes

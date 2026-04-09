@@ -1,0 +1,19 @@
+extends: existence
+message: "Weak access language: '%s'. PIPEDA Principle 4.9 and Section 8(1) require that individuals be informed of the existence, use, and disclosure of their personal information and be given access upon request. Section 8(3) requires response within thirty days. Discretionary or conditional access language is non-compliant."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-4.html"
+level: error
+ignorecase: true
+tokens:
+  - may request access
+  - access at our discretion
+  - access may be granted
+  - we may provide access
+  - access subject to our approval
+  - access upon our determination
+  - we reserve the right to deny access
+  - access may be limited
+  - access at our sole discretion
+  - we will consider access requests
+  - access is not guaranteed
+  - we may choose to provide
+  - access is subject to verification

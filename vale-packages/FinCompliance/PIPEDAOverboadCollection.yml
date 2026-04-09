@@ -1,0 +1,20 @@
+extends: existence
+message: "Overbroad collection language: '%s'. PIPEDA Principle 4.4 requires that the collection of personal information be limited to that which is necessary for the purposes identified by the organization. Information must not be collected indiscriminately."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: error
+ignorecase: true
+tokens:
+  - all available data
+  - any information we deem necessary
+  - any data we consider relevant
+  - all information that may be useful
+  - collect any information
+  - any data that we may require
+  - all personal data available
+  - as much information as possible
+  - any information we see fit
+  - all data we can obtain
+  - any and all information
+  - data we consider appropriate
+  - information we believe relevant
+  - collect broadly

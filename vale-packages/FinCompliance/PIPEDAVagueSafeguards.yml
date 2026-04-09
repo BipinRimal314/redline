@@ -1,0 +1,20 @@
+extends: existence
+message: "Vague safeguard language: '%s'. PIPEDA Principle 4.7 requires security safeguards appropriate to the sensitivity of the information, including physical measures, organizational measures, and technological measures. Specify the nature of protections rather than using generic language."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-9.html"
+level: error
+ignorecase: true
+tokens:
+  - appropriate safeguards
+  - reasonable security measures
+  - adequate protection
+  - appropriate security measures
+  - reasonable precautions
+  - suitable safeguards
+  - reasonable steps to protect
+  - appropriate measures to secure
+  - commercially reasonable security
+  - industry-standard safeguards
+  - appropriate level of security
+  - reasonable efforts to protect
+  - appropriate protections
+  - reasonable safeguards

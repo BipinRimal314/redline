@@ -137,8 +137,9 @@ redline/
 │   ├── sec/                # 9 rules (marketing-rule, adv-filing)
 │   ├── soc2/soc2.yml       # 10 rules
 │   ├── iso27001/           # 10 rules
-│   └── quebec-law25/       # 10 rules
-├── vale-packages/          # 78 Vale linting rules (FinCompliance)
+│   ├── quebec-law25/       # 10 rules
+│   └── pipeda/pipeda.yml   # 10 rules
+├── vale-packages/          # 88 Vale linting rules (FinCompliance)
 ├── cli/                    # Python CLI
 ├── templates/              # Report templates
 ├── tests/                  # Test documents

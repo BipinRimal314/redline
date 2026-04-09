@@ -1,0 +1,21 @@
+extends: existence
+message: "Weak consent language: '%s'. PIPEDA Section 6.1 and Principle 4.3 require knowledge and consent for the collection, use, or disclosure of personal information. Consent must be meaningful — individuals must understand what they are consenting to. Implied or deemed consent is insufficient where explicit consent is required."
+link: "https://laws-lois.justice.gc.ca/eng/acts/p-8.6/page-3.html"
+level: error
+ignorecase: true
+tokens:
+  - implied consent
+  - deemed to consent
+  - by using this service you agree
+  - by using this service you consent
+  - continued use constitutes consent
+  - your use indicates acceptance
+  - by continuing you agree
+  - consent is assumed
+  - presumed to consent
+  - by accessing this site you consent
+  - deemed to have consented
+  - automatically agree to
+  - consent unless you object
+  - passive consent
+  - implies consent
