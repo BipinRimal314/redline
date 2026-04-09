@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing or vague PIA language: '%s'. Quebec Law 25 Section 3.3 requires a mandatory privacy impact assessment before any project involving collection, use, communication, or retention of personal information. Use definitive language confirming a PIA will be conducted."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - assessment may be conducted
+  - as deemed appropriate
+  - assessment where necessary
+  - privacy review if applicable
+  - impact assessment when warranted
+  - assessment as circumstances require
+  - assessment may be performed
+  - privacy review as needed
+  - assessment at our discretion
+  - impact assessment if required
+  - assessment where appropriate
+  - privacy assessment may be undertaken
+  - review if deemed necessary
+  - assessment considered as appropriate
+  - impact review as deemed necessary

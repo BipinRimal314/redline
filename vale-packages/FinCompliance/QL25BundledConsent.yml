@@ -1,0 +1,21 @@
+extends: existence
+message: "Bundled consent language: '%s'. Quebec Law 25 Section 8.1 requires consent to be requested for each purpose separately, in clear and simple language, and presented separately from any other information. Do not bundle consent for multiple purposes."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - consent to all purposes
+  - agree to our terms
+  - consent for the purposes described
+  - agree to the collection and use
+  - consent to all of the above
+  - blanket consent
+  - consent to these purposes
+  - agree to all uses
+  - general consent
+  - consent to the above purposes
+  - by agreeing you consent to all
+  - single consent for all purposes
+  - consent covers all
+  - combined consent
+  - consent to the following purposes

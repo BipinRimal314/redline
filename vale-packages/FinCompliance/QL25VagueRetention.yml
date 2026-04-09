@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague retention and destruction language: '%s'. Quebec Law 25 Section 12 requires destruction or anonymization of personal information once the purpose for which it was collected is fulfilled. Specify concrete retention periods and destruction procedures."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - retained as needed
+  - destroyed when appropriate
+  - kept for a reasonable period
+  - retained as long as necessary
+  - destroyed when no longer needed
+  - retained at our discretion
+  - destroyed in due course
+  - retained as appropriate
+  - deleted when appropriate
+  - retained for business needs
+  - destroyed as circumstances require
+  - retained until no longer required
+  - deleted as appropriate
+  - destroyed at a suitable time
+  - retained for a suitable period

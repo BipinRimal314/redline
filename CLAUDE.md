@@ -1,6 +1,6 @@
 # Redline — Compliance Documentation Linter
 
-Deterministic compliance documentation linter. 85 rules across 16 regulations. Every flag traces to a specific rule, which traces to a specific regulation paragraph. Zero LLM cost at runtime.
+Deterministic compliance documentation linter. 95 rules across 17 regulations. Every flag traces to a specific rule, which traces to a specific regulation paragraph. Zero LLM cost at runtime.
 
 ## Critical Rules
 
@@ -128,7 +128,7 @@ All 10 SOC 2 rules audited against AICPA Trust Services Criteria (TSC) 2017. All
 
 ```
 redline/
-├── regulations/           # 16 YAML rule files (85 rules total)
+├── regulations/           # 17 YAML rule files (95 rules total)
 │   ├── gdpr/gdpr.yml      # 10 rules
 │   ├── hipaa/hipaa.yml     # 10 rules
 │   ├── sox/                # 11 rules (section-302, section-404, pcaob-standards)
@@ -136,8 +136,9 @@ redline/
 │   ├── bsa-aml/            # 15 rules (aml-program, cdd, ctr, sar)
 │   ├── sec/                # 9 rules (marketing-rule, adv-filing)
 │   ├── soc2/soc2.yml       # 10 rules
-│   └── iso27001/           # 10 rules
-├── vale-packages/          # 68 Vale linting rules (FinCompliance)
+│   ├── iso27001/           # 10 rules
+│   └── quebec-law25/       # 10 rules
+├── vale-packages/          # 78 Vale linting rules (FinCompliance)
 ├── cli/                    # Python CLI
 ├── templates/              # Report templates
 ├── tests/                  # Test documents
@@ -146,7 +147,7 @@ redline/
 
 ## Rule Types
 
-- **deterministic** — Vale pattern matching. Catches structural issues, prohibited terms, missing sections. No LLM needed. All 85 rules are deterministic as of 2026-04-08.
+- **deterministic** — Vale pattern matching. Catches structural issues, prohibited terms, missing sections. No LLM needed. All 95 rules are deterministic as of 2026-04-08.
 
 ## Development
 
@@ -166,7 +167,7 @@ python -m pytest tests/
 - ~~**Audit SOX (11) and BSA-AML (15)**~~ (done 2026-04-08)
 - ~~**Audit SOC 2 (10) and ISO 27001 (10)**~~ (done 2026-04-08)
 - ~~**Audit FINRA (10) and SEC (9)**~~ (done 2026-04-08)
-- **All 85 rules audited.** Every rule now has `regulation_paragraph` with primary source citation.
+- **All 95 rules audited.** Every rule now has `regulation_paragraph` with primary source citation.
 - ~~**Add `legal_text` field** to rule YAML schema (matching AI Trace Auditor pattern)~~ (done 2026-04-08)
 - ~~**Convert all 18 `check_type: ai` rules to deterministic Vale patterns**~~ (done 2026-04-08)
 - **Add `verified_against_primary` flag** to each rule

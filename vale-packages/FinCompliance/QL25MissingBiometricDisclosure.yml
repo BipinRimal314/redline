@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing biometric database disclosure: '%s'. Quebec Law 25 Section 45 requires disclosure of any biometric database to the Commission d'accès à l'information (CAI). Specify CAI disclosure for any biometric data collection."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - biometric data may be collected
+  - biometric information stored
+  - biometric characteristics used
+  - biometric verification applied
+  - biometric authentication employed
+  - biometric identifiers collected
+  - facial recognition data
+  - fingerprint data collected
+  - biometric measurements taken
+  - biometric database maintained
+  - biometric templates stored
+  - voice recognition data collected
+  - iris scan data
+  - biometric samples retained
+  - retinal data collected

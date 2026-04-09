@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague data portability language: '%s'. Quebec Law 25 Section 27 requires that personal information be communicated in a structured, commonly used technological format upon request. Replace with specific commitments to format and mechanism."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - may provide data in available format
+  - reasonable format
+  - data provided in a suitable format
+  - information in an accessible format
+  - format determined at our discretion
+  - available format as appropriate
+  - in a format we determine
+  - in a convenient format
+  - data in a readable format
+  - format as reasonably practicable
+  - in whatever format is available
+  - in a format of our choosing
+  - data export in available formats
+  - in a format we deem appropriate
+  - portable format where feasible

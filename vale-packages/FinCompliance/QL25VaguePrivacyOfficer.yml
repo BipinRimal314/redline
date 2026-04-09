@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague privacy officer designation: '%s'. Quebec Law 25 Section 3.1 requires designating a specific person responsible for the protection of personal information, with title and contact information published on the enterprise's website. Replace with a named role and published contact details."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - appropriate personnel
+  - designated staff
+  - responsible team
+  - privacy team will handle
+  - appropriate person will be designated
+  - privacy responsibilities assigned as needed
+  - designated personnel as appropriate
+  - someone responsible for privacy
+  - staff responsible for data
+  - relevant personnel
+  - appropriate staff member
+  - a member of our team
+  - our privacy team
+  - designated as needed
+  - suitable personnel

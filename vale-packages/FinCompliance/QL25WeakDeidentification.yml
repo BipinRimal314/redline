@@ -1,0 +1,21 @@
+extends: existence
+message: "Weak de-identification language: '%s'. Quebec Law 25 Section 23 requires de-identification according to generally accepted best practices and prohibits re-identification without authorization. Specify the de-identification standards and methods used."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: warning
+ignorecase: true
+tokens:
+  - anonymized as appropriate
+  - reasonable de-identification
+  - de-identified where possible
+  - anonymization measures applied
+  - data suitably anonymized
+  - de-identified as needed
+  - reasonable anonymization
+  - de-identification where feasible
+  - anonymized to the extent practicable
+  - de-identified as appropriate
+  - reasonable steps to anonymize
+  - de-identification measures taken
+  - anonymized where practicable
+  - data de-identified as practical
+  - anonymization applied as appropriate

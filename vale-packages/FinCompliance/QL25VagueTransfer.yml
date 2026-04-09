@@ -1,0 +1,21 @@
+extends: existence
+message: "Vague cross-border transfer language: '%s'. Quebec Law 25 Section 17 requires a privacy impact assessment before communicating personal information outside Quebec and a written agreement that the information will receive substantially similar protection. Specify the PIA and written agreement explicitly."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - appropriate safeguards
+  - adequate protection
+  - suitable protection measures
+  - reasonable safeguards for transfers
+  - transferred with adequate security
+  - appropriate measures for cross-border
+  - sufficient protections in place
+  - data transferred securely
+  - safeguards deemed appropriate
+  - adequate data protection measures
+  - reasonable protection for transfers
+  - appropriate transfer mechanisms
+  - data protected during transfer
+  - suitable transfer safeguards
+  - adequate measures for international

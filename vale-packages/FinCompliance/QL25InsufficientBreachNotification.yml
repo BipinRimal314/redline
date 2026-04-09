@@ -1,0 +1,21 @@
+extends: existence
+message: "Insufficient breach notification language: '%s'. Quebec Law 25 Section 3.5 requires notifying the Commission d'accès à l'information (CAI) and affected individuals with diligence when a confidentiality incident presents a risk of serious injury. Specify CAI notification and the risk-of-serious-injury threshold explicitly."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - notify affected parties promptly
+  - report breaches as appropriate
+  - inform individuals in a timely manner
+  - notify as soon as reasonably possible
+  - breach notification where required
+  - report incidents as necessary
+  - notify individuals as appropriate
+  - inform as soon as practicable
+  - notification within a reasonable time
+  - report to relevant authorities
+  - notify applicable authorities
+  - report to the appropriate regulator
+  - breach reported promptly
+  - notify authorities as required
+  - inform affected persons promptly

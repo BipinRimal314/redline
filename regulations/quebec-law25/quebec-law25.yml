@@ -1,0 +1,90 @@
+regulation:
+  id: "QUEBEC-LAW25"
+  name: "Quebec Law 25 — Act respecting the protection of personal information in the private sector"
+  authority: "Commission d'accès à l'information du Québec (CAI)"
+  cfr_reference: "CQLR c P-39.1 (as amended by 2021, c. 25 — Law 25)"
+  document_types:
+    - privacy-policy
+    - data-processing-agreement
+    - compliance-policy
+    - data-protection-impact-assessment
+  requirements:
+    - id: "QL25-01"
+      description: "Must designate a person responsible for the protection of personal information by law; title and contact information must be published on the enterprise's website. Vague accountability language does not satisfy the designation requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25VaguePrivacyOfficer"
+      regulation_paragraph: "Section 3.1 — Person responsible for the protection of personal information"
+      legal_text: "Section 3.1: The person carrying on an enterprise must appoint a person responsible for the protection of personal information. The person responsible must see to the implementation of and compliance with this Act within the enterprise. That function is exercised by the person having the highest authority within the enterprise, unless the latter delegates the function in writing to any other person. The person carrying on the enterprise must publish the title and contact information of the person responsible for the protection of personal information on the enterprise's website or, if the enterprise does not have a website, make them available by any other appropriate means."
+
+    - id: "QL25-02"
+      description: "A privacy impact assessment must be conducted before any project involving the collection, use, communication, keeping, or destruction of personal information. Optional or conditional PIA language does not satisfy the mandatory requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25MissingPIA"
+      regulation_paragraph: "Section 3.3 — Privacy impact assessment"
+      legal_text: "Section 3.3: The person carrying on an enterprise must conduct a privacy impact assessment for any project involving the acquisition, development or redesign of an information system or electronic service delivery system involving the collection, use, communication, keeping or destruction of personal information. The same applies when personal information is to be communicated outside Québec for processing purposes."
+
+    - id: "QL25-03"
+      description: "Consent must be requested for each purpose separately and may not be bundled. Consent obtained for multiple purposes in a single request does not satisfy the granularity requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25BundledConsent"
+      regulation_paragraph: "Section 8.1 — Consent requested for each purpose"
+      legal_text: "Section 8.1: Consent to the collection, communication or use of personal information must be requested for each purpose of the collection, communication or use, in clear and simple language. The request must be presented separately from any other information provided to the person concerned."
+
+    - id: "QL25-04"
+      description: "When a decision based exclusively on automated processing is made about a person, the enterprise must inform that person and provide the opportunity to submit observations to a member of the enterprise's personnel who is in a position to review the decision."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25MissingADMTransparency"
+      regulation_paragraph: "Section 12.1 — Automated decision-making"
+      legal_text: "Section 12.1: A person carrying on an enterprise who uses personal information to render a decision based exclusively on an automated processing of such information must inform the person concerned accordingly. At the request of the person concerned, the person carrying on the enterprise must inform the person concerned of the personal information used to render the decision, the reasons and the principal factors and parameters that led to the decision and the right of the person concerned to have the personal information used to render the decision corrected. The person concerned must be given the opportunity to submit observations to a member of the personnel of the person carrying on the enterprise who is in a position to review the decision."
+
+    - id: "QL25-05"
+      description: "Upon request, an enterprise must communicate personal information collected about a person in a structured, commonly used technological format, or to a person or body authorized by law to collect such information. Vague portability language does not satisfy the right."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25VaguePortability"
+      regulation_paragraph: "Section 27 — Right to data portability"
+      legal_text: "Section 27: On request, a person carrying on an enterprise who has collected personal information from the person concerned must, where the information was collected from the person concerned, communicate such information to the person concerned or to a person or body authorized by law to collect such information, in a structured, commonly used technological format."
+
+    - id: "QL25-06"
+      description: "Before communicating personal information outside Quebec, a privacy impact assessment must be conducted. The enterprise must be satisfied that the information will receive substantially similar protection. Vague transfer safeguards without a PIA do not satisfy the requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25VagueTransfer"
+      regulation_paragraph: "Section 17 — Communication outside Québec"
+      legal_text: "Section 17: Before communicating personal information outside Québec, the person carrying on the enterprise must conduct a privacy impact assessment. The communication may take place if the assessment establishes that the information would receive substantially similar protection to that afforded under this Act. The communication must be the subject of a written agreement that takes into account, in particular, the results of the privacy impact assessment and, where applicable, the terms agreed on by the parties in order to mitigate the risks identified in the assessment."
+
+    - id: "QL25-07"
+      description: "A confidentiality incident involving personal information that presents a risk of serious injury must be reported to the Commission d'accès à l'information (CAI) and the affected persons must be notified. Missing CAI notification or vague breach language does not satisfy the requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25InsufficientBreachNotification"
+      regulation_paragraph: "Section 3.5 — Confidentiality incidents"
+      legal_text: "Section 3.5: When the person carrying on the enterprise has reason to believe that a confidentiality incident involving personal information has occurred, the person must take reasonable measures to reduce the risk of injury and to prevent new incidents of the same nature. If the incident presents a risk of serious injury, the person carrying on the enterprise must, with diligence, notify the Commission d'accès à l'information as well as any person whose personal information is concerned by the incident."
+
+    - id: "QL25-08"
+      description: "De-identification must follow generally accepted best practices and the enterprise must not re-identify information without authorization. Weak or vague de-identification language does not satisfy the requirement."
+      severity: warning
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25WeakDeidentification"
+      regulation_paragraph: "Section 23 — De-identification"
+      legal_text: "Section 23: A person carrying on an enterprise who de-identifies personal information must do so according to generally accepted best practices and in accordance with the criteria and terms determined by regulation. No person may, without authorization, re-identify personal information that has been de-identified, unless this is done to verify the effectiveness of the de-identification process."
+
+    - id: "QL25-09"
+      description: "Personal information must be destroyed or anonymized once the purpose for which it was collected is fulfilled, subject to the retention period provided by law or by an approved retention schedule. Vague or open-ended retention language does not satisfy the obligation."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25VagueRetention"
+      regulation_paragraph: "Section 12 — Destruction and anonymization"
+      legal_text: "Section 12: Once the purposes for which personal information was collected or used have been achieved, the person carrying on an enterprise must destroy the information, or anonymize it to use it for serious and legitimate purposes, subject to the preservation period provided for by law or by a retention schedule established by a government regulation."
+
+    - id: "QL25-10"
+      description: "The creation of a biometric database must be disclosed to the Commission d'accès à l'information (CAI). Any collection or use of biometric characteristics or measurements without such disclosure does not satisfy the requirement."
+      severity: error
+      check_type: deterministic
+      vale_rule: "FinCompliance.QL25MissingBiometricDisclosure"
+      regulation_paragraph: "Section 45 — Biometric databases"
+      legal_text: "Section 45: Any person establishing a biometric database must disclose its existence to the Commission d'accès à l'information. The Commission may make orders determining the acquisition, possession, use or management of such a database and may order that it be destroyed."

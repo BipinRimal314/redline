@@ -1,0 +1,21 @@
+extends: existence
+message: "Missing automated decision-making transparency: '%s'. Quebec Law 25 Section 12.1 requires informing individuals when decisions are based exclusively on automated processing, disclosing the information used, the reasons and principal factors, and providing the opportunity for human review. Specify ADM disclosures explicitly."
+link: "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1"
+level: error
+ignorecase: true
+tokens:
+  - automated decisions may be made
+  - algorithms may be used
+  - automated processing where appropriate
+  - technology-assisted decisions
+  - automated tools may assist
+  - decisions may involve automation
+  - algorithmic assessment may be used
+  - automated systems may be employed
+  - we may use automated means
+  - decisions may be made automatically
+  - automated analysis may be applied
+  - machine-based decisions
+  - automated evaluation where applicable
+  - systems may make automated decisions
+  - automated scoring may be used
