@@ -53,16 +53,48 @@ redline init
 
 ## Supported Regulations
 
-| Regulation | Rules | Domain |
-|---|---|---|
-| BSA/AML | 6 rules | Financial crime |
-| SEC Marketing Rule | 6 rules | Investment advisors |
-| FINRA Communications | 5 rules | Broker-dealers |
-| SOX Section 404 | 5 rules | Internal controls |
-| SOC2 Trust Services | 10 rules | Security/compliance |
-| GDPR | 10 rules | Data protection |
+105 rules across 10 frameworks, in 18 regulation files.
+
+| Regulation | Rules | Domain | Audited against primary source |
+|---|---|---|---|
+| BSA/AML | 15 | Financial crime | Yes (2026-04-08) |
+| SOX (302, 404, PCAOB) | 11 | Internal controls | Yes (2026-04-08) |
+| GDPR | 10 | Data protection | Yes (2026-04-08) |
+| HIPAA Security Rule | 10 | Protected health information | Yes (2026-04-08) |
+| SOC 2 Trust Services | 10 | Security/compliance | Yes (2026-04-08) |
+| ISO 27001 | 10 | Information security | Yes (2026-04-08) |
+| FINRA | 10 | Broker-dealers | Yes (2026-04-08) |
+| SEC (Marketing Rule, ADV) | 9 | Investment advisors | Yes (2026-04-08) |
+| PIPEDA | 10 | Canadian privacy | **No** |
+| Quebec Law 25 | 10 | Quebec privacy | **No** |
 
 Plus common quality rules (plain language, sentence length, date formats, passive voice).
+
+Redline does not cover PCI-DSS. That lives in the sibling project, [Comply](https://github.com/BipinRimal314/comply).
+
+## Rule Verification Status
+
+This section exists because a rule set that cites regulations is worthless if the citations are wrong, and there is no way to know without checking.
+
+**The spot-check (2026-04-07).** I audited 10 of the then-85 rules against primary sources. Three were clean. Seven were not:
+
+| Rule | Issue | Resolution |
+|---|---|---|
+| GDPR-02 | Cited Article 7, but the consent definition is Article 4(11) | Now cites both |
+| GDPR-05 | Said "30-day timeline"; GDPR says "one month" | Fixed, with Article 12(3) |
+| GDPR-08 | Presented the 72-hour deadline as absolute | Added "where feasible" per Article 33(1) |
+| HIPAA-01 | Bundled Required and Addressable specs as equals | Now distinguishes them |
+| HIPAA-07 | Injected "role-based access criteria" | Rewritten to §164.514(d)(2) language |
+| HIPAA-09 | **Fabricated** — attributed NIST 800-88 concepts to HIPAA | Rewritten to §164.310(d)(2)(i-ii) |
+| SOX 404-05 | Attributed PCAOB AS 2201 concepts to the statute | Now cites 15 USC 7262(a) and AS 2201 separately |
+
+A 70% error rate on a sample of 10. One rule described a requirement that does not exist in the regulation it named.
+
+That is the failure mode this architecture predicts. The LLM writes the rules; the LLM can be wrong; the difference from an LLM-in-the-loop reviewer is that the error sits in a YAML file where it can be found once and fixed permanently, rather than resurfacing unpredictably on every run.
+
+**The full pass (2026-04-08).** All 85 rules existing at that point were then audited line by line against primary sources — GDPR, HIPAA, SOX, BSA/AML, SOC 2, ISO 27001, FINRA, SEC. Each now carries a `regulation_paragraph` citation and a `legal_text` quotation from the source. Six further corrections came out of it (HIPAA-05, 06, 10 had injected requirements the regulation does not state, such as recovery time objectives, which are not a HIPAA term).
+
+**Not yet audited.** The 20 PIPEDA and Quebec Law 25 rules were added 2026-04-09, after that pass. They have not been checked against primary sources. Treat their citations as unverified.
 
 ## Rule Generation Pipeline
 
@@ -114,14 +146,18 @@ redline/
 │   ├── registry.py     # Regulation YAML loader + Vale rule index
 │   ├── report.py       # Gap report generation (JSON, Markdown)
 │   └── config.py       # .redline.yml config loader
-├── vale-packages/FinCompliance/  # 42+ Vale rules
-├── regulations/                   # YAML requirement definitions
-│   ├── bsa-aml/                  # BSA/AML, CDD, CTR, SAR
-│   ├── sec/                      # SEC Marketing Rule
-│   ├── finra/                    # FINRA Communications
-│   ├── sox/                      # SOX Section 404
-│   ├── soc2/                     # SOC2 Trust Services (NEW)
-│   └── gdpr/                     # GDPR (NEW)
+├── vale-packages/FinCompliance/  # 103 Vale rules
+├── regulations/                   # YAML requirement definitions, 105 rules
+│   ├── bsa-aml/                  # BSA/AML program, CDD, CTR, SAR
+│   ├── sec/                      # SEC Marketing Rule, ADV filing
+│   ├── finra/                    # FINRA 2111, 2210, 3110
+│   ├── sox/                      # SOX 302, 404, PCAOB standards
+│   ├── soc2/                     # SOC 2 Trust Services
+│   ├── gdpr/                     # GDPR
+│   ├── hipaa/                    # HIPAA Security Rule
+│   ├── iso27001/                 # ISO 27001 (2022 Annex A)
+│   ├── pipeda/                   # PIPEDA (unaudited)
+│   └── quebec-law25/             # Quebec Law 25 (unaudited)
 ├── regulations-source/           # Source regulation texts
 ├── fixtures/                     # Test documents (passing + failing)
 └── tests/                        # 49 tests
